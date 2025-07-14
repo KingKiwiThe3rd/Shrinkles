@@ -1,0 +1,29 @@
+[gd_scene load_steps=5 format=3 uid="uid://dedwio2103ro2"]
+
+[ext_resource type="Script" uid="uid://cbhuc1t1m0dwm" path="res://Scripts/character_body_2d.gd" id="1_kjqfi"]
+[ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_okmft"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lfvs5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_okmft")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_rpveg"]
+size = Vector2(128, 125)
+
+[node name="Shrinky" type="CharacterBody2D"]
+collision_layer = 2
+script = ExtResource("1_kjqfi")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lfvs5")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_rpveg")
