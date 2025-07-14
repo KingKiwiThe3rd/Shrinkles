@@ -10,15 +10,61 @@ var landing_timer = 0.0
 
 var jumps_left = 2
 const JUMP_AMOUNT = 2
-const JUMP_VELOCITY = -120.0
+var JUMP_VELOCITY = -240.0
 const JUMP_CUT_MULTIPLIER = 0.3
 const GRAVITY = 300.0
 const MAX_FALL_SPEED = 700.0
 
-const MAX_SPEED = 50.0
+var MAX_SPEED = 100.0
 const ACCELERATION = 400.0
 const DECELERATION = 500.0
-const AIR_CONTROL = 200.0
+const AIR_CONTROL = 400.0
+
+const FormData = preload("res://Forms/FormData.gd") # adjust path as needed
+
+enum Form { SMALLER ,SMALL, NORMAL, LARGE }
+var current_form: Form = Form.NORMAL
+
+var smaller_form := FormData.new()
+var small_form := FormData.new()
+var normal_form := FormData.new()
+var large_form := FormData.new()
+
+
+
+func _ready() -> void:
+	smaller_form.scale = Vector2(0.3,0.3)
+	smaller_form.max_speed = 50
+	smaller_form.jump_velocity = -80
+	smaller_form.collision_size = Vector2(3, 5)
+	
+	small_form.scale = Vector2(0.5, 0.5)
+	small_form.max_speed = 70.0
+	small_form.jump_velocity = -100.0
+	small_form.collision_size = Vector2(6, 10)
+
+	normal_form.scale = Vector2(1, 1)
+	normal_form.max_speed = 100.0
+	normal_form.jump_velocity = -240.0
+	normal_form.collision_size = Vector2(12, 20)
+
+	large_form.scale = Vector2(1.5, 1.5)
+	large_form.max_speed = 60.0
+	large_form.jump_velocity = -150.0
+	large_form.collision_size = Vector2(18, 30)
+
+	switch_form(normal_form) # start with normal
+
+func switch_form(form_data: FormData) -> void:
+	scale = form_data.scale
+	MAX_SPEED = form_data.max_speed
+	JUMP_VELOCITY = form_data.jump_velocity
+	
+		# Replace the shape to avoid modifying a shared resource
+	var new_shape := RectangleShape2D.new()
+	new_shape.size = form_data.collision_size
+	$CollisionShape2D.shape = new_shape
+
 
 func _physics_process(delta: float) -> void:
 	# Horizontal movement input
@@ -72,4 +118,12 @@ func _physics_process(delta: float) -> void:
 		is_landing = true
 		landing_timer = LAND_DURATION
 
+	if Input.is_action_just_pressed("small_form"):
+		switch_form(small_form)
+	elif Input.is_action_just_pressed("normal_form"):
+		switch_form(normal_form)
+	elif Input.is_action_just_pressed("large_form"):
+		switch_form(large_form)
+	elif Input.is_action_just_pressed("smaller_form"):
+		switch_form(smaller_form)
 	move_and_slide()
