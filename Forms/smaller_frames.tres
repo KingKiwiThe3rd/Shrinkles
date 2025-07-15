@@ -1,0 +1,30 @@
+[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://8besqpvtf8nd"]
+
+[ext_resource type="Texture2D" uid="uid://dpv0byl5pcvw4" path="res://Assets/Sprites/4bitmc.png" id="1_cempl"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cempl")
+}],
+"loop": true,
+"name": &"smaller_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cempl")
+}],
+"loop": true,
+"name": &"smaller_jump",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cempl")
+}],
+"loop": true,
+"name": &"smaller_run",
+"speed": 5.0
+}]

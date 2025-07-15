@@ -1,5 +1,9 @@
 extends CharacterBody2D
 
+@onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
+@onready var dash_manager = $Dash_Manager
+@export var sprite_frames: SpriteFrames
+
 var is_preparing_jump = false
 var is_landing = false
 var jump_prepare_timer = 0.0
@@ -16,14 +20,14 @@ var GRAVITY = 300.0
 var MAX_FALL_SPEED = 700.0
 
 var MAX_SPEED = 100.0
-var ACCELERATION = 400.0
-var DECELERATION = 500.0
+var ACCELERATION = 300.0
+var DECELERATION = 400.0
 var AIR_CONTROL = 400.0
+var accel = ACCELERATION if is_on_floor() else AIR_CONTROL
 
 var image = Image.new()
 var current_animation_prefix := "normal_"  # default
 
-const FormData = preload("res://Forms/FormData.gd") # adjust path as needed
 
 enum Form { SMALLER ,SMALL, NORMAL, LARGE }
 var current_form: Form = Form.NORMAL
@@ -33,55 +37,52 @@ var small_form := FormData.new()
 var normal_form := FormData.new()
 var large_form := FormData.new()
 
-@onready var dash_manager: Node2D = $Dash_Manager
-@export var sprite_frames: SpriteFrames
 
 func _ready() -> void:
-	
-	smaller_form.scale = Vector2(1,1)
+	var normal_frames := preload("res://Forms/normal_frames.tres")
+	var large_frames := preload("res://Forms/large_frames.tres")
+	var small_frames := preload("res://Forms/small_frames.tres")
+	var smaller_frames := preload("res://Forms/smaller_frames.tres")
+
+	normal_form.sprite_frames = normal_frames
+	large_form.sprite_frames = large_frames
+	small_form.sprite_frames = small_frames
+	smaller_form.sprite_frames = smaller_frames
+
+	smaller_form.scale = Vector2(1.5, 1.5)
 	smaller_form.max_speed = 80
 	smaller_form.jump_velocity = -80
 	smaller_form.collision_size = Vector2(2.5, 3.75)
 	smaller_form.can_dash = true
-	image.load("res://assets/sprites/4bitmc.png")
-	smaller_form.texture.create_from_image(image)
 	smaller_form.animation_prefix = "tiny_"
 
 	
-	small_form.scale = Vector2(1,1)
+	small_form.scale = Vector2(1.5, 1.5)
 	small_form.max_speed = 70.0
 	small_form.jump_velocity = -300.0
 	small_form.collision_size = Vector2(5, 7.5)
-	small_form.can_dash = false
-	image.load("res://assets/sprites/4bitmc.png")
-	small_form.texture.create_from_image(image)
+	#small_form.can_dash = false
 	small_form.animation_prefix = "small_"
 
-	normal_form.scale = Vector2(1, 1)
+	normal_form.scale = Vector2(1.5, 1.5)
 	normal_form.max_speed = 100.0
 	normal_form.jump_velocity = -240.0
 	normal_form.collision_size = Vector2(10, 15)
 	normal_form.can_dash = false
-	image.load("res://assets/sprites/4bitmc.png")
-	normal_form.texture.create_from_image(image)
 	normal_form.animation_prefix = "normal_"
 
 	
-	large_form.scale = Vector2(2, 2)
+	large_form.scale = Vector2(1.5, 1.5)
 	large_form.max_speed = 60.0
 	large_form.jump_velocity = -150.0
 	large_form.collision_size = Vector2(15, 20)
 	large_form.can_dash = false
-	image.load("res://assets/sprites/4bitmc.png")
-	large_form.texture.create_from_image(image)
 	large_form.animation_prefix = "large_"
-
-
-
-	switch_form(normal_form)# start with normal form
 	
 	# Link this player to the dash manager
 	dash_manager.player = self
+	switch_form(normal_form)# start with normal form
+
 
 func switch_form(form_data: FormData) -> void:
 	scale = form_data.scale
@@ -89,7 +90,7 @@ func switch_form(form_data: FormData) -> void:
 	JUMP_VELOCITY = form_data.jump_velocity
 	# $AnimatedSprite2D.texture=form_data.texture
 	$AnimatedSprite2D.play(form_data.animation_name)
-	
+
 	current_animation_prefix = form_data.animation_prefix
 	$AnimatedSprite2D.sprite_frames = form_data.sprite_frames
 	
@@ -99,7 +100,10 @@ func switch_form(form_data: FormData) -> void:
 	$CollisionShape2D.shape = new_shape
 	
 	# Pass abilities to DashManager
-	dash_manager.dash_enabled = form_data.can_dash
+	if dash_manager:
+		dash_manager.dash_enabled = form_data.can_dash
+
+
 
 func _physics_process(delta: float) -> void:
 	# Horizontal movement input
@@ -134,9 +138,15 @@ func _physics_process(delta: float) -> void:
 			is_preparing_jump = true
 			jump_prepare_timer = JUMP_PREPARE_DURATION
 
-	if Input.is_action_just_pressed("Dash"):
+	if Input.is_action_just_pressed("Dash") and dash_manager.dash_enabled:
 		dash_manager.try_dash()
-
+	
+	var direction := Input.get_axis("Left", "Right")
+	if not dash_manager.is_dashing:
+		var current_accel = ACCELERATION if is_on_floor() else AIR_CONTROL
+		velocity.x = move_toward(velocity.x, direction * MAX_SPEED, current_accel * delta)
+		animated_sprite_2d.flip_h = direction < 0 if direction != 0 else animated_sprite_2d.flip_h
+	
 	if is_preparing_jump:
 		jump_prepare_timer -= delta
 		if jump_prepare_timer <= 0.0:
@@ -170,7 +180,24 @@ func _physics_process(delta: float) -> void:
 		switch_form(large_form)
 	elif Input.is_action_just_pressed("smaller_form"):
 		switch_form(smaller_form)
-	update_animation()
+	
+	# if dash_manager.is_dashing:
+		# animated_sprite_2d.play("dash")
+	#elif is_preparing_jump:
+		# pass
+	# elif is_landing:
+		# animated_sprite_2d.play("fallingFollowThrough")
+	if is_on_floor():
+		if direction == 0:
+			animated_sprite_2d.play(current_animation_prefix +"idle")
+		else:
+			animated_sprite_2d.play(current_animation_prefix +"run")
+	else:
+		if velocity.y < 25:
+			animated_sprite_2d.play(current_animation_prefix +"jump")
+		# else:
+			# animated_sprite_2d.play("falling")
+	# update_animation()
 	move_and_slide()
 	
 func update_animation():
@@ -180,3 +207,7 @@ func update_animation():
 		$AnimatedSprite2D.play(current_animation_prefix + "run")
 	else:
 		$AnimatedSprite2D.play(current_animation_prefix + "idle")
+
+
+func get_facing_direction() -> int:
+	return -1 if animated_sprite_2d.flip_h else 1

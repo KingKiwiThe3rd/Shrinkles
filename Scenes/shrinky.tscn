@@ -1,7 +1,6 @@
-[gd_scene load_steps=10 format=3 uid="uid://dedwio2103ro2"]
+[gd_scene load_steps=9 format=3 uid="uid://dedwio2103ro2"]
 
 [ext_resource type="Script" uid="uid://cbhuc1t1m0dwm" path="res://Scripts/Shrinky.gd" id="1_kjqfi"]
-[ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_okmft"]
 [ext_resource type="Script" uid="uid://dalxlrimjqb1y" path="res://Forms/Dash_Manager.gd" id="3_fileg"]
 [ext_resource type="Texture2D" uid="uid://bru8s8tqldkjh" path="res://Assets/Sprites/32bitmc.png" id="3_qmd8i"]
 [ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://Assets/Sprites/16bitmc.png" id="4_nrkhb"]
@@ -10,10 +9,7 @@
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lfvs5"]
 animations = [{
-"frames": [{
-"duration": 1.0,
-"texture": ExtResource("2_okmft")
-}],
+"frames": [],
 "loop": true,
 "name": &"default",
 "speed": 5.0
@@ -119,15 +115,17 @@ animations = [{
 size = Vector2(15, 15)
 
 [node name="Shrinky" type="CharacterBody2D"]
+z_index = 20
 collision_layer = 2
 collision_mask = 3
 script = ExtResource("1_kjqfi")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+visibility_layer = 3
+z_index = 20
 position = Vector2(-9.53674e-07, 0)
-scale = Vector2(0.117188, 0.117188)
 sprite_frames = SubResource("SpriteFrames_lfvs5")
-animation = &"large_idle"
+animation = &"smaller_idle"
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rpveg")

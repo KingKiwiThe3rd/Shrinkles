@@ -56,13 +56,13 @@ func try_dash():
 
 func start_dash():
 	is_dashing = true
-	var dash_direction = 1 if not player.animated_sprite_2d.flip_h else -1
-	# Dparticles.emitting=true
+	var dash_direction = player.get_facing_direction()  # ✅ GOOD — per dash
 	player.velocity.x = dash_direction * DASH_INITIAL_BOOST
 	player.velocity.y = 0
 	dash_timer = DASH_TIME
 	dash_cooldown_timer = DASH_COOLDOWN
-
+	# Dparticles.emitting=true
+	
 func enable_extra_air_dash():
 	extra_air_dash = true  # Allows two dashes in air
 	
