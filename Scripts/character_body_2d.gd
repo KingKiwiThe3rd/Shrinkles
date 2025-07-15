@@ -20,6 +20,8 @@ const ACCELERATION = 400.0
 const DECELERATION = 500.0
 const AIR_CONTROL = 400.0
 
+var image = Image.new()
+
 const FormData = preload("res://Forms/FormData.gd") # adjust path as needed
 
 enum Form { SMALLER ,SMALL, NORMAL, LARGE }
@@ -37,21 +39,29 @@ func _ready() -> void:
 	smaller_form.max_speed = 50
 	smaller_form.jump_velocity = -80
 	smaller_form.collision_size = Vector2(3, 5)
+	image.load("res://assets/sprites/4bitmc.png")
+	smaller_form.texture.create_from_image(image)
 	
 	small_form.scale = Vector2(0.5, 0.5)
 	small_form.max_speed = 70.0
 	small_form.jump_velocity = -100.0
 	small_form.collision_size = Vector2(6, 10)
+	image.load("res://assets/sprites/4bitmc.png")
+	small_form.texture.create_from_image(image)
 
 	normal_form.scale = Vector2(1, 1)
 	normal_form.max_speed = 100.0
 	normal_form.jump_velocity = -240.0
 	normal_form.collision_size = Vector2(12, 20)
+	image.load("res://assets/sprites/4bitmc.png")
+	normal_form.texture.create_from_image(image)
 
 	large_form.scale = Vector2(1.5, 1.5)
 	large_form.max_speed = 60.0
 	large_form.jump_velocity = -150.0
 	large_form.collision_size = Vector2(18, 30)
+	image.load("res://assets/sprites/4bitmc.png")
+	large_form.texture.create_from_image(image)
 
 	switch_form(normal_form) # start with normal
 
@@ -59,6 +69,8 @@ func switch_form(form_data: FormData) -> void:
 	scale = form_data.scale
 	MAX_SPEED = form_data.max_speed
 	JUMP_VELOCITY = form_data.jump_velocity
+	$AnimatedSprite2D.texture=form_data.texture
+	
 	
 		# Replace the shape to avoid modifying a shared resource
 	var new_shape := RectangleShape2D.new()
