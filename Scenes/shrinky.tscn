@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://dedwio2103ro2"]
+[gd_scene load_steps=6 format=3 uid="uid://dedwio2103ro2"]
 
-[ext_resource type="Script" uid="uid://cbhuc1t1m0dwm" path="res://Scripts/character_body_2d.gd" id="1_kjqfi"]
+[ext_resource type="Script" uid="uid://cbhuc1t1m0dwm" path="res://Scripts/Shrinky.gd" id="1_kjqfi"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_okmft"]
+[ext_resource type="Script" uid="uid://dalxlrimjqb1y" path="res://Forms/Dash_Manager.gd" id="3_fileg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_lfvs5"]
 animations = [{
@@ -29,3 +30,6 @@ sprite_frames = SubResource("SpriteFrames_lfvs5")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rpveg")
+
+[node name="Dash_Manager" type="Node2D" parent="."]
+script = ExtResource("3_fileg")
