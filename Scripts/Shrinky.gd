@@ -21,6 +21,7 @@ var DECELERATION = 500.0
 var AIR_CONTROL = 400.0
 
 var image = Image.new()
+var current_animation_prefix := "normal_"  # default
 
 const FormData = preload("res://Forms/FormData.gd") # adjust path as needed
 
@@ -33,62 +34,52 @@ var normal_form := FormData.new()
 var large_form := FormData.new()
 
 @onready var dash_manager: Node2D = $Dash_Manager
-
+@export var sprite_frames: SpriteFrames
 
 func _ready() -> void:
 	
-	smaller_form.scale = Vector2(0.25,0.25)
+	smaller_form.scale = Vector2(1,1)
 	smaller_form.max_speed = 80
 	smaller_form.jump_velocity = -80
-
 	smaller_form.collision_size = Vector2(2.5, 3.75)
 	smaller_form.can_dash = true
+	image.load("res://assets/sprites/4bitmc.png")
+	smaller_form.texture.create_from_image(image)
+	smaller_form.animation_prefix = "tiny_"
+
 	
-	small_form.scale = Vector2(0.5, 0.5)
+	small_form.scale = Vector2(1,1)
 	small_form.max_speed = 70.0
 	small_form.jump_velocity = -300.0
 	small_form.collision_size = Vector2(5, 7.5)
 	small_form.can_dash = false
-
-	smaller_form.collision_size = Vector2(3, 5)
-	image.load("res://assets/sprites/4bitmc.png")
-	smaller_form.texture.create_from_image(image)
-	
-	small_form.scale = Vector2(0.5, 0.5)
-	small_form.max_speed = 70.0
-	small_form.jump_velocity = -100.0
-	small_form.collision_size = Vector2(6, 10)
 	image.load("res://assets/sprites/4bitmc.png")
 	small_form.texture.create_from_image(image)
-
+	small_form.animation_prefix = "small_"
 
 	normal_form.scale = Vector2(1, 1)
 	normal_form.max_speed = 100.0
 	normal_form.jump_velocity = -240.0
-
 	normal_form.collision_size = Vector2(10, 15)
 	normal_form.can_dash = false
+	image.load("res://assets/sprites/4bitmc.png")
+	normal_form.texture.create_from_image(image)
+	normal_form.animation_prefix = "normal_"
+
 	
 	large_form.scale = Vector2(2, 2)
 	large_form.max_speed = 60.0
 	large_form.jump_velocity = -150.0
 	large_form.collision_size = Vector2(15, 20)
 	large_form.can_dash = false
-	
-	switch_form(normal_form)# start with normal form
-
-	normal_form.collision_size = Vector2(12, 20)
-	image.load("res://assets/sprites/4bitmc.png")
-	normal_form.texture.create_from_image(image)
-
-	large_form.scale = Vector2(1.5, 1.5)
-	large_form.max_speed = 60.0
-	large_form.jump_velocity = -150.0
-	large_form.collision_size = Vector2(18, 30)
 	image.load("res://assets/sprites/4bitmc.png")
 	large_form.texture.create_from_image(image)
+	large_form.animation_prefix = "large_"
 
 
+
+	switch_form(normal_form)# start with normal form
+	
 	# Link this player to the dash manager
 	dash_manager.player = self
 
@@ -96,8 +87,11 @@ func switch_form(form_data: FormData) -> void:
 	scale = form_data.scale
 	MAX_SPEED = form_data.max_speed
 	JUMP_VELOCITY = form_data.jump_velocity
-	$AnimatedSprite2D.texture=form_data.texture
+	# $AnimatedSprite2D.texture=form_data.texture
+	$AnimatedSprite2D.play(form_data.animation_name)
 	
+	current_animation_prefix = form_data.animation_prefix
+	$AnimatedSprite2D.sprite_frames = form_data.sprite_frames
 	
 		# Replace the shape to avoid modifying a shared resource
 	var new_shape := RectangleShape2D.new()
@@ -176,4 +170,13 @@ func _physics_process(delta: float) -> void:
 		switch_form(large_form)
 	elif Input.is_action_just_pressed("smaller_form"):
 		switch_form(smaller_form)
+	update_animation()
 	move_and_slide()
+	
+func update_animation():
+	if not is_on_floor():
+		$AnimatedSprite2D.play(current_animation_prefix + "jump")
+	elif abs(velocity.x) > 5:
+		$AnimatedSprite2D.play(current_animation_prefix + "run")
+	else:
+		$AnimatedSprite2D.play(current_animation_prefix + "idle")

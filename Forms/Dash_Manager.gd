@@ -56,10 +56,9 @@ func try_dash():
 
 func start_dash():
 	is_dashing = true
-	#var dash_direction = 1 if not player.animated_sprite_2d.flip_h else -1
+	var dash_direction = 1 if not player.animated_sprite_2d.flip_h else -1
 	# Dparticles.emitting=true
-	#player.velocity.x = dash_direction * DASH_INITIAL_BOOST
-	player.velocity.x= DASH_INITIAL_BOOST
+	player.velocity.x = dash_direction * DASH_INITIAL_BOOST
 	player.velocity.y = 0
 	dash_timer = DASH_TIME
 	dash_cooldown_timer = DASH_COOLDOWN
