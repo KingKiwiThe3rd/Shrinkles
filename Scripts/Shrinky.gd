@@ -12,8 +12,8 @@ const LAND_DURATION = 0.2
 
 var landing_timer = 0.0
 
-var jumps_left = 2
-const JUMP_AMOUNT = 2
+var jumps_left = 1
+const JUMP_AMOUNT = 1
 var JUMP_VELOCITY = -240.0
 var JUMP_CUT_MULTIPLIER = 0.3
 var GRAVITY = 300.0
@@ -39,6 +39,8 @@ var large_form := FormData.new()
 
 
 func _ready() -> void:
+	add_to_group("player")
+	
 	var normal_frames := preload("res://Forms/normal_frames.tres")
 	var large_frames := preload("res://Forms/large_frames.tres")
 	var small_frames := preload("res://Forms/small_frames.tres")
@@ -50,42 +52,33 @@ func _ready() -> void:
 	smaller_form.sprite_frames = smaller_frames
 
 	
-	smaller_form.scale = Vector2(1.0, 1.0)
-
-
 	smaller_form.scale = Vector2(1, 1)
-
 	smaller_form.max_speed = 80
 	smaller_form.jump_velocity = -80
 	smaller_form.collision_size = Vector2(4, 4)
 	smaller_form.can_dash = true
-	smaller_form.animation_prefix = "tiny_"
+	smaller_form.animation_prefix = "smaller_"
 	smaller_form.air_control = 500
 
 
-	small_form.scale = Vector2(1.0, 1.0)
-	
 	small_form.scale = Vector2(1, 1)
 	small_form.max_speed = 70.0
-	small_form.jump_velocity = -300.0
+	small_form.jump_velocity = -210.0
 	small_form.collision_size = Vector2(5, 8)
 	#small_form.can_dash = false
 	small_form.animation_prefix = "small_"
 	small_form.air_control = 200
 
+
 	normal_form.scale = Vector2(1.0, 1.0)
-	normal_form.scale = Vector2(1, 1)
 	normal_form.max_speed = 100.0
-	normal_form.jump_velocity = -240.0
+	normal_form.jump_velocity = -160.0
 	normal_form.collision_size = Vector2(10, 16)
 	normal_form.can_dash = false
 	normal_form.animation_prefix = "normal_"
 	normal_form.air_control = 350
 	
-	large_form.scale = Vector2(1.0, 1.0)
-	large_form.max_speed = 60.0
-	large_form.jump_velocity = -150.0
-	large_form.collision_size = Vector2(15, 28)
+	
 	large_form.scale = Vector2(1, 1)
 	large_form.max_speed = 60.0
 	large_form.jump_velocity = -150.0
@@ -93,6 +86,8 @@ func _ready() -> void:
 	large_form.can_dash = false
 	large_form.animation_prefix = "large_"
 	normal_form.air_control = 400
+
+
 	# Link this player to the dash manager
 	dash_manager.player = self
 	switch_form(normal_form)# start with normal form
