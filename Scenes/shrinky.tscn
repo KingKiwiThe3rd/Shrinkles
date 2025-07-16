@@ -1,14 +1,13 @@
-[gd_scene load_steps=23 format=3 uid="uid://dedwio2103ro2"]
+[gd_scene load_steps=21 format=3 uid="uid://dedwio2103ro2"]
 
 [ext_resource type="Script" uid="uid://cbhuc1t1m0dwm" path="res://Scripts/Shrinky.gd" id="1_kjqfi"]
 [ext_resource type="Script" uid="uid://dalxlrimjqb1y" path="res://Forms/Dash_Manager.gd" id="3_fileg"]
-[ext_resource type="Texture2D" uid="uid://bru8s8tqldkjh" path="res://assets/sprites/32bitmc.png" id="3_qmd8i"]
-[ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://assets/sprites/16bitmc.png" id="4_nrkhb"]
-[ext_resource type="Texture2D" uid="uid://botg5xq4umtku" path="res://assets/sprites/16bitidle.png" id="4_wbst6"]
-[ext_resource type="Texture2D" uid="uid://cbuyufa8r1tdr" path="res://assets/sprites/16bitmcrun.png" id="5_ihsto"]
-[ext_resource type="Texture2D" uid="uid://xq0t27at46xj" path="res://assets/sprites/8bitmc.png" id="5_wbst6"]
-[ext_resource type="Texture2D" uid="uid://dpv0byl5pcvw4" path="res://assets/sprites/4bitmc.png" id="6_ihsto"]
-[ext_resource type="Texture2D" uid="uid://v2fb2mejvksp" path="res://assets/sprites/sizeShiftParticles.png" id="9_wbst6"]
+[ext_resource type="Texture2D" uid="uid://bru8s8tqldkjh" path="res://Assets/Sprites/32bitmc.png" id="3_qmd8i"]
+[ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://Assets/Sprites/16bitmc.png" id="4_nrkhb"]
+[ext_resource type="Texture2D" uid="uid://botg5xq4umtku" path="res://Assets/Sprites/16bitidle.png" id="4_wbst6"]
+[ext_resource type="Texture2D" uid="uid://cbuyufa8r1tdr" path="res://Assets/Sprites/16bitmcrun.png" id="5_ihsto"]
+[ext_resource type="Texture2D" uid="uid://xq0t27at46xj" path="res://Assets/Sprites/8bitmc.png" id="5_wbst6"]
+[ext_resource type="Texture2D" uid="uid://dpv0byl5pcvw4" path="res://Assets/Sprites/4bitmc.png" id="6_ihsto"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4olj2"]
 atlas = ExtResource("4_wbst6")
@@ -187,12 +186,6 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_rpveg"]
 size = Vector2(15, 15)
 
-[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ihsto"]
-particles_animation = true
-particles_anim_h_frames = 5
-particles_anim_v_frames = 1
-particles_anim_loop = false
-
 [node name="Shrinky" type="CharacterBody2D"]
 z_index = 20
 collision_layer = 2
@@ -204,23 +197,11 @@ visibility_layer = 3
 z_index = 20
 position = Vector2(-9.53674e-07, 0)
 sprite_frames = SubResource("SpriteFrames_lfvs5")
-animation = &"normal_idle"
+animation = &"normal_run"
+frame_progress = 0.579615
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 shape = SubResource("RectangleShape2D_rpveg")
 
 [node name="Dash_Manager" type="Node2D" parent="."]
 script = ExtResource("3_fileg")
-
-[node name="switchFormParticles" type="CPUParticles2D" parent="."]
-z_index = 21
-material = SubResource("CanvasItemMaterial_ihsto")
-emitting = false
-amount = 1
-texture = ExtResource("9_wbst6")
-lifetime = 0.2
-one_shot = true
-local_coords = true
-gravity = Vector2(0, 0)
-anim_speed_min = 3.0
-anim_speed_max = 3.0

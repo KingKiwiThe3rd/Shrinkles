@@ -12,10 +12,12 @@ const LAND_DURATION = 0.2
 
 var landing_timer = 0.0
 
+
+var jumps_left = 1
+const JUMP_AMOUNT = 1
+
 @onready var switchFormParticles = get_node("switchFormParticles")
 
-var jumps_left = 2
-const JUMP_AMOUNT = 2
 var JUMP_VELOCITY = -240.0
 var JUMP_CUT_MULTIPLIER = 0.3
 var GRAVITY = 300.0
@@ -41,6 +43,8 @@ var large_form := FormData.new()
 
 
 func _ready() -> void:
+	add_to_group("player")
+	
 	var normal_frames := preload("res://Forms/normal_frames.tres")
 	var large_frames := preload("res://Forms/large_frames.tres")
 	var small_frames := preload("res://Forms/small_frames.tres")
@@ -52,57 +56,59 @@ func _ready() -> void:
 	smaller_form.sprite_frames = smaller_frames
 
 	
-	smaller_form.scale = Vector2(1.0, 1.0)
-
-
 	smaller_form.scale = Vector2(1, 1)
-
 	smaller_form.max_speed = 80
 	smaller_form.jump_velocity = -80
 	smaller_form.collision_size = Vector2(4, 4)
 	smaller_form.can_dash = true
-	smaller_form.animation_prefix = "tiny_"
-	smaller_form.air_control = 500
+	smaller_form.animation_prefix = "smaller_"
+	smaller_form.air_control = 300
+	smaller_form.form_type = Form.SMALLER
 
-
-	small_form.scale = Vector2(1.0, 1.0)
-	
 	small_form.scale = Vector2(1, 1)
 	small_form.max_speed = 70.0
-	small_form.jump_velocity = -300.0
+	small_form.jump_velocity = -220.0
 	small_form.collision_size = Vector2(5, 8)
 	#small_form.can_dash = false
 	small_form.animation_prefix = "small_"
 	small_form.air_control = 200
+	small_form.form_type = Form.SMALL
 
 	normal_form.scale = Vector2(1.0, 1.0)
-	normal_form.scale = Vector2(1, 1)
 	normal_form.max_speed = 100.0
+
+	normal_form.jump_velocity = -170.0
+	normal_form.collision_size = Vector2(10, 16)
+
 	normal_form.jump_velocity = -240.0
 	normal_form.collision_size = Vector2(10, 15.9)
+
 	normal_form.can_dash = false
 	normal_form.animation_prefix = "normal_"
 	normal_form.air_control = 350
+	normal_form.form_type = Form.NORMAL
 	
-	large_form.scale = Vector2(1.0, 1.0)
-	large_form.max_speed = 60.0
-	large_form.jump_velocity = -150.0
-	large_form.collision_size = Vector2(15, 28)
 	large_form.scale = Vector2(1, 1)
-	large_form.max_speed = 60.0
+	large_form.max_speed = 70.0
 	large_form.jump_velocity = -150.0
 	large_form.collision_size = Vector2(15, 30)
 	large_form.can_dash = false
 	large_form.animation_prefix = "large_"
-	normal_form.air_control = 400
+	large_form.air_control = 400
+	large_form.form_type = Form.LARGE
+
 	# Link this player to the dash manager
 	dash_manager.player = self
 	switch_form(normal_form)# start with normal form
 
 
 func switch_form(form_data: FormData) -> void:
+
+	current_form = form_data.form_type  # <-- THIS FIXES THE ISSUE
+
 	if not current_animation_prefix==form_data.animation_prefix:
 		switchFormParticles.emitting=true
+
 	scale = form_data.scale
 	MAX_SPEED = form_data.max_speed
 	JUMP_VELOCITY = form_data.jump_velocity
@@ -193,23 +199,27 @@ func _physics_process(delta: float) -> void:
 	if Input.is_action_just_pressed("small_form"):
 		switchFormParticles.scale=Vector2(1,1)
 		switch_form(small_form)
+		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("normal_form"):
 		switchFormParticles.scale=Vector2(2,2)
 		switch_form(normal_form)
+		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("large_form"):
 		switchFormParticles.scale=Vector2(3,3)
 		switch_form(large_form)
+		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("smaller_form"):
 		switchFormParticles.scale=Vector2(1,1)
 		switch_form(smaller_form)
+		print("Current form: ", get_form())
 	
-	# if dash_manager.is_dashing:
-		# animated_sprite_2d.play("dash")
+	if dash_manager.is_dashing:
+		animated_sprite_2d.play("smaller_dash")
 	#elif is_preparing_jump:
 		# pass
 	# elif is_landing:
 		# animated_sprite_2d.play("fallingFollowThrough")
-	if is_on_floor():
+	elif is_on_floor():
 		if direction == 0:
 			animated_sprite_2d.play(current_animation_prefix +"idle")
 		else:
@@ -233,3 +243,8 @@ func update_animation():
 
 func get_facing_direction() -> int:
 	return -1 if animated_sprite_2d.flip_h else 1
+
+func get_form():
+	return current_form
+func get_player_velocity():
+	return velocity
