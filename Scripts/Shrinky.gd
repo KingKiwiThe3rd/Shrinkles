@@ -49,33 +49,33 @@ func _ready() -> void:
 	small_form.sprite_frames = small_frames
 	smaller_form.sprite_frames = smaller_frames
 
-	smaller_form.scale = Vector2(1.5, 1.5)
+	smaller_form.scale = Vector2(1, 1)
 	smaller_form.max_speed = 80
 	smaller_form.jump_velocity = -80
-	smaller_form.collision_size = Vector2(2.5, 3.75)
+	smaller_form.collision_size = Vector2(4, 4)
 	smaller_form.can_dash = true
 	smaller_form.animation_prefix = "tiny_"
 
 	
-	small_form.scale = Vector2(1.5, 1.5)
+	small_form.scale = Vector2(1, 1)
 	small_form.max_speed = 70.0
 	small_form.jump_velocity = -300.0
-	small_form.collision_size = Vector2(5, 7.5)
+	small_form.collision_size = Vector2(5, 8)
 	#small_form.can_dash = false
 	small_form.animation_prefix = "small_"
 
-	normal_form.scale = Vector2(1.5, 1.5)
+	normal_form.scale = Vector2(1, 1)
 	normal_form.max_speed = 100.0
 	normal_form.jump_velocity = -240.0
-	normal_form.collision_size = Vector2(10, 15)
+	normal_form.collision_size = Vector2(10, 16)
 	normal_form.can_dash = false
 	normal_form.animation_prefix = "normal_"
 
 	
-	large_form.scale = Vector2(1.5, 1.5)
+	large_form.scale = Vector2(1, 1)
 	large_form.max_speed = 60.0
 	large_form.jump_velocity = -150.0
-	large_form.collision_size = Vector2(15, 20)
+	large_form.collision_size = Vector2(15, 30)
 	large_form.can_dash = false
 	large_form.animation_prefix = "large_"
 	
