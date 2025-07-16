@@ -28,8 +28,8 @@ var tile_configs: Dictionary = {
 	17: Vector2i(2, 7),   # Top-Right
 	18: Vector2i(0,5),   # Top-Left, Top-Right
 	19: Vector2i(0, 7),   # Bottom-Left
-	20: Vector2i(5, 0),   # Top-Left, Bottom-Left
-	21: Vector2i(3,5),   # Top-Right, Bottom-Left
+	20: Vector2i(3, 5),   # Top-Left, Bottom-Left
+	21: Vector2i(2,6),   # Top-Right, Bottom-Left
 	22: Vector2i(3,4),   # Top-Left, Top-Right, Bottom-Left
 	23: Vector2i(1,7),   # Bottom-Right
 	24: Vector2i(1,6),   # Top-Left, Bottom-Right

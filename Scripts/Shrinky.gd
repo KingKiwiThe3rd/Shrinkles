@@ -12,8 +12,12 @@ const LAND_DURATION = 0.2
 
 var landing_timer = 0.0
 
+
 var jumps_left = 1
 const JUMP_AMOUNT = 1
+
+@onready var switchFormParticles = get_node("switchFormParticles")
+
 var JUMP_VELOCITY = -240.0
 var JUMP_CUT_MULTIPLIER = 0.3
 var GRAVITY = 300.0
@@ -72,8 +76,13 @@ func _ready() -> void:
 
 	normal_form.scale = Vector2(1.0, 1.0)
 	normal_form.max_speed = 100.0
+
 	normal_form.jump_velocity = -170.0
 	normal_form.collision_size = Vector2(10, 16)
+
+	normal_form.jump_velocity = -240.0
+	normal_form.collision_size = Vector2(10, 15.9)
+
 	normal_form.can_dash = false
 	normal_form.animation_prefix = "normal_"
 	normal_form.air_control = 350
@@ -94,7 +103,12 @@ func _ready() -> void:
 
 
 func switch_form(form_data: FormData) -> void:
+
 	current_form = form_data.form_type  # <-- THIS FIXES THE ISSUE
+
+	if not current_animation_prefix==form_data.animation_prefix:
+		switchFormParticles.emitting=true
+
 	scale = form_data.scale
 	MAX_SPEED = form_data.max_speed
 	JUMP_VELOCITY = form_data.jump_velocity
@@ -183,15 +197,19 @@ func _physics_process(delta: float) -> void:
 		landing_timer = LAND_DURATION
 
 	if Input.is_action_just_pressed("small_form"):
+		switchFormParticles.scale=Vector2(1,1)
 		switch_form(small_form)
 		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("normal_form"):
+		switchFormParticles.scale=Vector2(2,2)
 		switch_form(normal_form)
 		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("large_form"):
+		switchFormParticles.scale=Vector2(3,3)
 		switch_form(large_form)
 		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("smaller_form"):
+		switchFormParticles.scale=Vector2(1,1)
 		switch_form(smaller_form)
 		print("Current form: ", get_form())
 	
