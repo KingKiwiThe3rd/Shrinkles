@@ -58,35 +58,35 @@ func _ready() -> void:
 	smaller_form.collision_size = Vector2(4, 4)
 	smaller_form.can_dash = true
 	smaller_form.animation_prefix = "smaller_"
-	smaller_form.air_control = 500
-
+	smaller_form.air_control = 300
+	smaller_form.form_type = Form.SMALLER
 
 	small_form.scale = Vector2(1, 1)
 	small_form.max_speed = 70.0
-	small_form.jump_velocity = -210.0
+	small_form.jump_velocity = -220.0
 	small_form.collision_size = Vector2(5, 8)
 	#small_form.can_dash = false
 	small_form.animation_prefix = "small_"
 	small_form.air_control = 200
-
+	small_form.form_type = Form.SMALL
 
 	normal_form.scale = Vector2(1.0, 1.0)
 	normal_form.max_speed = 100.0
-	normal_form.jump_velocity = -160.0
+	normal_form.jump_velocity = -170.0
 	normal_form.collision_size = Vector2(10, 16)
 	normal_form.can_dash = false
 	normal_form.animation_prefix = "normal_"
 	normal_form.air_control = 350
-	
+	normal_form.form_type = Form.NORMAL
 	
 	large_form.scale = Vector2(1, 1)
-	large_form.max_speed = 60.0
+	large_form.max_speed = 70.0
 	large_form.jump_velocity = -150.0
 	large_form.collision_size = Vector2(15, 30)
 	large_form.can_dash = false
 	large_form.animation_prefix = "large_"
-	normal_form.air_control = 400
-
+	large_form.air_control = 400
+	large_form.form_type = Form.LARGE
 
 	# Link this player to the dash manager
 	dash_manager.player = self
@@ -94,6 +94,7 @@ func _ready() -> void:
 
 
 func switch_form(form_data: FormData) -> void:
+	current_form = form_data.form_type  # <-- THIS FIXES THE ISSUE
 	scale = form_data.scale
 	MAX_SPEED = form_data.max_speed
 	JUMP_VELOCITY = form_data.jump_velocity
@@ -183,20 +184,24 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("small_form"):
 		switch_form(small_form)
+		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("normal_form"):
 		switch_form(normal_form)
+		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("large_form"):
 		switch_form(large_form)
+		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("smaller_form"):
 		switch_form(smaller_form)
+		print("Current form: ", get_form())
 	
-	# if dash_manager.is_dashing:
-		# animated_sprite_2d.play("dash")
+	if dash_manager.is_dashing:
+		animated_sprite_2d.play("smaller_dash")
 	#elif is_preparing_jump:
 		# pass
 	# elif is_landing:
 		# animated_sprite_2d.play("fallingFollowThrough")
-	if is_on_floor():
+	elif is_on_floor():
 		if direction == 0:
 			animated_sprite_2d.play(current_animation_prefix +"idle")
 		else:
@@ -220,3 +225,8 @@ func update_animation():
 
 func get_facing_direction() -> int:
 	return -1 if animated_sprite_2d.flip_h else 1
+
+func get_form():
+	return current_form
+func get_player_velocity():
+	return velocity

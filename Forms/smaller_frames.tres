@@ -1,9 +1,26 @@
-[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://8besqpvtf8nd"]
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://8besqpvtf8nd"]
 
 [ext_resource type="Texture2D" uid="uid://dpv0byl5pcvw4" path="res://Assets/Sprites/4bitmc.png" id="1_cempl"]
+[ext_resource type="Texture2D" uid="uid://c6dduquircrds" path="res://Assets/Sprites/4bitmcrun.png" id="2_i3eda"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i3eda"]
+atlas = ExtResource("2_i3eda")
+region = Rect2(0, 0, 4, 5)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xjuxb"]
+atlas = ExtResource("2_i3eda")
+region = Rect2(0, 0, 4, 5)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i3eda")
+}],
+"loop": true,
+"name": &"smaller_dash",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_cempl")
@@ -23,6 +40,9 @@ animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_cempl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xjuxb")
 }],
 "loop": true,
 "name": &"smaller_run",
