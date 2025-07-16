@@ -1,16 +1,57 @@
-[gd_resource type="SpriteFrames" load_steps=2 format=3 uid="uid://cjvh6q6gngpr5"]
+[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://cjvh6q6gngpr5"]
 
-[ext_resource type="Texture2D" uid="uid://xq0t27at46xj" path="res://Assets/Sprites/8bitmc.png" id="1_duo6m"]
+[ext_resource type="Texture2D" uid="uid://xq0t27at46xj" path="res://assets/sprites/8bitmc.png" id="1_duo6m"]
+[ext_resource type="Texture2D" uid="uid://dyn1rgg5a6poh" path="res://assets/sprites/8bitmcidle.png" id="2_xvudm"]
+[ext_resource type="Texture2D" uid="uid://cprmk1heq5ooe" path="res://assets/sprites/8bitmcrun.png" id="3_2qup2"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3mbwj"]
+atlas = ExtResource("2_xvudm")
+region = Rect2(8, 0, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k8y5s"]
+atlas = ExtResource("3_2qup2")
+region = Rect2(0, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wyn1g"]
+atlas = ExtResource("3_2qup2")
+region = Rect2(8, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oo0jd"]
+atlas = ExtResource("3_2qup2")
+region = Rect2(16, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7utgy"]
+atlas = ExtResource("3_2qup2")
+region = Rect2(24, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_i2tiw"]
+atlas = ExtResource("3_2qup2")
+region = Rect2(32, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_utdr8"]
+atlas = ExtResource("3_2qup2")
+region = Rect2(40, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mx2y2"]
+atlas = ExtResource("3_2qup2")
+region = Rect2(48, 0, 8, 10)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_en7ws"]
+atlas = ExtResource("3_2qup2")
+region = Rect2(56, 0, 8, 10)
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_duo6m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3mbwj")
 }],
 "loop": true,
 "name": &"small_idle",
-"speed": 5.0
+"speed": 2.5
 }, {
 "frames": [{
 "duration": 1.0,
@@ -22,7 +63,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_duo6m")
+"texture": SubResource("AtlasTexture_k8y5s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wyn1g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oo0jd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7utgy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_i2tiw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_utdr8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mx2y2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_en7ws")
 }],
 "loop": true,
 "name": &"small_run",

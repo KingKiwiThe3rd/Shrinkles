@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://botg5xq4umtku"
-path="res://.godot/imported/16bitidle.png-fab16e8366c80f691f4d62a5c3958252.ctex"
+uid="uid://bxrv6kbtipvqy"
+path="res://.godot/imported/breakableLab.png-f80bc6f9b7c0a386853ce3191be50b5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/16bitidle.png"
-dest_files=["res://.godot/imported/16bitidle.png-fab16e8366c80f691f4d62a5c3958252.ctex"]
+source_file="res://assets/sprites/breakableLab.png"
+dest_files=["res://.godot/imported/breakableLab.png-f80bc6f9b7c0a386853ce3191be50b5e.ctex"]
 
 [params]
 

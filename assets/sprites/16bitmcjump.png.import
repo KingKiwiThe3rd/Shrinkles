@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://botg5xq4umtku"
-path="res://.godot/imported/16bitidle.png-fab16e8366c80f691f4d62a5c3958252.ctex"
+uid="uid://bqy4bqr1fgyja"
+path="res://.godot/imported/16bitmcjump.png-197b2c69d873cdfe15822323bd438744.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/16bitidle.png"
-dest_files=["res://.godot/imported/16bitidle.png-fab16e8366c80f691f4d62a5c3958252.ctex"]
+source_file="res://assets/sprites/16bitmcjump.png"
+dest_files=["res://.godot/imported/16bitmcjump.png-197b2c69d873cdfe15822323bd438744.ctex"]
 
 [params]
 

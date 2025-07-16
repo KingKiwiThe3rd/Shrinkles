@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://botg5xq4umtku"
-path="res://.godot/imported/16bitidle.png-fab16e8366c80f691f4d62a5c3958252.ctex"
+uid="uid://bnppm534vhxgo"
+path="res://.godot/imported/32bitmcrun.png-27bc3f9b3c4e0eab5ff3649c5c576a3f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/16bitidle.png"
-dest_files=["res://.godot/imported/16bitidle.png-fab16e8366c80f691f4d62a5c3958252.ctex"]
+source_file="res://assets/sprites/32bitmcrun.png"
+dest_files=["res://.godot/imported/32bitmcrun.png-27bc3f9b3c4e0eab5ff3649c5c576a3f.ctex"]
 
 [params]
 
