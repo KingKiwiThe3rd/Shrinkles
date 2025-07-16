@@ -15,6 +15,10 @@ run/main_scene="uid://bwjyxjswceqrv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[editor_plugins]
+
+enabled=PackedStringArray("res://addons/autotileplugin/plugin.cfg")
+
 [input]
 
 Jump={
@@ -64,3 +68,7 @@ Dash={
 
 2d_render/layer_1="World"
 2d_render/layer_2="Player"
+
+[rendering]
+
+textures/canvas_textures/default_texture_filter=0
