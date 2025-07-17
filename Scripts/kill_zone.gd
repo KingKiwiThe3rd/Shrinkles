@@ -1,7 +1,8 @@
 extends Area2D
 
 @onready var timer: Timer = $Timer
-@onready var priff = get_node("/root/Game/Priff")
+@onready var shrinky = get_node("Shrinky")
+
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -23,6 +24,6 @@ func _on_body_entered(body: Node2D) -> void:
 
 func _on_timer_timeout() -> void:
 	Engine.time_scale = 1.0
-	priff.die_and_respawn()  # Call the fade-out respawn function
+	shrinky.die_and_respawn()  # Call the fade-out respawn function
 	get_tree().reload_current_scene()
 	
