@@ -2,13 +2,13 @@
 
 [ext_resource type="Script" uid="uid://cbhuc1t1m0dwm" path="res://Scripts/Shrinky.gd" id="1_kjqfi"]
 [ext_resource type="Script" uid="uid://dalxlrimjqb1y" path="res://Forms/Dash_Manager.gd" id="3_fileg"]
-[ext_resource type="Texture2D" uid="uid://bru8s8tqldkjh" path="res://Assets/Sprites/32bitmc.png" id="3_qmd8i"]
-[ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://Assets/Sprites/16bitmc.png" id="4_nrkhb"]
-[ext_resource type="Texture2D" uid="uid://botg5xq4umtku" path="res://Assets/Sprites/16bitidle.png" id="4_wbst6"]
-[ext_resource type="Texture2D" uid="uid://cbuyufa8r1tdr" path="res://Assets/Sprites/16bitmcrun.png" id="5_ihsto"]
-[ext_resource type="Texture2D" uid="uid://xq0t27at46xj" path="res://Assets/Sprites/8bitmc.png" id="5_wbst6"]
-[ext_resource type="Texture2D" uid="uid://dpv0byl5pcvw4" path="res://Assets/Sprites/4bitmc.png" id="6_ihsto"]
-[ext_resource type="Texture2D" uid="uid://v2fb2mejvksp" path="res://Assets/Sprites/sizeShiftParticles.png" id="9_wbst6"]
+[ext_resource type="Texture2D" uid="uid://bru8s8tqldkjh" path="res://assets/sprites/32bitmc.png" id="3_qmd8i"]
+[ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://assets/sprites/16bitmc.png" id="4_nrkhb"]
+[ext_resource type="Texture2D" uid="uid://botg5xq4umtku" path="res://assets/sprites/16bitidle.png" id="4_wbst6"]
+[ext_resource type="Texture2D" uid="uid://cbuyufa8r1tdr" path="res://assets/sprites/16bitmcrun.png" id="5_ihsto"]
+[ext_resource type="Texture2D" uid="uid://xq0t27at46xj" path="res://assets/sprites/8bitmc.png" id="5_wbst6"]
+[ext_resource type="Texture2D" uid="uid://dpv0byl5pcvw4" path="res://assets/sprites/4bitmc.png" id="6_ihsto"]
+[ext_resource type="Texture2D" uid="uid://v2fb2mejvksp" path="res://assets/sprites/sizeShiftParticles.png" id="9_wbst6"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4olj2"]
 atlas = ExtResource("4_wbst6")
