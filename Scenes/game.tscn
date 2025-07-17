@@ -350,3 +350,9 @@ position = Vector2(402, 64)
 
 [node name="KeyCard" parent="." instance=ExtResource("9_ldgsr")]
 position = Vector2(58, 59)
+
+[node name="LockedDoor2" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(415, 64)
+
+[node name="KeyCard2" parent="." instance=ExtResource("9_ldgsr")]
+position = Vector2(283, 63)

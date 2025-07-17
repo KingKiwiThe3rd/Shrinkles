@@ -1,16 +1,24 @@
 extends StaticBody2D
 
-@export var key_required := true
-
 func _on_KeyCheck_body_entered(body):
-	if body.is_in_group("player"):
-		# Check if key is nearby
-		for child in get_tree().get_nodes_in_group("keycards"):
-			if child.picked_up and child.player_ref == body:
-				open_door()
-				break
+	if body.has_method("has_keycard") and body.has_keycard:
+		open_door()
 
 func open_door():
 	$CollisionShape2D.disabled = true
-	$Sprite2D.visible = false  # or play open animation
-	queue_free()  # or disable collision and hide
+	$Sprite2D.visible = false
+	if get_tree().get_first_node_in_group("player") as CharacterBody2D:
+		var player = get_tree().get_first_node_in_group("player") as CharacterBody2D
+		if player.keycard:
+			player.keycard.queue_free()
+			player.keycard = null
+			player.has_keycard = false
+	queue_free()  # optional: if you want to remove the door itself too
+
+
+func _on_scanner_body_entered(body: Node2D) -> void:
+	print ("yes")
+	if body is CharacterBody2D:
+		var player = body as CharacterBody2D
+		if player.has_keycard:
+			open_door()

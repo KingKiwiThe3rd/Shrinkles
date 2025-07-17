@@ -107,6 +107,7 @@ shape = SubResource("RectangleShape2D_n5nl0")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_gdplv")
-frame_progress = 0.802297
+autoplay = "default"
+frame_progress = 0.79078
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -44,6 +44,10 @@ var large_form := FormData.new()
 var is_on_ladder = false
 var is_climbing = false
 
+
+var keycard = null
+var has_keycard: bool = false
+
 func _ready() -> void:
 	add_to_group("player")
 	
@@ -268,3 +272,10 @@ func get_form():
 	return current_form
 func get_player_velocity():
 	return velocity
+
+func give_keycard(card):
+	has_keycard = true
+	keycard = card
+	if keycard:
+		keycard.global_position = global_position + Vector2(0, -20)
+		keycard.show()  # in case it was hidden
