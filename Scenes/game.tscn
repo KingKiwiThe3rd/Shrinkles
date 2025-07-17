@@ -1,11 +1,12 @@
-[gd_scene load_steps=11 format=3 uid="uid://bwjyxjswceqrv"]
+[gd_scene load_steps=12 format=3 uid="uid://bwjyxjswceqrv"]
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
-[ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://assets/sprites/tilemaptemplate.png" id="3_3dryh"]
-[ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://assets/sprites/labtilemap.png" id="3_wowpa"]
+[ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://Assets/Sprites/tilemaptemplate.png" id="3_3dryh"]
+[ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://Assets/Sprites/labtilemap.png" id="3_wowpa"]
 [ext_resource type="Script" uid="uid://d3j2dd13ko6lv" path="res://Scenes/tile_map.gd" id="4_wowpa"]
 [ext_resource type="PackedScene" uid="uid://cdiyv24pvm6ai" path="res://Scenes/breakable_box.tscn" id="6_i6g32"]
+[ext_resource type="PackedScene" uid="uid://c6s0rocml1gw1" path="res://Scenes/ladder.tscn" id="7_1l0tm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
@@ -308,3 +309,36 @@ position = Vector2(187, 14)
 
 [node name="breakable_box4" parent="." instance=ExtResource("6_i6g32")]
 position = Vector2(234, 49)
+
+[node name="Ladder" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 195)
+
+[node name="Ladder2" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 182)
+
+[node name="Ladder3" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 169)
+
+[node name="Ladder4" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 156)
+
+[node name="Ladder5" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 130)
+
+[node name="Ladder6" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 117)
+
+[node name="Ladder7" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 104)
+
+[node name="Ladder8" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 91)
+
+[node name="Ladder9" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 78)
+
+[node name="Ladder10" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 143)
+
+[node name="Ladder11" parent="." instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 65)

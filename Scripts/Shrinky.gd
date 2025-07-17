@@ -41,6 +41,8 @@ var small_form := FormData.new()
 var normal_form := FormData.new()
 var large_form := FormData.new()
 
+var is_on_ladder = false
+var is_climbing = false
 
 func _ready() -> void:
 	add_to_group("player")
@@ -133,7 +135,25 @@ func _physics_process(delta: float) -> void:
 	# Horizontal movement input
 	var input_direction = Input.get_action_strength("Right") - Input.get_action_strength("Left")
 	var target_speed = input_direction * MAX_SPEED
-	
+	# Start climbing manually if inside ladder and pressing UP
+	if is_on_ladder and Input.is_action_pressed("Up"):
+		velocity.y = 0  # cancel gravity
+		is_climbing = true
+
+		if Input.is_action_pressed("Up"):
+			velocity.y = -MAX_SPEED
+		elif Input.is_action_pressed("Down"):
+			velocity.y = MAX_SPEED
+		else:
+			velocity.y = 0
+
+		# Allow jump off
+		if Input.is_action_just_pressed("Jump"):
+			is_on_ladder = false
+			is_climbing = false
+			velocity.y = JUMP_VELOCITY  # or whatever jump logic
+
+
 	if is_on_floor():
 		if abs(target_speed) > 0.1:
 			velocity.x = move_toward(velocity.x, target_speed, ACCELERATION * delta)

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://c6hukldulw33b"
-path="res://.godot/imported/labtilemap.png-c7c161135081fc14903a7d62c8bb17ac.ctex"
+path="res://.godot/imported/labtilemap.png-5153364d373a71d7325a610fd1f5bdad.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/labtilemap.png"
-dest_files=["res://.godot/imported/labtilemap.png-c7c161135081fc14903a7d62c8bb17ac.ctex"]
+source_file="res://Assets/Sprites/labtilemap.png"
+dest_files=["res://.godot/imported/labtilemap.png-5153364d373a71d7325a610fd1f5bdad.ctex"]
 
 [params]
 
