@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bwjyxjswceqrv"]
+[gd_scene load_steps=20 format=3 uid="uid://bwjyxjswceqrv"]
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://c6s0rocml1gw1" path="res://Scenes/ladder.tscn" id="7_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://bv2wr08fdoj8a" path="res://Scenes/locked_door.tscn" id="8_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://6jef5csgiayi" path="res://Scenes/key_card.tscn" id="9_ldgsr"]
+[ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="12_rku1e"]
+[ext_resource type="PackedScene" uid="uid://pk2ktr3bniek" path="res://Scenes/check_points.tscn" id="13_rfjv2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
@@ -379,3 +381,9 @@ position = Vector2(415, 64)
 
 [node name="KeyCard2" parent="." instance=ExtResource("9_ldgsr")]
 position = Vector2(283, 63)
+
+[node name="Kill_zone" parent="." instance=ExtResource("12_rku1e")]
+position = Vector2(89, 60)
+
+[node name="CheckPoints" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(-59, 71)

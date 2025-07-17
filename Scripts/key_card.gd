@@ -12,7 +12,7 @@ func _on_body_entered(body):
 
 		self.collision_layer = 0
 		self.collision_mask = 0
-		$CollisionShape2D.disabled = true
+		$CollisionShape2D.set_deferred("disabled", true)
 		z_index = 100
 
 func _process(delta):

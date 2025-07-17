@@ -47,9 +47,18 @@ var is_climbing = false
 
 var keycard = null
 var has_keycard: bool = false
+var spawn_point: Vector2
 
 func _ready() -> void:
 	add_to_group("player")
+	# Only overwrite if checkpoint hasn't been saved yet
+	if GameManager.checkpoint_position == Vector2.ZERO:
+		GameManager.checkpoint_position = global_position
+
+	spawn_point = GameManager.checkpoint_position
+	global_position = spawn_point
+
+	print("Shrinky spawned at: ", global_position)
 	
 	var normal_frames := preload("res://Forms/normal_frames.tres")
 	var large_frames := preload("res://Forms/large_frames.tres")
@@ -82,13 +91,8 @@ func _ready() -> void:
 
 	normal_form.scale = Vector2(1.0, 1.0)
 	normal_form.max_speed = 100.0
-
 	normal_form.jump_velocity = -170.0
-	normal_form.collision_size = Vector2(10, 16)
-
-	normal_form.jump_velocity = -240.0
 	normal_form.collision_size = Vector2(10, 15.9)
-
 	normal_form.can_dash = false
 	normal_form.animation_prefix = "normal_"
 	normal_form.air_control = 350
@@ -279,3 +283,32 @@ func give_keycard(card):
 	if keycard:
 		keycard.global_position = global_position + Vector2(0, -20)
 		keycard.show()  # in case it was hidden
+		
+func set_spawn_point(new_spawn_point: Vector2):
+	print("Shrinky has gotten the checkpoint")
+	spawn_point = new_spawn_point
+
+
+func die_and_respawn():
+	print(">> die_and_respawn called")
+	global_position = spawn_point
+	velocity = Vector2.ZERO
+	show()  # If you ever hide Shrinky
+	var collider = get_node_or_null("CollisionShape2D")
+	if collider:
+		collider.disabled = false
+	print("Player respawned at: ", global_position)
+
+	var areas = get_tree().get_nodes_in_group("room")
+	for area in areas:
+		if area is Area2D and area.has_method("check_player_inside"):
+			area.check_player_inside()
+#func die_and_respawn():
+	#global_position = spawn_point
+	#velocity = Vector2.ZERO
+	#print("Player respawned at: ", global_position)
+#
+	#var areas = get_tree().get_nodes_in_group("room")
+	#for area in areas:
+		#if area is Area2D and area.has_method("check_player_inside"):
+			#area.check_player_inside()
