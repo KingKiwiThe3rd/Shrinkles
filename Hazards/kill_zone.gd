@@ -7,7 +7,10 @@ var is_disabled = false  # New flag
 func _on_body_entered(body: Node2D) -> void:
 	if is_disabled:
 		return
-
+	var robots = get_tree().get_nodes_in_group("Hazards")
+	for robot in robots:
+		if robot.has_method("Kill"):
+			robot.smile()
 	if body.name == "Shrinky":
 		print("you died from killzone")
 		is_disabled = true
