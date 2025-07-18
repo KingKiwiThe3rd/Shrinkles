@@ -2,13 +2,13 @@
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
-[ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://assets/sprites/tilemaptemplate.png" id="3_3dryh"]
-[ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://assets/sprites/labtilemap.png" id="3_wowpa"]
-[ext_resource type="Texture2D" uid="uid://b1ei1dgjs0r7h" path="res://assets/sprites/vents.png" id="4_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://Assets/Sprites/tilemaptemplate.png" id="3_3dryh"]
+[ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://Assets/Sprites/labtilemap.png" id="3_wowpa"]
+[ext_resource type="Texture2D" uid="uid://b1ei1dgjs0r7h" path="res://Assets/Sprites/vents.png" id="4_o5yvi"]
 [ext_resource type="Script" uid="uid://d3j2dd13ko6lv" path="res://Scenes/tile_map.gd" id="4_wowpa"]
-[ext_resource type="Texture2D" uid="uid://cjen73cghif3h" path="res://assets/sprites/cave_tilemap.png" id="5_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://cjen73cghif3h" path="res://Assets/Sprites/cave_tilemap.png" id="5_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://cdiyv24pvm6ai" path="res://Scenes/breakable_box.tscn" id="6_i6g32"]
-[ext_resource type="Texture2D" uid="uid://ckkmj682w7exj" path="res://assets/sprites/foreground_lab.png" id="6_rku1e"]
+[ext_resource type="Texture2D" uid="uid://ckkmj682w7exj" path="res://Assets/Sprites/foreground_lab.png" id="6_rku1e"]
 [ext_resource type="PackedScene" uid="uid://c6s0rocml1gw1" path="res://Scenes/ladder.tscn" id="7_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://bv2wr08fdoj8a" path="res://Scenes/locked_door.tscn" id="8_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://6jef5csgiayi" path="res://Scenes/key_card.tscn" id="9_ldgsr"]
@@ -468,7 +468,7 @@ position = Vector2(171, 14)
 position = Vector2(187, 14)
 
 [node name="breakable_box4" parent="Breakable_blocks" instance=ExtResource("6_i6g32")]
-position = Vector2(234, 49)
+position = Vector2(234, 65)
 
 [node name="ladders" type="Node" parent="."]
 
@@ -511,15 +511,6 @@ position = Vector2(444, 60)
 [node name="Ladder13" parent="ladders" instance=ExtResource("7_1l0tm")]
 position = Vector2(444, 48)
 
-[node name="LockedDoor" parent="." instance=ExtResource("8_h4fw4")]
-position = Vector2(402, 64)
-
-[node name="KeyCard" parent="." instance=ExtResource("9_ldgsr")]
-position = Vector2(58, 59)
-
-[node name="Collectables#KeyCard2" parent="." instance=ExtResource("9_ldgsr")]
-position = Vector2(283, 63)
-
 [node name="Locked_Doors" type="Node" parent="."]
 
 [node name="LockedDoor" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
@@ -547,6 +538,15 @@ position = Vector2(204, 202)
 [node name="CheckPoints" parent="Checkpoints" instance=ExtResource("13_rfjv2")]
 position = Vector2(-59, 71)
 
+
+[node name="KeyCards" type="Node" parent="."]
+
+[node name="KeyCard" parent="KeyCards" instance=ExtResource("9_ldgsr")]
+position = Vector2(58, 59)
+
+[node name="KeyCard2" parent="KeyCards" instance=ExtResource("9_ldgsr")]
+position = Vector2(283, 61)
+
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
 [node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
@@ -573,3 +573,4 @@ texture_scale = 4.77
 [node name="Sprite2D" type="Sprite2D" parent="PointLight2D"]
 position = Vector2(0.0926675, -81.6009)
 texture = ExtResource("20_7nbq1")
+

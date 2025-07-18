@@ -2,13 +2,16 @@ extends CharacterBody2D
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var dash_manager = $Dash_Manager
-@export var sprite_frames: SpriteFrames
+@onready var stomp_manager = $Stomp_Manager
 
+@export var sprite_frames: SpriteFrames
 @export var tilemap: TileMap  # Reference to the TileMap with vent tiles
 @export var camera: Camera2D  # Reference to the Camera2D node
 @export var normal_zoom: Vector2 = Vector2(3.6, 3.6)  # Default zoom level
 @export var vent_zoom: Vector2 = Vector2(7,7)  # Zoom level when in vent
 @export var zoom_speed: float = 2.0  # Speed of zoom transition (units per second)
+
+@onready var tile_map: TileMap = $"../TileMap"
 var vent_source_id: int = 7  # Matches vent_source_id from vent_tilemap.gd
 var target_zoom: Vector2  # Current target zoom level
 var is_in_vent: bool = false
@@ -69,11 +72,11 @@ func _ready() -> void:
 	spawn_point = GameManager.checkpoint_position
 	global_position = spawn_point
 
-	print("Shrinky spawned at: ", global_position)
-	
+	print("Shrinky spawned at: ", global_position)	
 	camera=get_node("Camera2D")
-	tilemap=get_node("res://scenes/game/TileMap")
-	
+	#tilemap=get_node("res://scenes/game/TileMap")
+
+
 	var normal_frames := preload("res://Forms/normal_frames.tres")
 	var large_frames := preload("res://Forms/large_frames.tres")
 	var small_frames := preload("res://Forms/small_frames.tres")
@@ -125,6 +128,7 @@ func _ready() -> void:
 	large_form.air_control = 600
 	large_form.form_type = Form.LARGE
 	large_form.ladder_detector = Vector2(15,30)
+	large_form.can_stomp = true
 
 
 	switch_form(normal_form)# start with normal form
@@ -178,6 +182,9 @@ func switch_form(form_data: FormData) -> void:
 	# Pass abilities to DashManager
 	if dash_manager:
 		dash_manager.dash_enabled = form_data.can_dash
+	if stomp_manager:
+		stomp_manager.stomp_enabled = form_data.can_stomp
+		print("it's stomping time")
 
 
 
@@ -265,7 +272,10 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("Dash") and dash_manager.dash_enabled:
 		dash_manager.try_dash()
-	
+	elif Input.is_action_just_pressed("GroundPound") and stomp_manager.stomp_enabled:
+		stomp_manager.try_stomp(global_position)
+		print("STOMP")
+
 	var direction := Input.get_axis("Left", "Right")
 	if not dash_manager.is_dashing && not is_on_ladder:
 		var current_accel = ACCELERATION if is_on_floor() else AIR_CONTROL
@@ -322,14 +332,6 @@ func _physics_process(delta: float) -> void:
 		var tile_pos = tilemap.local_to_map(tilemap.to_local(check_pos))
 		var tile_data = tilemap.get_cell_tile_data(0, tile_pos)
 		is_in_vent = tile_data and tilemap.get_cell_source_id(0, tile_pos) == vent_source_id
-		print("Player global pos: ", global_position, ", check pos: ", check_pos, ", tile pos: ", tile_pos)
-		if is_in_vent:
-			print("Player on vent tile at: ", tile_pos, " (source_id = ", vent_source_id, ")")
-		else:
-			print("Player not on vent tile at: ", tile_pos)
-	else:
-		is_in_vent = false
-		print("No valid TileMap assigned for vent detection")
 	
 	# Set target zoom based on vent status
 	if camera and is_instance_valid(camera):

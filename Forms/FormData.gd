@@ -12,6 +12,8 @@ class_name FormData
 @export var air_control: float
 @export var form_type: int  # 0 = SMALLER, 1 = SMALL, etc.
 @export var ladder_detector: Vector2
+@export var can_stomp: bool = false
+
 
 # Ability toggles
 @export var can_dash: bool = false

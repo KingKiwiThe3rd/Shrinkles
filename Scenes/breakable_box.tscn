@@ -1,7 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://cdiyv24pvm6ai"]
+[gd_scene load_steps=6 format=3 uid="uid://cdiyv24pvm6ai"]
 
 [ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://Assets/Sprites/16bitmc.png" id="1_400t6"]
 [ext_resource type="Script" uid="uid://ba0co6o1cx1ta" path="res://Scripts/breakable_box.gd" id="1_tr8hw"]
+[ext_resource type="Script" uid="uid://b6pjt2nauojfe" path="res://Scripts/sensor.gd" id="3_vyrgs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr8hw"]
 size = Vector2(16, 16)
@@ -9,7 +10,7 @@ size = Vector2(16, 16)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vyrgs"]
 size = Vector2(16, 4.8125)
 
-[node name="breakable_box" type="StaticBody2D"]
+[node name="breakable_box" type="StaticBody2D" groups=["Breakable"]]
 script = ExtResource("1_tr8hw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
@@ -18,9 +19,10 @@ shape = SubResource("RectangleShape2D_tr8hw")
 [node name="Sprite2D" type="Sprite2D" parent="."]
 texture = ExtResource("1_400t6")
 
-[node name="Sensor" type="Area2D" parent="."]
+[node name="Sensor" type="Area2D" parent="." groups=["Breakable"]]
 position = Vector2(0, 8)
-collision_mask = 2
+collision_mask = 3
+script = ExtResource("3_vyrgs")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Sensor"]
 position = Vector2(0, 1.59375)
