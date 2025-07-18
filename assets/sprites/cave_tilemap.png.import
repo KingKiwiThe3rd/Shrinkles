@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://5k35riea7uit"
-path="res://.godot/imported/labDoor.png-d0a84c44807ddb5b78e1a8ad5717d437.ctex"
+uid="uid://cjen73cghif3h"
+path="res://.godot/imported/cave_tilemap.png-6f00ac82d66159c65528b9492f669064.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/labDoor.png"
-dest_files=["res://.godot/imported/labDoor.png-d0a84c44807ddb5b78e1a8ad5717d437.ctex"]
+source_file="res://assets/sprites/cave_tilemap.png"
+dest_files=["res://.godot/imported/cave_tilemap.png-6f00ac82d66159c65528b9492f669064.ctex"]
 
 [params]
 

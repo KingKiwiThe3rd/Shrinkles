@@ -4,6 +4,15 @@ extends CharacterBody2D
 @onready var dash_manager = $Dash_Manager
 @export var sprite_frames: SpriteFrames
 
+@export var tilemap: TileMap  # Reference to the TileMap with vent tiles
+@export var camera: Camera2D  # Reference to the Camera2D node
+@export var normal_zoom: Vector2 = Vector2(3.6, 3.6)  # Default zoom level
+@export var vent_zoom: Vector2 = Vector2(7,7)  # Zoom level when in vent
+@export var zoom_speed: float = 2.0  # Speed of zoom transition (units per second)
+var vent_source_id: int = 7  # Matches vent_source_id from vent_tilemap.gd
+var target_zoom: Vector2  # Current target zoom level
+var is_in_vent: bool = false
+
 var is_preparing_jump = false
 var is_landing = false
 var jump_prepare_timer = 0.0
@@ -50,6 +59,9 @@ var has_keycard: bool = false
 
 func _ready() -> void:
 	add_to_group("player")
+	
+	camera=get_node("Camera2D")
+	tilemap=get_node("res://scenes/game/TileMap")
 	
 	var normal_frames := preload("res://Forms/normal_frames.tres")
 	var large_frames := preload("res://Forms/large_frames.tres")
@@ -106,6 +118,30 @@ func _ready() -> void:
 	# Link this player to the dash manager
 	dash_manager.player = self
 	switch_form(normal_form)# start with normal form
+	
+	# Initialize camera zoom and warn if not set
+	if camera and is_instance_valid(camera):
+		camera.zoom = normal_zoom
+		target_zoom = normal_zoom
+		print("Camera initialized with zoom: ", normal_zoom)
+	else:
+		push_warning("Camera2D not assigned or invalid! Please assign a Camera2D node to the 'camera' property in the Inspector.")
+
+	# Check and attempt to find TileMap if not assigned
+	if not tilemap or not is_instance_valid(tilemap):
+		push_warning("TileMap not assigned or invalid! Attempting to find a TileMap in the scene...")
+		# Try to find a TileMap in the scene
+		var root = get_tree().current_scene
+		if root:
+			for node in root.get_children():
+				if node is TileMap:
+					tilemap = node
+					print("Found TileMap: ", tilemap.name)
+					break
+		if not tilemap or not is_instance_valid(tilemap):
+			push_warning("No valid TileMap found in the scene! Please assign a TileMap node with vent tiles (source_id = 7) to the 'tilemap' property in the Inspector.")
+	else:
+		print("TileMap assigned: ", tilemap.name)
 
 
 func switch_form(form_data: FormData) -> void:
@@ -236,6 +272,32 @@ func _physics_process(delta: float) -> void:
 		switchFormParticles.scale=Vector2(1,1)
 		switch_form(smaller_form)
 		print("Current form: ", get_form())
+		
+		# Check if player is on a vent tile
+	if tilemap and is_instance_valid(tilemap):
+		# Adjust position to check tile at player's feet (based on collision shape)
+		var offset = Vector2(0, $CollisionShape2D.shape.size.y / 2) if $CollisionShape2D.shape is RectangleShape2D else Vector2.ZERO
+		var check_pos = global_position + offset
+		var tile_pos = tilemap.local_to_map(tilemap.to_local(check_pos))
+		var tile_data = tilemap.get_cell_tile_data(0, tile_pos)
+		is_in_vent = tile_data and tilemap.get_cell_source_id(0, tile_pos) == vent_source_id
+		print("Player global pos: ", global_position, ", check pos: ", check_pos, ", tile pos: ", tile_pos)
+		if is_in_vent:
+			print("Player on vent tile at: ", tile_pos, " (source_id = ", vent_source_id, ")")
+		else:
+			print("Player not on vent tile at: ", tile_pos)
+	else:
+		is_in_vent = false
+		print("No valid TileMap assigned for vent detection")
+	
+	# Set target zoom based on vent status
+	if camera and is_instance_valid(camera):
+		target_zoom = vent_zoom if is_in_vent else normal_zoom
+		# Smoothly interpolate camera zoom
+		if camera.zoom != target_zoom:
+			var new_zoom = camera.zoom.lerp(target_zoom, delta * zoom_speed)
+			camera.zoom = new_zoom
+			print("Camera zoom updated to: ", camera.zoom, " (target: ", target_zoom, ")")
 	
 	if dash_manager.is_dashing:
 		animated_sprite_2d.play("smaller_dash")
