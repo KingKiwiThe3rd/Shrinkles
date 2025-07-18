@@ -17,9 +17,9 @@
 [ext_resource type="PackedScene" uid="uid://oigntvfu4ih8" path="res://Hazards/shorty.tscn" id="14_1phco"]
 [ext_resource type="PackedScene" uid="uid://qllcb8v2mmpi" path="res://Hazards/string_bean.tscn" id="14_nb51f"]
 [ext_resource type="Shader" path="res://Scenes/sfumato.gdshader" id="17_85qyi"]
-[ext_resource type="Texture2D" uid="uid://k4s048raoj73" path="res://assets/sprites/background2.png" id="17_ewbju"]
-[ext_resource type="Texture2D" uid="uid://bmcnqf8a34n86" path="res://assets/sprites/light_cone.png" id="19_iivbl"]
-[ext_resource type="Texture2D" uid="uid://dckupvvjo2wgq" path="res://assets/sprites/lightbulb.png" id="20_7nbq1"]
+[ext_resource type="Texture2D" uid="uid://k4s048raoj73" path="res://Assets/Sprites/background2.png" id="17_ewbju"]
+[ext_resource type="Texture2D" uid="uid://bmcnqf8a34n86" path="res://Assets/Sprites/light_cone.png" id="19_iivbl"]
+[ext_resource type="Texture2D" uid="uid://dckupvvjo2wgq" path="res://Assets/Sprites/lightbulb.png" id="20_7nbq1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
@@ -442,7 +442,7 @@ shader_parameter/fade_strength = 1.3
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(165, 60)
+position = Vector2(-150, 190)
 
 [node name="Camera2D" type="Camera2D" parent="Shrinky"]
 zoom = Vector2(3.6, 3.6)
@@ -538,7 +538,6 @@ position = Vector2(204, 202)
 [node name="CheckPoints" parent="Checkpoints" instance=ExtResource("13_rfjv2")]
 position = Vector2(-59, 71)
 
-
 [node name="KeyCards" type="Node" parent="."]
 
 [node name="KeyCard" parent="KeyCards" instance=ExtResource("9_ldgsr")]
@@ -556,6 +555,7 @@ motion_mirroring = Vector2(4096, 4096)
 
 [node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
 material = SubResource("ShaderMaterial_iivbl")
+position = Vector2(-1639, 2077)
 texture = ExtResource("17_ewbju")
 centered = false
 region_enabled = true
@@ -573,4 +573,3 @@ texture_scale = 4.77
 [node name="Sprite2D" type="Sprite2D" parent="PointLight2D"]
 position = Vector2(0.0926675, -81.6009)
 texture = ExtResource("20_7nbq1")
-
