@@ -442,12 +442,12 @@ shader_parameter/fade_strength = 1.3
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-<<<<<<< HEAD
+
 position = Vector2(543, 8184)
-=======
+
 
 position = Vector2(155, 8184)
->>>>>>> e88d929aa3eb4f2b9ce5a92425b4be335413a256
+
 
 
 [node name="Camera2D" type="Camera2D" parent="Shrinky"]
