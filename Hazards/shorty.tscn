@@ -1,0 +1,63 @@
+[gd_scene load_steps=7 format=3 uid="uid://oigntvfu4ih8"]
+
+[ext_resource type="Script" uid="uid://e76tpl250hp3" path="res://Hazards/shorty.gd" id="1_a85sk"]
+[ext_resource type="Texture2D" uid="uid://c2e287bm52knm" path="res://Assets/Sprites/Fatty normal.png" id="2_erp61"]
+[ext_resource type="Texture2D" uid="uid://yfcj4udepxwd" path="res://Assets/Sprites/Fatty smiling.png" id="3_c5gpx"]
+[ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="3_erp61"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_287tu"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_erp61")
+}],
+"loop": true,
+"name": &"Base",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_c5gpx")
+}],
+"loop": true,
+"name": &"Kill",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_a85sk"]
+size = Vector2(16, 16)
+
+[node name="Shorty" type="Node2D"]
+scale = Vector2(0.5, 0.5)
+script = ExtResource("1_a85sk")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(7, -16)
+scale = Vector2(0.9375, 1)
+sprite_frames = SubResource("SpriteFrames_287tu")
+animation = &"Base"
+autoplay = "Base"
+
+[node name="Kill_zone" parent="." instance=ExtResource("3_erp61")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_zone"]
+position = Vector2(8, -8)
+shape = SubResource("RectangleShape2D_a85sk")
+
+[node name="RayCast_Right" type="RayCast2D" parent="."]
+position = Vector2(8, -8)
+target_position = Vector2(10, 10)
+
+[node name="RayCast_Left" type="RayCast2D" parent="."]
+position = Vector2(8, -8)
+target_position = Vector2(-10, 10)
+
+[node name="RayCast_Left_wall" type="RayCast2D" parent="."]
+position = Vector2(8, -8)
+target_position = Vector2(-10, 0)
+
+[node name="RayCast_Right_wall" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -8)
+target_position = Vector2(10, 0)
+
+[connection signal="body_entered" from="Kill_zone" to="." method="_on_kill_zone_body_entered"]

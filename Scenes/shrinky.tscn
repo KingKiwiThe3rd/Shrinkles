@@ -1,4 +1,4 @@
-[gd_scene load_steps=23 format=3 uid="uid://dedwio2103ro2"]
+[gd_scene load_steps=24 format=3 uid="uid://dedwio2103ro2"]
 
 [ext_resource type="Script" uid="uid://cbhuc1t1m0dwm" path="res://Scripts/Shrinky.gd" id="1_kjqfi"]
 [ext_resource type="Script" uid="uid://dalxlrimjqb1y" path="res://Forms/Dash_Manager.gd" id="3_fileg"]
@@ -193,6 +193,9 @@ particles_anim_h_frames = 5
 particles_anim_v_frames = 1
 particles_anim_loop = false
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wbst6"]
+size = Vector2(15, 15)
+
 [node name="Shrinky" type="CharacterBody2D"]
 z_index = 20
 collision_layer = 2
@@ -225,3 +228,9 @@ local_coords = true
 gravity = Vector2(0, 0)
 anim_speed_min = 3.0
 anim_speed_max = 3.0
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, -0.5)
+shape = SubResource("RectangleShape2D_wbst6")

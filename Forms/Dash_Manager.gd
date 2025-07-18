@@ -2,7 +2,7 @@
 extends Node
 
 var player: CharacterBody2D
-const DASH_INITIAL_BOOST = 340.0
+const DASH_INITIAL_BOOST = 330.0
 const DASH_DECAY = 1400.0
 const DASH_TIME = 0.2
 const DASH_COOLDOWN = 0.45
@@ -21,6 +21,7 @@ var dash_enabled = false
 func _process(delta):
 	if not dash_enabled:
 		return  # Block dash if form can't dash
+	
 	if dash_cooldown_timer > 0:
 		dash_cooldown_timer -= delta
 		
