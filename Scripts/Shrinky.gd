@@ -266,7 +266,7 @@ func _physics_process(delta: float) -> void:
 		# dash_manager.reset_dash()
 
 	if Input.is_action_just_pressed("Jump"):
-		if is_on_floor() or jumps_left > 0:
+		if is_on_floor():
 			is_preparing_jump = true
 			jump_prepare_timer = JUMP_PREPARE_DURATION
 
