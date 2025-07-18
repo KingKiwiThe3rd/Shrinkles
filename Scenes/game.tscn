@@ -352,37 +352,58 @@ position = Vector2(283, 63)
 [node name="Ladders" type="Node" parent="."]
 
 [node name="Ladder" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 195)
+position = Vector2(438, 196)
 
 [node name="Ladder2" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 182)
+position = Vector2(438, 188)
 
 [node name="Ladder3" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 169)
+position = Vector2(438, 180)
 
 [node name="Ladder4" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 156)
+position = Vector2(438, 172)
 
 [node name="Ladder5" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 130)
+position = Vector2(438, 133)
 
 [node name="Ladder6" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 117)
+position = Vector2(438, 125)
 
 [node name="Ladder7" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 104)
+position = Vector2(438, 117)
 
 [node name="Ladder8" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 91)
+position = Vector2(438, 109)
 
 [node name="Ladder9" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 78)
+position = Vector2(438, 77)
 
 [node name="Ladder10" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 143)
+position = Vector2(438, 164)
 
 [node name="Ladder11" parent="Ladders" instance=ExtResource("7_1l0tm")]
-position = Vector2(438, 65)
+position = Vector2(438, 69)
+
+[node name="Ladder12" parent="Ladders" instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 156)
+
+[node name="Ladder13" parent="Ladders" instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 148)
+
+[node name="Ladder14" parent="Ladders" instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 141)
+
+[node name="Ladder15" parent="Ladders" instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 101)
+
+[node name="Ladder16" parent="Ladders" instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 93)
+
+[node name="Ladder17" parent="Ladders" instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 85)
+
+[node name="Ladder18" parent="Ladders" instance=ExtResource("7_1l0tm")]
+position = Vector2(438, 61)
 
 [node name="Locked_Doors" type="Node" parent="."]
 

@@ -56,7 +56,7 @@ target_position = Vector2(-10, 10)
 position = Vector2(8, -8)
 target_position = Vector2(-10, 0)
 
-[node name="RayCast_Right_wall" type="RayCast2D" parent="."]
+[node name="RayCast_Right_wall" type="RayCast2D" parent="." groups=["Enemies"]]
 position = Vector2(8, -8)
 target_position = Vector2(10, 0)
 

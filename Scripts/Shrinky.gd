@@ -48,9 +48,11 @@ var is_climbing = false
 var keycard = null
 var has_keycard: bool = false
 var spawn_point: Vector2
+@onready var area_2d: Area2D = $Area2D
 
 func _ready() -> void:
 	add_to_group("player")
+	dash_manager.player = self
 	# Only overwrite if checkpoint hasn't been saved yet
 	if GameManager.checkpoint_position == Vector2.ZERO:
 		GameManager.checkpoint_position = global_position
@@ -72,43 +74,47 @@ func _ready() -> void:
 
 	
 	smaller_form.scale = Vector2(1, 1)
-	smaller_form.max_speed = 80
+	smaller_form.max_speed = 70
 	smaller_form.jump_velocity = -80
 	smaller_form.collision_size = Vector2(4, 4)
 	smaller_form.can_dash = true
 	smaller_form.animation_prefix = "smaller_"
 	smaller_form.air_control = 300
 	smaller_form.form_type = Form.SMALLER
+	smaller_form.ladder_detector = Vector2(4,4)
 
 	small_form.scale = Vector2(1, 1)
-	small_form.max_speed = 70.0
+	small_form.max_speed = 60.0
 	small_form.jump_velocity = -220.0
 	small_form.collision_size = Vector2(5, 8)
 	#small_form.can_dash = false
 	small_form.animation_prefix = "small_"
 	small_form.air_control = 200
 	small_form.form_type = Form.SMALL
+	small_form.ladder_detector = Vector2(5,8)
 
 	normal_form.scale = Vector2(1.0, 1.0)
-	normal_form.max_speed = 100.0
-	normal_form.jump_velocity = -170.0
+	normal_form.max_speed = 90.0
+	normal_form.jump_velocity = -160.0
 	normal_form.collision_size = Vector2(10, 15.9)
 	normal_form.can_dash = false
 	normal_form.animation_prefix = "normal_"
 	normal_form.air_control = 350
 	normal_form.form_type = Form.NORMAL
-	
+	normal_form.ladder_detector = Vector2(10,15.9)
+
+
 	large_form.scale = Vector2(1, 1)
 	large_form.max_speed = 70.0
-	large_form.jump_velocity = -150.0
+	large_form.jump_velocity = -140.0
 	large_form.collision_size = Vector2(15, 30)
 	large_form.can_dash = false
 	large_form.animation_prefix = "large_"
-	large_form.air_control = 400
+	large_form.air_control = 600
 	large_form.form_type = Form.LARGE
+	large_form.ladder_detector = Vector2(15,30)
 
-	# Link this player to the dash manager
-	dash_manager.player = self
+
 	switch_form(normal_form)# start with normal form
 
 
@@ -144,22 +150,53 @@ func _physics_process(delta: float) -> void:
 	var input_direction = Input.get_action_strength("Right") - Input.get_action_strength("Left")
 	var target_speed = input_direction * MAX_SPEED
 	# Start climbing manually if inside ladder and pressing UP
-	if is_on_ladder and Input.is_action_pressed("Up"):
-		velocity.y = 0  # cancel gravity
-		is_climbing = true
-
-		if Input.is_action_pressed("Up"):
+	# === LADDER LOGIC ===
+	if is_on_ladder:
+		velocity = Vector2.ZERO  # Full gravity cancel
+		velocity.x = 0           # Prevent flying bug
+		jumps_left = JUMP_AMOUNT
+			# Movement
+		if Input.is_action_just_pressed("Jump"):
+			is_on_ladder = false
+			is_climbing = false
+		elif Input.is_action_just_pressed("Dash"):
+			is_on_ladder = false
+			is_climbing = false
+			jumps_left = JUMP_AMOUNT
+		elif Input.is_action_pressed("Up"):
 			velocity.y = -MAX_SPEED
 		elif Input.is_action_pressed("Down"):
 			velocity.y = MAX_SPEED
 		else:
 			velocity.y = 0
 
-		# Allow jump off
-		if Input.is_action_just_pressed("Jump"):
+		# Exit at top or ground
+		var top_of_ladder = global_position.y < $CollisionShape2D.global_position.y - $CollisionShape2D.shape.extents.y
+		var bottom_of_ladder = is_on_floor()
+		if top_of_ladder or bottom_of_ladder:
 			is_on_ladder = false
 			is_climbing = false
-			velocity.y = JUMP_VELOCITY  # or whatever jump logic
+			jumps_left = JUMP_AMOUNT
+
+		# Exit if not overlapping any ladder
+		var still_touching_ladder := false
+		for area in area_2d.get_overlapping_areas():
+			if area.is_in_group("Ladder"):
+				still_touching_ladder = true
+				break
+		if not still_touching_ladder:
+			is_on_ladder = false
+			is_climbing = false
+			
+
+	# ENTER LADDER ONLY IF PRESSING UP AND TOUCHING IT
+	elif Input.is_action_pressed("Up"):
+		for area in area_2d.get_overlapping_areas():
+			if area.is_in_group("Ladder"):
+				is_on_ladder = true
+				is_climbing = true
+				break
+
 
 
 	if is_on_floor():
@@ -181,9 +218,9 @@ func _physics_process(delta: float) -> void:
 
 	# Reset on floor
 	if is_on_floor():
-		dash_manager.air_dashes_used = 0
-		dash_manager.extra_air_dash = false
-		dash_manager.reset_dash()
+		dash_manager.air_dashes_used = 0  #check
+		dash_manager.extra_air_dash = false  # check
+		# dash_manager.reset_dash()
 
 	if Input.is_action_just_pressed("Jump"):
 		if is_on_floor() or jumps_left > 0:
@@ -194,7 +231,7 @@ func _physics_process(delta: float) -> void:
 		dash_manager.try_dash()
 	
 	var direction := Input.get_axis("Left", "Right")
-	if not dash_manager.is_dashing:
+	if not dash_manager.is_dashing && not is_on_ladder:
 		var current_accel = ACCELERATION if is_on_floor() else AIR_CONTROL
 		velocity.x = move_toward(velocity.x, direction * MAX_SPEED, current_accel * delta)
 		animated_sprite_2d.flip_h = direction < 0 if direction != 0 else animated_sprite_2d.flip_h
@@ -259,15 +296,6 @@ func _physics_process(delta: float) -> void:
 			# animated_sprite_2d.play("falling")
 	# update_animation()
 	move_and_slide()
-	
-func update_animation():
-	if not is_on_floor():
-		$AnimatedSprite2D.play(current_animation_prefix + "jump")
-	elif abs(velocity.x) > 5:
-		$AnimatedSprite2D.play(current_animation_prefix + "run")
-	else:
-		$AnimatedSprite2D.play(current_animation_prefix + "idle")
-
 
 func get_facing_direction() -> int:
 	return -1 if animated_sprite_2d.flip_h else 1
@@ -303,12 +331,3 @@ func die_and_respawn():
 	for area in areas:
 		if area is Area2D and area.has_method("check_player_inside"):
 			area.check_player_inside()
-#func die_and_respawn():
-	#global_position = spawn_point
-	#velocity = Vector2.ZERO
-	#print("Player respawned at: ", global_position)
-#
-	#var areas = get_tree().get_nodes_in_group("room")
-	#for area in areas:
-		#if area is Area2D and area.has_method("check_player_inside"):
-			#area.check_player_inside()

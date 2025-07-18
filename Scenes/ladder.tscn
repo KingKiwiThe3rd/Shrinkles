@@ -4,9 +4,9 @@
 [ext_resource type="Texture2D" uid="uid://3rukk7fc1ugj" path="res://Assets/Sprites/ladder.png" id="2_fnw1j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qe38t"]
-size = Vector2(6, 16)
+size = Vector2(6, 15.5)
 
-[node name="Ladder" type="Area2D"]
+[node name="Ladder" type="Area2D" groups=["Ladder"]]
 collision_mask = 3
 script = ExtResource("1_75hc7")
 
