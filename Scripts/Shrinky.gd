@@ -99,18 +99,18 @@ func _ready() -> void:
 	smaller_form.ladder_detector = Vector2(4,4)
 
 	small_form.scale = Vector2(1, 1)
-	small_form.max_speed = 60.0
-	small_form.jump_velocity = -220.0
+	small_form.max_speed = 50.0
+	small_form.jump_velocity = -190.0
 	small_form.collision_size = Vector2(5, 8)
 	#small_form.can_dash = false
 	small_form.animation_prefix = "small_"
-	small_form.air_control = 200
+	small_form.air_control = 100
 	small_form.form_type = Form.SMALL
 	small_form.ladder_detector = Vector2(5,8)
 
 	normal_form.scale = Vector2(1.0, 1.0)
-	normal_form.max_speed = 90.0
-	normal_form.jump_velocity = -160.0
+	normal_form.max_speed = 100.0
+	normal_form.jump_velocity = -170.0
 	normal_form.collision_size = Vector2(10, 15.9)
 	normal_form.can_dash = false
 	normal_form.animation_prefix = "normal_"

@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cmsaq15gtkeia" path="res://Assets/Sprites/ladder2.png" id="2_fnw1j"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_qe38t"]
-size = Vector2(14, 48)
+size = Vector2(14, 24)
 
 [node name="Ladder" type="Area2D" groups=["Ladder"]]
 collision_mask = 3
