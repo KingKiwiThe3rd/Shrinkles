@@ -15,6 +15,10 @@ run/main_scene="uid://bwjyxjswceqrv"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
+[autoload]
+
+GameManager="*res://Scripts/Game_Manager.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/autotileplugin/plugin.cfg")
@@ -88,3 +92,4 @@ Down={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+environment/defaults/default_clear_color=Color(0.147777, 0.0936402, 0.145067, 1)

@@ -5,7 +5,7 @@ func _on_KeyCheck_body_entered(body):
 		open_door()
 
 func open_door():
-	$CollisionShape2D.disabled = true
+	$CollisionShape2D.set_deferred("disabled", true)
 	$Sprite2D.visible = false
 	if get_tree().get_first_node_in_group("player") as CharacterBody2D:
 		var player = get_tree().get_first_node_in_group("player") as CharacterBody2D
@@ -13,7 +13,7 @@ func open_door():
 			player.keycard.queue_free()
 			player.keycard = null
 			player.has_keycard = false
-	queue_free()  # optional: if you want to remove the door itself too
+	call_deferred("queue_free")  # optional: if you want to remove the door itself too
 
 
 func _on_scanner_body_entered(body: Node2D) -> void:
