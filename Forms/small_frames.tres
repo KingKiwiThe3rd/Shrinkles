@@ -1,8 +1,10 @@
-[gd_resource type="SpriteFrames" load_steps=13 format=3 uid="uid://cjvh6q6gngpr5"]
+[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://cjvh6q6gngpr5"]
 
+[ext_resource type="Texture2D" uid="uid://bll1cujvhnlyb" path="res://Assets/Sprites/8bitmcfall.png" id="1_3mbwj"]
 [ext_resource type="Texture2D" uid="uid://xq0t27at46xj" path="res://Assets/Sprites/8bitmc.png" id="1_duo6m"]
 [ext_resource type="Texture2D" uid="uid://dyn1rgg5a6poh" path="res://Assets/Sprites/8bitmcidle.png" id="2_xvudm"]
 [ext_resource type="Texture2D" uid="uid://cprmk1heq5ooe" path="res://Assets/Sprites/8bitmcrun.png" id="3_2qup2"]
+[ext_resource type="Texture2D" uid="uid://chldrflpjp25f" path="res://Assets/Sprites/8bitmcjump.png" id="3_3mbwj"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_3mbwj"]
 atlas = ExtResource("2_xvudm")
@@ -44,6 +46,14 @@ region = Rect2(56, 0, 8, 10)
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("1_3mbwj")
+}],
+"loop": true,
+"name": &"small_falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
 "texture": ExtResource("1_duo6m")
 }, {
 "duration": 1.0,
@@ -55,7 +65,7 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_duo6m")
+"texture": ExtResource("3_3mbwj")
 }],
 "loop": true,
 "name": &"small_jump",

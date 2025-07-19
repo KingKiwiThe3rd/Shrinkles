@@ -1,6 +1,7 @@
-[gd_resource type="SpriteFrames" load_steps=15 format=3 uid="uid://d066i3ylwcn5a"]
+[gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://d066i3ylwcn5a"]
 
 [ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://Assets/Sprites/16bitmc.png" id="1_1je0b"]
+[ext_resource type="Texture2D" uid="uid://d88anfx2fybu" path="res://Assets/Sprites/16bitmcfall.png" id="1_21vwm"]
 [ext_resource type="Texture2D" uid="uid://botg5xq4umtku" path="res://Assets/Sprites/16bitidle.png" id="2_8jnvq"]
 [ext_resource type="Texture2D" uid="uid://bqy4bqr1fgyja" path="res://Assets/Sprites/16bitmcjump.png" id="3_21vwm"]
 [ext_resource type="Texture2D" uid="uid://cbuyufa8r1tdr" path="res://Assets/Sprites/16bitmcrun.png" id="3_fxij7"]
@@ -47,6 +48,14 @@ region = Rect2(16, 34, 16, 17)
 
 [resource]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_21vwm")
+}],
+"loop": true,
+"name": &"normal_falling",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_1je0b")

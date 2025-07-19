@@ -356,8 +356,8 @@ func _physics_process(delta: float) -> void:
 	else:
 		if velocity.y < 25:
 			animated_sprite_2d.play(current_animation_prefix +"jump")
-		# else:
-			# animated_sprite_2d.play("falling")
+		else:
+			animated_sprite_2d.play(current_animation_prefix +"falling")
 	# update_animation()
 	move_and_slide()
 

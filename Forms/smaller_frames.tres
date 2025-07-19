@@ -26,6 +26,14 @@ animations = [{
 "texture": ExtResource("1_cempl")
 }],
 "loop": true,
+"name": &"smaller_falling",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_cempl")
+}],
+"loop": true,
 "name": &"smaller_idle",
 "speed": 5.0
 }, {
