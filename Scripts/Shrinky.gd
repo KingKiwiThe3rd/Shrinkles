@@ -100,7 +100,7 @@ func _ready() -> void:
 
 	small_form.scale = Vector2(1, 1)
 	small_form.max_speed = 50.0
-	small_form.jump_velocity = -190.0
+	small_form.jump_velocity = -200.0
 	small_form.collision_size = Vector2(5, 8)
 	#small_form.can_dash = false
 	small_form.animation_prefix = "small_"

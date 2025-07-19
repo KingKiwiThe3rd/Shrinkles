@@ -8,6 +8,14 @@ var direction = -1
 @onready var ray_cast_left: RayCast2D = $RayCast_Left
 @onready var ray_cast_left_wall: RayCast2D = $RayCast_Left_wall
 @onready var ray_cast_right_wall: RayCast2D = $RayCast_Right_wall
+@onready var ray_cast_left_wall_2: RayCast2D = $RayCast_Left_wall2
+@onready var ray_cast_right_wall_2: RayCast2D = $RayCast_Right_wall2
+@onready var ray_cast_left_wall_3: RayCast2D = $RayCast_Left_wall3
+@onready var ray_cast_right_wall_3: RayCast2D = $RayCast_Right_wall3
+@onready var ray_cast_left_wall_4: RayCast2D = $RayCast_Left_wall4
+@onready var ray_cast_right_wall_4: RayCast2D = $RayCast_Right_wall4
+@onready var ray_cast_left_wall_5: RayCast2D = $RayCast_Left_wall5
+@onready var ray_cast_right_wall_5: RayCast2D = $RayCast_Right_wall5
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 
@@ -32,6 +40,43 @@ func _process(delta: float) -> void:
 		animated_sprite_2d.flip_h= false
 		
 	if ray_cast_left_wall.is_colliding():
+		direction =1
+		animated_sprite_2d.flip_h= true
+		
+		
+	if ray_cast_left_wall.is_colliding():
+		direction =1
+		animated_sprite_2d.flip_h= true
+
+	if  ray_cast_right_wall_2.is_colliding():
+		direction =-1
+		animated_sprite_2d.flip_h= false
+		
+	if ray_cast_left_wall_2.is_colliding():
+		direction =1
+		animated_sprite_2d.flip_h= true
+
+	if  ray_cast_right_wall_3.is_colliding():
+		direction =-1
+		animated_sprite_2d.flip_h= false
+		
+	if ray_cast_left_wall_3.is_colliding():
+		direction =1
+		animated_sprite_2d.flip_h= true
+
+	if  ray_cast_right_wall_4.is_colliding():
+		direction =-1
+		animated_sprite_2d.flip_h= false
+		
+	if ray_cast_left_wall_4.is_colliding():
+		direction =1
+		animated_sprite_2d.flip_h= true
+
+	if  ray_cast_right_wall_5.is_colliding():
+		direction =-1
+		animated_sprite_2d.flip_h= false
+		
+	if ray_cast_left_wall_5.is_colliding():
 		direction =1
 		animated_sprite_2d.flip_h= true
 		
