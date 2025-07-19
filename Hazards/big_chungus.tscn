@@ -52,12 +52,44 @@ target_position = Vector2(10, 9)
 position = Vector2(8, -8)
 target_position = Vector2(-10, 9)
 
-[node name="RayCast_Left_wall" type="RayCast2D" parent="."]
+[node name="RayCast_Left_wall" type="RayCast2D" parent="." groups=["Enemies"]]
 position = Vector2(8, -8)
-target_position = Vector2(-10, 0)
+target_position = Vector2(-9, 0)
 
 [node name="RayCast_Right_wall" type="RayCast2D" parent="." groups=["Enemies"]]
 position = Vector2(8, -8)
-target_position = Vector2(10, 0)
+target_position = Vector2(9, 0)
+
+[node name="RayCast_Left_wall2" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -12)
+target_position = Vector2(-9, 0)
+
+[node name="RayCast_Right_wall2" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -12)
+target_position = Vector2(9, 0)
+
+[node name="RayCast_Left_wall3" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -3.5)
+target_position = Vector2(-9, 0)
+
+[node name="RayCast_Right_wall3" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -3.5)
+target_position = Vector2(9, 0)
+
+[node name="RayCast_Left_wall4" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -15)
+target_position = Vector2(-9, 0)
+
+[node name="RayCast_Right_wall4" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -15)
+target_position = Vector2(9, 0)
+
+[node name="RayCast_Left_wall5" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -1)
+target_position = Vector2(-9, 0)
+
+[node name="RayCast_Right_wall5" type="RayCast2D" parent="." groups=["Enemies"]]
+position = Vector2(8, -1)
+target_position = Vector2(9, 0)
 
 [connection signal="body_entered" from="Kill_zone" to="." method="_on_kill_zone_body_entered"]

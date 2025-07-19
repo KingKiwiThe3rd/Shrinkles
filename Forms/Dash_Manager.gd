@@ -2,10 +2,10 @@
 extends Node
 
 var player: CharacterBody2D
-const DASH_INITIAL_BOOST = 330.0
+const DASH_INITIAL_BOOST = 340.0
 const DASH_DECAY = 1400.0
 const DASH_TIME = 0.2
-const DASH_COOLDOWN = 0.45
+const DASH_COOLDOWN = 0.40 
 
 @onready var animated_sprite_2d: AnimatedSprite2D = $"../AnimatedSprite2D"
 
