@@ -15,7 +15,15 @@ func _on_body_entered(body: Node2D) -> void:
 		print("you died from killzone")
 		is_disabled = true
 		Engine.time_scale = 0.25
-		$CollisionShape2D.set_deferred("disabled", true)
+		var collider = get_node_or_null("CollisionShape2D")
+		if collider == null:
+			collider = get_node_or_null("CollisionPolygon2D")
+
+		if collider:
+			collider.set_deferred("disabled", true)
+
+
+
 		timer.start()
 
 func _on_timer_timeout() -> void:

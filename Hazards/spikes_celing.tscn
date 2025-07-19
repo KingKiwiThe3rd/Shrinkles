@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=3 uid="uid://btxksfw0gix8n"]
+
+[ext_resource type="Texture2D" uid="uid://brjs6aunxfqtc" path="res://Assets/Sprites/spikesPlaceholder.png" id="1_rijds"]
+[ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="2_p2mra"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tnr75"]
+size = Vector2(8, 7)
+
+[node name="Spikes_celing" type="Area2D"]
+rotation = -3.14029
+collision_mask = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_rijds")
+
+[node name="Kill_zone" parent="." instance=ExtResource("2_p2mra")]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kill_zone"]
+polygon = PackedVector2Array(-4, 4, -2, -3, 0, 1, 2, -3, 3, -3, 3, 0, 4, 0, 4, 4)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_tnr75")
