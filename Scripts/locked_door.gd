@@ -10,7 +10,7 @@ func open_door():
 			player.keycard = null
 			player.has_keycard = false
 	#await $AnimationPlayer.animation_finished
-	call_deferred("queue_free")  # optional: if you want to remove the door itself too
+	#call_deferred("queue_free")  # optional: if you want to remove the door itself too
 #
 #func open_door():
 	#$CollisionShape2D.set_deferred("disabled", true)

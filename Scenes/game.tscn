@@ -440,18 +440,18 @@ sources/7 = SubResource("TileSetAtlasSource_ldgsr")
 sources/5 = SubResource("TileSetAtlasSource_rku1e")
 sources/6 = SubResource("TileSetAtlasSource_rfjv2")
 
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fkdbe"]
+
 [sub_resource type="ShaderMaterial" id="ShaderMaterial_iivbl"]
 shader = ExtResource("17_85qyi")
 shader_parameter/blur_strength = 0.5
 shader_parameter/fade_strength = 1.5
 shader_parameter/mute_amount = 1.0
 
-[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fkdbe"]
-
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(4930, 8268)
+position = Vector2(1815, 7662)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
@@ -785,49 +785,6 @@ position = Vector2(27, 7425)
 
 [node name="Locked_Doors" type="Node" parent="."]
 
-[node name="LockedDoor" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor2" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor3" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor4" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor5" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor6" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor7" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor8" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor9" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor10" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor11" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor12" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor13" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor14" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor15" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor16" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor17" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor18" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor19" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-rotation = -3.14014
-
-[node name="LockedDoor20" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor21" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-
 [node name="Checkpoints" type="Node" parent="."]
 
 [node name="CheckPoints" parent="Checkpoints" instance=ExtResource("13_rfjv2")]
@@ -895,20 +852,8 @@ position = Vector2(1797, 7609)
 [node name="KeyCard20" parent="KeyCards" instance=ExtResource("9_ldgsr")]
 position = Vector2(1987, 7415)
 
-[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
-
-[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
-texture_filter = 1
-texture_repeat = 2
-motion_mirroring = Vector2(4096, 4096)
-
-[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
-material = SubResource("ShaderMaterial_iivbl")
-position = Vector2(-72, 25)
-texture = ExtResource("17_ewbju")
-centered = false
-region_enabled = true
-region_rect = Rect2(0, 0, 4096, 4096)
+[node name="KeyCard21" parent="KeyCards" instance=ExtResource("9_ldgsr")]
+position = Vector2(5052, 8009)
 
 [node name="lights" type="Node" parent="."]
 
@@ -1923,6 +1868,66 @@ position = Vector2(4732, 8092)
 [node name="Spikes271" parent="Spikes" instance=ExtResource("21_exi56")]
 position = Vector2(4740, 8092)
 
+[node name="Spikes272" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5004, 8276)
+
+[node name="Spikes273" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5012, 8276)
+
+[node name="Spikes274" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5020, 8276)
+
+[node name="Spikes275" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5028, 8276)
+
+[node name="Spikes276" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5052, 8276)
+
+[node name="Spikes277" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5060, 8276)
+
+[node name="Spikes278" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5068, 8276)
+
+[node name="Spikes279" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5076, 8276)
+
+[node name="Spikes280" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5100, 8276)
+
+[node name="Spikes281" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5108, 8276)
+
+[node name="Spikes282" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5116, 8276)
+
+[node name="Spikes283" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5124, 8276)
+
+[node name="Spikes284" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5132, 8276)
+
+[node name="Spikes285" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5156, 8276)
+
+[node name="Spikes286" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5164, 8276)
+
+[node name="Spikes287" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5172, 8276)
+
+[node name="Spikes288" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5180, 8276)
+
+[node name="Spikes289" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5188, 8276)
+
+[node name="Spikes290" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(5196, 8276)
+
+[node name="Spikes_celing48" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(4988, 8196)
+
 [node name="KillZones" type="Node" parent="."]
 
 [node name="Shorty" parent="KillZones" instance=ExtResource("14_1phco")]
@@ -2136,67 +2141,55 @@ texture_scale = 4.77
 position = Vector2(0.0926675, -81.6009)
 texture = ExtResource("20_7nbq1")
 
-[node name="KeyCard" parent="." instance=ExtResource("9_ldgsr")]
-position = Vector2(5052, 8009)
+[node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+texture_filter = 1
+texture_repeat = 2
+motion_mirroring = Vector2(4096, 4096)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+material = SubResource("ShaderMaterial_iivbl")
+position = Vector2(-72, 25)
+texture = ExtResource("17_ewbju")
+centered = false
+region_enabled = true
+region_rect = Rect2(0, 0, 4096, 4096)
 
 [node name="LockedDoor" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes2" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5004, 8276)
+[node name="LockedDoor2" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes3" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5012, 8276)
+[node name="LockedDoor3" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes4" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5020, 8276)
+[node name="LockedDoor4" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes5" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5028, 8276)
+[node name="LockedDoor5" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes6" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5052, 8276)
+[node name="LockedDoor6" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes7" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5060, 8276)
+[node name="LockedDoor7" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes8" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5068, 8276)
+[node name="LockedDoor8" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes9" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5076, 8276)
+[node name="LockedDoor9" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes10" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5100, 8276)
+[node name="LockedDoor10" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes11" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5108, 8276)
+[node name="LockedDoor11" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes12" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5116, 8276)
+[node name="LockedDoor12" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes13" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5124, 8276)
+[node name="LockedDoor13" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes14" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5132, 8276)
+[node name="LockedDoor14" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes15" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5156, 8276)
+[node name="LockedDoor15" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes16" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5164, 8276)
+[node name="LockedDoor16" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes17" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5172, 8276)
+[node name="LockedDoor17" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes18" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5180, 8276)
+[node name="LockedDoor18" parent="." instance=ExtResource("8_h4fw4")]
 
-[node name="Spikes19" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5188, 8276)
-
-[node name="Spikes20" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(5196, 8276)
-
-[node name="Spikes_celing" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(4988, 8196)
+[node name="LockedDoor19" parent="." instance=ExtResource("8_h4fw4")]
