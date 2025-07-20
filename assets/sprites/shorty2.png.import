@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dll0u0og425ti"
-path="res://.godot/imported/shorty2.png-5f2af28312138e9f8f4a0170947bb886.ctex"
+path="res://.godot/imported/shorty2.png-33b9bb09fcd00d4eb2630bddd8935d74.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/shorty2.png"
-dest_files=["res://.godot/imported/shorty2.png-5f2af28312138e9f8f4a0170947bb886.ctex"]
+source_file="res://assets/sprites/shorty2.png"
+dest_files=["res://.godot/imported/shorty2.png-33b9bb09fcd00d4eb2630bddd8935d74.ctex"]
 
 [params]
 
