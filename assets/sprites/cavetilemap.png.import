@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxbsvuqsjdm4a"
-path="res://.godot/imported/cavetilemap.png-24291e76cef2177b75be856c1f848547.ctex"
+path="res://.godot/imported/cavetilemap.png-1d4cf11020abb29bcf706c14c9d7bb83.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/cavetilemap.png"
-dest_files=["res://.godot/imported/cavetilemap.png-24291e76cef2177b75be856c1f848547.ctex"]
+source_file="res://Assets/Sprites/cavetilemap.png"
+dest_files=["res://.godot/imported/cavetilemap.png-1d4cf11020abb29bcf706c14c9d7bb83.ctex"]
 
 [params]
 

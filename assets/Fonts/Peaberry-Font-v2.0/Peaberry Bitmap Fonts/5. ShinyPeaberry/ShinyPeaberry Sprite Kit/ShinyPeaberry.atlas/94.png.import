@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bpu0wphoux5ub"
-path="res://.godot/imported/94.png-862efdbd0bb51ddcc70b289bce7fa3d2.ctex"
+path="res://.godot/imported/94.png-a7f16e6df4bf953226aa4f13d5ac5c0a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/5. ShinyPeaberry/ShinyPeaberry Sprite Kit/ShinyPeaberry.atlas/94.png"
-dest_files=["res://.godot/imported/94.png-862efdbd0bb51ddcc70b289bce7fa3d2.ctex"]
+source_file="res://Assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/5. ShinyPeaberry/ShinyPeaberry Sprite Kit/ShinyPeaberry.atlas/94.png"
+dest_files=["res://.godot/imported/94.png-a7f16e6df4bf953226aa4f13d5ac5c0a.ctex"]
 
 [params]
 

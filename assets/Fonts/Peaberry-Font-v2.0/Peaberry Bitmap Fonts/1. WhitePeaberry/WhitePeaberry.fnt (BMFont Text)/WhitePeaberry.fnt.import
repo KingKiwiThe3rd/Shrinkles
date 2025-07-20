@@ -7,7 +7,7 @@ valid=false
 
 [deps]
 
-source_file="res://assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/1. WhitePeaberry/WhitePeaberry.fnt (BMFont Text)/WhitePeaberry.fnt"
+source_file="res://Assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/1. WhitePeaberry/WhitePeaberry.fnt (BMFont Text)/WhitePeaberry.fnt"
 
 [params]
 
