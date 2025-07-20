@@ -1,4 +1,4 @@
-[gd_scene load_steps=36 format=3 uid="uid://bwjyxjswceqrv"]
+[gd_scene load_steps=37 format=3 uid="uid://bwjyxjswceqrv"]
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
 [ext_resource type="Script" path="res://Scenes/screen_shake.gd" id="2_22asu"]
@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://gdtwseqi8dej" path="res://Hazards/Fatty.tscn" id="13_1phco"]
 [ext_resource type="PackedScene" uid="uid://pk2ktr3bniek" path="res://Scenes/check_points.tscn" id="13_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://oigntvfu4ih8" path="res://Hazards/shorty.tscn" id="14_1phco"]
+[ext_resource type="PackedScene" uid="uid://c6pgo65otp0w2" path="res://Scenes/Teleporter.tscn" id="14_81klo"]
 [ext_resource type="PackedScene" uid="uid://qllcb8v2mmpi" path="res://Hazards/string_bean.tscn" id="14_nb51f"]
 [ext_resource type="Shader" uid="uid://e614fpnx1vd" path="res://Scenes/sfumato.gdshader" id="17_85qyi"]
 [ext_resource type="Texture2D" uid="uid://k4s048raoj73" path="res://assets/sprites/background2.png" id="17_ewbju"]
@@ -854,6 +855,10 @@ position = Vector2(1987, 7415)
 
 [node name="KeyCard21" parent="KeyCards" instance=ExtResource("9_ldgsr")]
 position = Vector2(5052, 8009)
+
+[node name="Area2D" parent="KeyCards" instance=ExtResource("14_81klo")]
+position = Vector2(6649, 8258)
+target_position = Vector2(6602, 8278)
 
 [node name="lights" type="Node" parent="."]
 

@@ -1,0 +1,17 @@
+[gd_scene load_steps=2 format=3 uid="uid://bekjfiw8kgf4n"]
+
+[ext_resource type="Script" uid="uid://coy2e6nmum05b" path="res://Scenes/transition.gd" id="1_ml2rw"]
+
+[node name="Transition" type="CanvasLayer"]
+script = ExtResource("1_ml2rw")
+
+[node name="Fade" type="ColorRect" parent="."]
+visible = false
+modulate = Color(0.666667, 0.666667, 0.666667, 1)
+self_modulate = Color(0.666667, 0.666667, 0.666667, 1)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
