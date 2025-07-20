@@ -1,6 +1,7 @@
-[gd_scene load_steps=38 format=3 uid="uid://26r5x70cfrob"]
+[gd_scene load_steps=39 format=3 uid="uid://26r5x70cfrob"]
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
+[ext_resource type="Script" uid="uid://2hdhx5aiwyat" path="res://Scenes/timer_ui.gd" id="1_tgy6u"]
 [ext_resource type="Script" uid="uid://boya3ftm3d4la" path="res://Scenes/screen_shake.gd" id="2_22asu"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://assets/sprites/tilemaptemplate.png" id="3_3dryh"]
@@ -510,6 +511,28 @@ cache/0/12/0/underline_thickness = 0.0
 cache/0/12/0/scale = 1.0
 
 [node name="game" type="Node2D"]
+
+[node name="TimerLayer" type="CanvasLayer" parent="."]
+layer = 25
+
+[node name="TimerUI" type="Control" parent="TimerLayer"]
+z_index = 100
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_tgy6u")
+
+[node name="TimerLabel" type="Label" parent="TimerLayer/TimerUI"]
+z_index = 100
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 23.0
+grow_horizontal = 0
+text = "00:00"
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
 position = Vector2(203, 4728)
