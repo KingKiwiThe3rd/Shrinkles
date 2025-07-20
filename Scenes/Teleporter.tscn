@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://c6pgo65otp0w2"]
+
+[ext_resource type="Script" uid="uid://cv1xellq3oli" path="res://Scenes/teleporter.gd" id="1_jdjlm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lrpa0"]
+size = Vector2(30, 29)
+
+[node name="Area2D" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_jdjlm")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_lrpa0")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
