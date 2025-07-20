@@ -1,10 +1,10 @@
 [gd_resource type="SpriteFrames" load_steps=16 format=3 uid="uid://d066i3ylwcn5a"]
 
-[ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://assets/sprites/16bitmc.png" id="1_1je0b"]
-[ext_resource type="Texture2D" uid="uid://d88anfx2fybu" path="res://assets/sprites/16bitmcfall.png" id="1_21vwm"]
-[ext_resource type="Texture2D" uid="uid://botg5xq4umtku" path="res://assets/sprites/16bitidle.png" id="2_8jnvq"]
-[ext_resource type="Texture2D" uid="uid://bqy4bqr1fgyja" path="res://assets/sprites/16bitmcjump.png" id="3_21vwm"]
-[ext_resource type="Texture2D" uid="uid://cbuyufa8r1tdr" path="res://assets/sprites/16bitmcrun.png" id="3_fxij7"]
+[ext_resource type="Texture2D" uid="uid://d4hnlmcouja7s" path="res://Assets/Sprites/16bitmc.png" id="1_1je0b"]
+[ext_resource type="Texture2D" uid="uid://d88anfx2fybu" path="res://Assets/Sprites/16bitmcfall.png" id="1_21vwm"]
+[ext_resource type="Texture2D" uid="uid://botg5xq4umtku" path="res://Assets/Sprites/16bitidle.png" id="2_8jnvq"]
+[ext_resource type="Texture2D" uid="uid://bqy4bqr1fgyja" path="res://Assets/Sprites/16bitmcjump.png" id="3_21vwm"]
+[ext_resource type="Texture2D" uid="uid://cbuyufa8r1tdr" path="res://Assets/Sprites/16bitmcrun.png" id="3_fxij7"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_21vwm"]
 atlas = ExtResource("2_8jnvq")

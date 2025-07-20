@@ -1,30 +1,25 @@
-
-[gd_scene load_steps=36 format=3 uid="uid://bwjyxjswceqrv"]
-
+[gd_scene load_steps=35 format=3 uid="uid://bwjyxjswceqrv"]
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
-[ext_resource type="Script" uid="uid://boya3ftm3d4la" path="res://Scenes/screen_shake.gd" id="2_22asu"]
+[ext_resource type="Script" path="res://Scenes/screen_shake.gd" id="2_22asu"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
-[ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://assets/sprites/tilemaptemplate.png" id="3_3dryh"]
-[ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://assets/sprites/labtilemap.png" id="3_wowpa"]
-[ext_resource type="Texture2D" uid="uid://b1ei1dgjs0r7h" path="res://assets/sprites/vents.png" id="4_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://Assets/Sprites/tilemaptemplate.png" id="3_3dryh"]
+[ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://Assets/Sprites/labtilemap.png" id="3_wowpa"]
+[ext_resource type="Texture2D" uid="uid://b1ei1dgjs0r7h" path="res://Assets/Sprites/vents.png" id="4_o5yvi"]
 [ext_resource type="Script" uid="uid://d3j2dd13ko6lv" path="res://Scenes/tile_map.gd" id="4_wowpa"]
-[ext_resource type="Texture2D" uid="uid://cjen73cghif3h" path="res://assets/sprites/cave_tilemap.png" id="5_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://cjen73cghif3h" path="res://Assets/Sprites/cave_tilemap.png" id="5_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://cdiyv24pvm6ai" path="res://Scenes/breakable_box.tscn" id="6_i6g32"]
-[ext_resource type="Texture2D" uid="uid://ckkmj682w7exj" path="res://assets/sprites/foreground_lab.png" id="6_rku1e"]
+[ext_resource type="Texture2D" uid="uid://ckkmj682w7exj" path="res://Assets/Sprites/foreground_lab.png" id="6_rku1e"]
 [ext_resource type="PackedScene" uid="uid://c6s0rocml1gw1" path="res://Scenes/ladder.tscn" id="7_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://bv2wr08fdoj8a" path="res://Scenes/locked_door.tscn" id="8_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://6jef5csgiayi" path="res://Scenes/key_card.tscn" id="9_ldgsr"]
 [ext_resource type="PackedScene" uid="uid://gdtwseqi8dej" path="res://Hazards/Fatty.tscn" id="13_1phco"]
 [ext_resource type="PackedScene" uid="uid://pk2ktr3bniek" path="res://Scenes/check_points.tscn" id="13_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://oigntvfu4ih8" path="res://Hazards/shorty.tscn" id="14_1phco"]
-
-
-[ext_resource type="PackedScene" path="res://Scenes/Teleporter.tscn" id="14_81klo"]
-
+[ext_resource type="PackedScene" uid="uid://cey82wheb67wu" path="res://Scenes/Teleporter.tscn" id="14_81klo"]
 [ext_resource type="PackedScene" uid="uid://qllcb8v2mmpi" path="res://Hazards/string_bean.tscn" id="14_nb51f"]
-[ext_resource type="Texture2D" uid="uid://bmcnqf8a34n86" path="res://assets/sprites/light_cone.png" id="19_iivbl"]
-[ext_resource type="Texture2D" uid="uid://dckupvvjo2wgq" path="res://assets/sprites/lightbulb.png" id="20_7nbq1"]
+[ext_resource type="Texture2D" uid="uid://bmcnqf8a34n86" path="res://Assets/Sprites/light_cone.png" id="19_iivbl"]
+[ext_resource type="Texture2D" uid="uid://dckupvvjo2wgq" path="res://Assets/Sprites/lightbulb.png" id="20_7nbq1"]
 [ext_resource type="PackedScene" uid="uid://c2fkfi020aago" path="res://Hazards/spikes.tscn" id="21_exi56"]
 [ext_resource type="PackedScene" uid="uid://d21mpe4r0ilv4" path="res://Hazards/big_chungus.tscn" id="22_mg4q0"]
 [ext_resource type="PackedScene" uid="uid://btxksfw0gix8n" path="res://Hazards/spikes_celing.tscn" id="23_vm72l"]
@@ -948,7 +943,6 @@ position = Vector2(1987, 7415)
 [node name="KeyCard21" parent="KeyCards" instance=ExtResource("9_ldgsr")]
 position = Vector2(5052, 8009)
 
-
 [node name="KeyCard22" parent="KeyCards" instance=ExtResource("9_ldgsr")]
 position = Vector2(6392, 8162)
 
@@ -970,7 +964,6 @@ position = Vector2(6241, 8026)
 
 [node name="KeyCard27" parent="KeyCards" instance=ExtResource("9_ldgsr")]
 position = Vector2(6914, 8035)
-
 
 [node name="lights" type="Node" parent="."]
 
@@ -2191,35 +2184,27 @@ position = Vector2(3772, 8124)
 
 [node name="Spikes_left_wall10" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(6738, 8113)
-scale = Vector2(1, 1)
 
 [node name="Spikes_left_wall11" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(6739, 8121)
-scale = Vector2(1, 1)
 
 [node name="Spikes_left_wall12" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(6739, 8129)
-scale = Vector2(1, 1)
 
 [node name="Spikes_left_wall13" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(6739, 8137)
-scale = Vector2(1, 1)
 
 [node name="Spikes_left_wall14" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(6740, 8145)
-scale = Vector2(1, 1)
 
 [node name="Spikes_left_wall15" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(6740, 8152)
-scale = Vector2(1, 1)
 
 [node name="Spikes_left_wall16" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(6740, 8160)
-scale = Vector2(1, 1)
 
 [node name="Spikes_left_wall17" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(6740, 8168)
-scale = Vector2(1, 1)
 
 [node name="KillZones" type="Node" parent="."]
 
@@ -2248,7 +2233,7 @@ position = Vector2(1374, 8090)
 position = Vector2(1239, 8208)
 
 [node name="Shorty3" parent="KillZones" instance=ExtResource("14_1phco")]
-position = Vector2(1318, 8208)
+position = Vector2(1326, 8209)
 
 [node name="Fatty2" parent="KillZones" instance=ExtResource("13_1phco")]
 position = Vector2(1368, 8209)
