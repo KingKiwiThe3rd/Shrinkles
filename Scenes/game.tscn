@@ -2239,6 +2239,8 @@ position = Vector2(5724, 8276)
 [node name="Spikes30" parent="." instance=ExtResource("21_exi56")]
 position = Vector2(5732, 8276)
 
+[node name="LockedDoor20" parent="." instance=ExtResource("8_h4fw4")]
+
 [node name="KeyCard" parent="." instance=ExtResource("9_ldgsr")]
 position = Vector2(6392, 8162)
 
