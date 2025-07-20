@@ -108,7 +108,7 @@ script = ExtResource("1_xhh6f")
 position = Vector2(576, 324)
 scale = Vector2(3.6, 3.6)
 sprite_frames = SubResource("SpriteFrames_1by5w")
-frame_progress = 0.123149
+frame_progress = 0.795613
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
