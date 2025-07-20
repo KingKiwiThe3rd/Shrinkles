@@ -199,7 +199,7 @@ particles_anim_loop = false
 size = Vector2(15, 15)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ihsto"]
-radius = 27.0
+radius = 31.0161
 
 [sub_resource type="Curve" id="Curve_aur7k"]
 _limits = [0.0, 15.0, 0.0, 1.0]

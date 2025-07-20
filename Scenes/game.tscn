@@ -451,7 +451,7 @@ shader_parameter/mute_amount = 1.0
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(1804, 7657)
+position = Vector2(35, 8178)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
@@ -2265,7 +2265,7 @@ position = Vector2(1854, 7640)
 position = Vector2(1966, 7680)
 
 [node name="LockedDoor" parent="." instance=ExtResource("8_h4fw4")]
-position = Vector2(1958, 7576)
+position = Vector2(422, 7032)
 rotation = 3.14159
 
 [node name="LockedDoor2" parent="." instance=ExtResource("8_h4fw4")]

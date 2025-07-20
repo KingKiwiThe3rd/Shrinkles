@@ -323,7 +323,13 @@ func _physics_process(delta: float) -> void:
 		switchFormParticles.scale=Vector2(1,1)
 		switch_form(smaller_form)
 		print("Current form: ", get_form())
+	
+	
+	if Input.is_action_just_pressed("reset"):
+		die_and_respawn()
+		get_tree().reload_current_scene()
 		
+
 		# Check if player is on a vent tile
 	if tilemap and is_instance_valid(tilemap):
 		# Adjust position to check tile at player's feet (based on collision shape)
