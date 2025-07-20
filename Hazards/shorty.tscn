@@ -75,10 +75,10 @@ target_position = Vector2(-10, 10)
 
 [node name="RayCast_Left_wall" type="RayCast2D" parent="."]
 position = Vector2(8, -8)
-target_position = Vector2(-10, 0)
+target_position = Vector2(-11, 0)
 
 [node name="RayCast_Right_wall" type="RayCast2D" parent="." groups=["Enemies"]]
 position = Vector2(8, -8)
-target_position = Vector2(10, 0)
+target_position = Vector2(11, 0)
 
 [connection signal="body_entered" from="Kill_zone" to="." method="_on_kill_zone_body_entered"]

@@ -1,8 +1,8 @@
 [gd_scene load_steps=10 format=3 uid="uid://d21mpe4r0ilv4"]
 
 [ext_resource type="Script" uid="uid://b4k52lc462652" path="res://Hazards/big_chungus.gd" id="1_mc4ut"]
-[ext_resource type="Texture2D" uid="uid://c4qfnrdyo221p" path="res://assets/sprites/fatty2.png" id="2_mc4ut"]
-[ext_resource type="Texture2D" uid="uid://diuqo6h1ox4eh" path="res://assets/sprites/fatty2_smile.png" id="3_8k0ww"]
+[ext_resource type="Texture2D" uid="uid://c4qfnrdyo221p" path="res://Assets/Sprites/fatty2.png" id="2_mc4ut"]
+[ext_resource type="Texture2D" uid="uid://diuqo6h1ox4eh" path="res://Assets/Sprites/fatty2_smile.png" id="3_8k0ww"]
 [ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="4_qqm70"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_h7til"]

@@ -267,6 +267,7 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("Jump"):
 		if is_on_floor():
+			$AudioStreamPlayer2D.play()
 			is_preparing_jump = true
 			jump_prepare_timer = JUMP_PREPARE_DURATION
 
@@ -309,18 +310,22 @@ func _physics_process(delta: float) -> void:
 
 	if Input.is_action_just_pressed("small_form"):
 		switchFormParticles.scale=Vector2(1,1)
+		$AudioStreamPlayer2D2.play()
 		switch_form(small_form)
 		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("normal_form"):
 		switchFormParticles.scale=Vector2(2,2)
+		$AudioStreamPlayer2D2.play()
 		switch_form(normal_form)
 		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("large_form"):
 		switchFormParticles.scale=Vector2(3,3)
+		$AudioStreamPlayer2D2.play()
 		switch_form(large_form)
 		print("Current form: ", get_form())
 	elif Input.is_action_just_pressed("smaller_form"):
 		switchFormParticles.scale=Vector2(1,1)
+		$AudioStreamPlayer2D2.play()
 		switch_form(smaller_form)
 		print("Current form: ", get_form())
 	

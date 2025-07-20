@@ -1,7 +1,7 @@
-[gd_scene load_steps=35 format=3 uid="uid://bwjyxjswceqrv"]
+[gd_scene load_steps=35 format=3 uid="uid://26r5x70cfrob"]
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
-[ext_resource type="Script" uid="uid://boya3ftm3d4la" path="res://Scenes/screen_shake.gd" id="2_22asu"]
+[ext_resource type="Script" path="res://Scenes/screen_shake.gd" id="2_22asu"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://assets/sprites/tilemaptemplate.png" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://assets/sprites/labtilemap.png" id="3_wowpa"]
@@ -16,14 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://gdtwseqi8dej" path="res://Hazards/Fatty.tscn" id="13_1phco"]
 [ext_resource type="PackedScene" uid="uid://pk2ktr3bniek" path="res://Scenes/check_points.tscn" id="13_rfjv2"]
 [ext_resource type="PackedScene" uid="uid://oigntvfu4ih8" path="res://Hazards/shorty.tscn" id="14_1phco"]
-<<<<<<< HEAD
 [ext_resource type="PackedScene" uid="uid://c6pgo65otp0w2" path="res://Scenes/Teleporter.tscn" id="14_81klo"]
-=======
-
-
-[ext_resource type="PackedScene" path="res://Scenes/Teleporter.tscn" id="14_81klo"]
-
->>>>>>> 2df33acafdf288c623b4a92e685508a6ce96f525
 [ext_resource type="PackedScene" uid="uid://qllcb8v2mmpi" path="res://Hazards/string_bean.tscn" id="14_nb51f"]
 [ext_resource type="Texture2D" uid="uid://bmcnqf8a34n86" path="res://assets/sprites/light_cone.png" id="19_iivbl"]
 [ext_resource type="Texture2D" uid="uid://dckupvvjo2wgq" path="res://assets/sprites/lightbulb.png" id="20_7nbq1"]
@@ -2240,7 +2233,7 @@ position = Vector2(1374, 8090)
 position = Vector2(1239, 8208)
 
 [node name="Shorty3" parent="KillZones" instance=ExtResource("14_1phco")]
-position = Vector2(1318, 8208)
+position = Vector2(1326, 8209)
 
 [node name="Fatty2" parent="KillZones" instance=ExtResource("13_1phco")]
 position = Vector2(1368, 8209)
