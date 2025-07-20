@@ -451,7 +451,7 @@ shader_parameter/mute_amount = 1.0
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(5918, 8280)
+position = Vector2(1804, 7657)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
@@ -2156,44 +2156,6 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
 
-[node name="LockedDoor" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor2" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor3" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor4" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor5" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor6" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor7" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor8" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor9" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor10" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor11" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor12" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor13" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor14" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor15" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor16" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor17" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor18" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor19" parent="." instance=ExtResource("8_h4fw4")]
-
 [node name="Spikes19" parent="." instance=ExtResource("21_exi56")]
 position = Vector2(5188, 8276)
 
@@ -2240,6 +2202,7 @@ position = Vector2(5724, 8276)
 position = Vector2(5732, 8276)
 
 [node name="LockedDoor20" parent="." instance=ExtResource("8_h4fw4")]
+rotation = 0.114585
 
 [node name="KeyCard" parent="." instance=ExtResource("9_ldgsr")]
 position = Vector2(6392, 8162)
@@ -2272,7 +2235,7 @@ position = Vector2(5995, 8224)
 position = Vector2(6084, 8080)
 
 [node name="Shorty7" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(6427, 8112)
+position = Vector2(6417, 8112)
 
 [node name="Fatty" parent="." instance=ExtResource("13_1phco")]
 position = Vector2(6211, 8080)
@@ -2294,3 +2257,47 @@ position = Vector2(6460, 8284)
 
 [node name="Spikes7" parent="." instance=ExtResource("21_exi56")]
 position = Vector2(6468, 8284)
+
+[node name="LockedDoor21" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor22" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor" parent="." instance=ExtResource("8_h4fw4")]
+rotation = 3.14159
+
+[node name="LockedDoor2" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor3" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor4" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor5" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor6" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor7" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor8" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor9" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor10" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor11" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor12" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor13" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor14" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor15" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor16" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor17" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor18" parent="." instance=ExtResource("8_h4fw4")]
+
+[node name="LockedDoor19" parent="." instance=ExtResource("8_h4fw4")]
+rotation = -3.14276
