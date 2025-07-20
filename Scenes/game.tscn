@@ -451,11 +451,7 @@ shader_parameter/mute_amount = 1.0
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-
-position = Vector2(1814, 7661)
-
-position = Vector2(5916, 8277)
-
+position = Vector2(1804, 7657)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
@@ -2160,44 +2156,6 @@ centered = false
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
 
-[node name="LockedDoor" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor2" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor3" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor4" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor5" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor6" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor7" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor8" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor9" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor10" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor11" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor12" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor13" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor14" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor15" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor16" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor17" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor18" parent="." instance=ExtResource("8_h4fw4")]
-
-[node name="LockedDoor19" parent="." instance=ExtResource("8_h4fw4")]
-
 [node name="Spikes19" parent="." instance=ExtResource("21_exi56")]
 position = Vector2(5188, 8276)
 
@@ -2243,8 +2201,8 @@ position = Vector2(5724, 8276)
 [node name="Spikes30" parent="." instance=ExtResource("21_exi56")]
 position = Vector2(5732, 8276)
 
-
 [node name="LockedDoor20" parent="." instance=ExtResource("8_h4fw4")]
+rotation = 0.114585
 
 [node name="KeyCard" parent="." instance=ExtResource("9_ldgsr")]
 position = Vector2(6392, 8162)
@@ -2300,3 +2258,63 @@ position = Vector2(6460, 8284)
 [node name="Spikes7" parent="." instance=ExtResource("21_exi56")]
 position = Vector2(6468, 8284)
 
+[node name="LockedDoor21" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(1854, 7640)
+
+[node name="LockedDoor22" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(1966, 7680)
+
+[node name="LockedDoor" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(1958, 7576)
+rotation = 3.14159
+
+[node name="LockedDoor2" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(1966, 7464)
+
+[node name="LockedDoor3" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(2175, 7472)
+
+[node name="LockedDoor4" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(1349, 7617)
+
+[node name="LockedDoor5" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(1733, 7680)
+
+[node name="LockedDoor6" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(249, 8136)
+
+[node name="LockedDoor7" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(242, 8008)
+
+[node name="LockedDoor8" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(575, 8144)
+
+[node name="LockedDoor9" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(637, 8183)
+
+[node name="LockedDoor10" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(701, 8183)
+
+[node name="LockedDoor11" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(805, 8184)
+
+[node name="LockedDoor12" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(1318, 8153)
+
+[node name="LockedDoor13" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(1561, 8160)
+
+[node name="LockedDoor14" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(3598, 7963)
+
+[node name="LockedDoor15" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(4277, 8201)
+
+[node name="LockedDoor16" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(4820, 8024)
+
+[node name="LockedDoor17" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(5220, 8160)
+
+[node name="LockedDoor18" parent="." instance=ExtResource("8_h4fw4")]
+position = Vector2(6485, 8025)
