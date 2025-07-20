@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://bcxpov1xhx47y"]
+
+[ext_resource type="Script" uid="uid://c1352pn3yqil3" path="res://comic_cutscene.gd" id="1_dopfk"]
+
+[node name="ComicCutscene" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dopfk")
+
+[node name="LeftButton" type="Button" parent="."]
+layout_mode = 1
+offset_right = 8.0
+offset_bottom = 8.0
+text = "PREVIOUS PAGE"
+
+[node name="RightButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -94.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "NEXT PAGE"
+
+[node name="StartButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -106.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "START GAME"
+
+[node name="PageContainer" type="Control" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+
+[node name="CurrentPage" type="TextureRect" parent="PageContainer"]
+z_index = -3
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5
+
+[node name="NextPage" type="TextureRect" parent="PageContainer"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+expand_mode = 1
+stretch_mode = 5

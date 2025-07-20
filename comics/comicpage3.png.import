@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://els6lp57vkry"
-path="res://.godot/imported/background.png-dde469fb1f19281f3784b52d4bea96cd.ctex"
+uid="uid://c7f44ifoermfh"
+path="res://.godot/imported/comicpage3.png-43096a8df01f3beea66793c5e3744ac2.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/background.png"
-dest_files=["res://.godot/imported/background.png-dde469fb1f19281f3784b52d4bea96cd.ctex"]
+source_file="res://comics/comicpage3.png"
+dest_files=["res://.godot/imported/comicpage3.png-43096a8df01f3beea66793c5e3744ac2.ctex"]
 
 [params]
 
