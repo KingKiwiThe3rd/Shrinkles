@@ -451,7 +451,7 @@ shader_parameter/mute_amount = 1.0
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(5916, 8277)
+position = Vector2(5918, 8280)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
