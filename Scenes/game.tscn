@@ -471,7 +471,7 @@ cache/0/12/0/scale = 1.0
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(1016, 8193)
+position = Vector2(2718, 8240)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
