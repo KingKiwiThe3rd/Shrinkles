@@ -1,10 +1,10 @@
 [gd_resource type="SpriteFrames" load_steps=17 format=3 uid="uid://cfmerdub728rg"]
 
-[ext_resource type="Texture2D" uid="uid://bfkempcv2d05v" path="res://Assets/Sprites/32bitmcfall.png" id="1_4ebwq"]
-[ext_resource type="Texture2D" uid="uid://bru8s8tqldkjh" path="res://Assets/Sprites/32bitmc.png" id="1_srqxi"]
-[ext_resource type="Texture2D" uid="uid://cqwgt3ttnlvt" path="res://Assets/Sprites/32bitmcidle.png" id="2_1647w"]
-[ext_resource type="Texture2D" uid="uid://82nvvtndfqal" path="res://Assets/Sprites/32bitmcjump.png" id="3_4ebwq"]
-[ext_resource type="Texture2D" uid="uid://bnppm534vhxgo" path="res://Assets/Sprites/32bitmcrun.png" id="3_5qvna"]
+[ext_resource type="Texture2D" uid="uid://bfkempcv2d05v" path="res://assets/sprites/32bitmcfall.png" id="1_4ebwq"]
+[ext_resource type="Texture2D" uid="uid://bru8s8tqldkjh" path="res://assets/sprites/32bitmc.png" id="1_srqxi"]
+[ext_resource type="Texture2D" uid="uid://cqwgt3ttnlvt" path="res://assets/sprites/32bitmcidle.png" id="2_1647w"]
+[ext_resource type="Texture2D" uid="uid://82nvvtndfqal" path="res://assets/sprites/32bitmcjump.png" id="3_4ebwq"]
+[ext_resource type="Texture2D" uid="uid://bnppm534vhxgo" path="res://assets/sprites/32bitmcrun.png" id="3_5qvna"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4ebwq"]
 atlas = ExtResource("2_1647w")
