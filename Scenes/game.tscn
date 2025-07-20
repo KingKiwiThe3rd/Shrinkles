@@ -2538,7 +2538,7 @@ offset_right = 206.0
 offset_bottom = 6884.0
 theme_override_fonts/font = SubResource("FontFile_22asu")
 theme_override_font_sizes/font_size = 16
-text = "Well... Iescaped the guards
+text = "Well... I escaped the guards
 for now, but I gotta get outta
 here ASAP"
 
