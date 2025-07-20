@@ -826,6 +826,23 @@ position = Vector2(1351, 7617)
 [node name="LockedDoor16" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
 position = Vector2(1733, 7680)
 
+[node name="LockedDoor17" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
+position = Vector2(1854, 7641)
+
+[node name="LockedDoor18" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
+position = Vector2(1966, 7680)
+
+[node name="LockedDoor19" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
+position = Vector2(1956, 7576)
+rotation = -3.14014
+scale = Vector2(1, 1)
+
+[node name="LockedDoor20" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
+position = Vector2(1966, 7464)
+
+[node name="LockedDoor21" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
+position = Vector2(2167, 7471)
+
 [node name="Checkpoints" type="Node" parent="."]
 
 [node name="CheckPoints" parent="Checkpoints" instance=ExtResource("13_rfjv2")]
@@ -877,6 +894,21 @@ position = Vector2(1632, 7542)
 
 [node name="KeyCard15" parent="KeyCards" instance=ExtResource("9_ldgsr")]
 position = Vector2(1260, 7576)
+
+[node name="KeyCard16" parent="KeyCards" instance=ExtResource("9_ldgsr")]
+position = Vector2(1817, 7683)
+
+[node name="KeyCard17" parent="KeyCards" instance=ExtResource("9_ldgsr")]
+position = Vector2(1906, 7624)
+
+[node name="KeyCard18" parent="KeyCards" instance=ExtResource("9_ldgsr")]
+position = Vector2(2159, 7508)
+
+[node name="KeyCard19" parent="KeyCards" instance=ExtResource("9_ldgsr")]
+position = Vector2(1797, 7609)
+
+[node name="KeyCard20" parent="KeyCards" instance=ExtResource("9_ldgsr")]
+position = Vector2(1987, 7415)
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
 
@@ -2113,34 +2145,3 @@ texture_scale = 4.77
 [node name="Sprite2D" type="Sprite2D" parent="Red_lights/PointLight2D9"]
 position = Vector2(0.0926675, -81.6009)
 texture = ExtResource("20_7nbq1")
-
-[node name="LockedDoor" parent="." instance=ExtResource("8_h4fw4")]
-position = Vector2(1854, 7641)
-
-[node name="LockedDoor2" parent="." instance=ExtResource("8_h4fw4")]
-position = Vector2(1966, 7680)
-
-[node name="LockedDoor3" parent="." instance=ExtResource("8_h4fw4")]
-position = Vector2(1956, 7576)
-rotation = 3.14304
-
-[node name="LockedDoor4" parent="." instance=ExtResource("8_h4fw4")]
-position = Vector2(1966, 7464)
-
-[node name="LockedDoor5" parent="." instance=ExtResource("8_h4fw4")]
-position = Vector2(2167, 7471)
-
-[node name="KeyCard" parent="." instance=ExtResource("9_ldgsr")]
-position = Vector2(1817, 7683)
-
-[node name="KeyCard2" parent="." instance=ExtResource("9_ldgsr")]
-position = Vector2(1906, 7624)
-
-[node name="KeyCard3" parent="." instance=ExtResource("9_ldgsr")]
-position = Vector2(2159, 7508)
-
-[node name="KeyCard4" parent="." instance=ExtResource("9_ldgsr")]
-position = Vector2(1797, 7609)
-
-[node name="KeyCard5" parent="." instance=ExtResource("9_ldgsr")]
-position = Vector2(1987, 7415)

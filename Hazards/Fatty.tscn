@@ -1,40 +1,40 @@
 [gd_scene load_steps=10 format=3 uid="uid://gdtwseqi8dej"]
 
 [ext_resource type="Script" uid="uid://qeu38evce2aw" path="res://Hazards/Fatty.gd" id="1_afpow"]
-[ext_resource type="Texture2D" uid="uid://c4qfnrdyo221p" path="res://Assets/Sprites/fatty2.png" id="2_5ybdw"]
+[ext_resource type="Texture2D" uid="uid://bo4x0j7upbcdo" path="res://Assets/Sprites/fattyreal.png" id="2_5ybdw"]
 [ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="2_afpow"]
-[ext_resource type="Texture2D" uid="uid://diuqo6h1ox4eh" path="res://Assets/Sprites/fatty2_smile.png" id="3_y2tkw"]
+[ext_resource type="Texture2D" uid="uid://bbvengpf07v6j" path="res://Assets/Sprites/fattyreal_smile.png" id="3_y2tkw"]
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_h7til"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kuvrb"]
 atlas = ExtResource("2_5ybdw")
-region = Rect2(0, 0, 32, 32)
+region = Rect2(0, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_qqm70"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_biv0d"]
 atlas = ExtResource("2_5ybdw")
-region = Rect2(32, 0, 32, 32)
+region = Rect2(16, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_lmjlv"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_8cp5y"]
 atlas = ExtResource("2_5ybdw")
-region = Rect2(64, 0, 32, 32)
+region = Rect2(32, 0, 16, 16)
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_11uye"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_ta6r2"]
 atlas = ExtResource("2_5ybdw")
-region = Rect2(96, 0, 32, 32)
+region = Rect2(48, 0, 16, 16)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_287tu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_h7til")
+"texture": SubResource("AtlasTexture_kuvrb")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_qqm70")
+"texture": SubResource("AtlasTexture_biv0d")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_lmjlv")
+"texture": SubResource("AtlasTexture_8cp5y")
 }, {
 "duration": 1.0,
-"texture": SubResource("AtlasTexture_11uye")
+"texture": SubResource("AtlasTexture_ta6r2")
 }],
 "loop": true,
 "name": &"Base",
@@ -54,14 +54,13 @@ script = ExtResource("1_afpow")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 position = Vector2(8, -8)
-scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_287tu")
-animation = &"Kill"
+animation = &"Base"
 
 [node name="Kill_zone" parent="." instance=ExtResource("2_afpow")]
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kill_zone"]
-polygon = PackedVector2Array(1, -1, 1, -5, 5, -5, 3, -6, 6, -12, 8, -15, 12, -15, 13, -14, 13, -12, 15, -10, 15, -6, 14, -5, 16, -5, 16, 0, 1, 0)
+polygon = PackedVector2Array(3, 0, 0, -3, 0, -5, 1, -6, 3, -6, 3, -7, 2, -7, 2, -10, 3, -11, 6, -11, 5, -12, 5, -14, 6, -16, 12, -16, 13, -14, 13, -12, 12, -11, 14, -11, 15, -10, 15, -7, 14, -6, 15, -6, 16, -5, 16, -3, 15, -1, 13, 0)
 
 [node name="RayCast_Right" type="RayCast2D" parent="."]
 position = Vector2(8, -8)
