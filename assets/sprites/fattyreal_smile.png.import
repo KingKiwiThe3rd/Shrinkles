@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bbvengpf07v6j"
-path="res://.godot/imported/fattyreal_smile.png-05ba240511ecb03adf201492cf2802cd.ctex"
+path="res://.godot/imported/fattyreal_smile.png-fd1c24fa54605248ee7b3177d869ec7c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/fattyreal_smile.png"
-dest_files=["res://.godot/imported/fattyreal_smile.png-05ba240511ecb03adf201492cf2802cd.ctex"]
+source_file="res://Assets/Sprites/fattyreal_smile.png"
+dest_files=["res://.godot/imported/fattyreal_smile.png-fd1c24fa54605248ee7b3177d869ec7c.ctex"]
 
 [params]
 
