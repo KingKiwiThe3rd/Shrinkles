@@ -198,7 +198,7 @@ particles_anim_loop = false
 size = Vector2(15, 15)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ihsto"]
-radius = 33.0606
+radius = 27.0
 
 [node name="Shrinky" type="CharacterBody2D"]
 z_index = 20
