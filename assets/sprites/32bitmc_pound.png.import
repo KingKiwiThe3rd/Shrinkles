@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cjen73cghif3h"
-path="res://.godot/imported/cave_tilemap.png-0c043f68e95a140a42dcefc9ba581e3d.ctex"
+uid="uid://oflquf7ja7wu"
+path="res://.godot/imported/32bitmc_pound.png-896bdf095588f30b23e60769b24f7d59.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/cave_tilemap.png"
-dest_files=["res://.godot/imported/cave_tilemap.png-0c043f68e95a140a42dcefc9ba581e3d.ctex"]
+source_file="res://Assets/Sprites/32bitmc_pound.png"
+dest_files=["res://.godot/imported/32bitmc_pound.png-896bdf095588f30b23e60769b24f7d59.ctex"]
 
 [params]
 

@@ -344,6 +344,8 @@ func _physics_process(delta: float) -> void:
 	
 	if dash_manager.is_dashing:
 		animated_sprite_2d.play("smaller_dash")
+	elif stomp_manager.is_stomping:
+		animated_sprite_2d.play("ground_pound")
 	#elif is_preparing_jump:
 		# pass
 	# elif is_landing:

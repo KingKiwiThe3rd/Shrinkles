@@ -1,4 +1,4 @@
-[gd_scene load_steps=26 format=3 uid="uid://dedwio2103ro2"]
+[gd_scene load_steps=28 format=3 uid="uid://dedwio2103ro2"]
 
 [ext_resource type="Script" uid="uid://cbhuc1t1m0dwm" path="res://Scripts/Shrinky.gd" id="1_kjqfi"]
 [ext_resource type="Script" uid="uid://dalxlrimjqb1y" path="res://Forms/Dash_Manager.gd" id="3_fileg"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://dpv0byl5pcvw4" path="res://Assets/Sprites/4bitmc.png" id="6_ihsto"]
 [ext_resource type="Texture2D" uid="uid://v2fb2mejvksp" path="res://Assets/Sprites/sizeShiftParticles.png" id="9_wbst6"]
 [ext_resource type="Script" uid="uid://duf4lksdtkmkg" path="res://Forms/stomp_manager.gd" id="10_ihsto"]
+[ext_resource type="Texture2D" uid="uid://ycyx5bnvq4nt" path="res://Assets/Sprites/poundring.png" id="11_4olj2"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4olj2"]
 atlas = ExtResource("4_wbst6")
@@ -198,7 +199,12 @@ particles_anim_loop = false
 size = Vector2(15, 15)
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ihsto"]
-radius = 33.0606
+radius = 27.0
+
+[sub_resource type="Curve" id="Curve_aur7k"]
+_limits = [0.0, 15.0, 0.0, 1.0]
+_data = [Vector2(0, 0.168541), 0.0, 0.0, 0, 0, Vector2(1, 15), 0.0, 0.0, 0, 0]
+point_count = 2
 
 [node name="Shrinky" type="CharacterBody2D"]
 z_index = 20
@@ -248,3 +254,15 @@ collision_layer = 8
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Stomp_Manager/StompArea"]
 position = Vector2(7, 6)
 shape = SubResource("CircleShape2D_ihsto")
+
+[node name="StompTimer" type="Timer" parent="Stomp_Manager"]
+wait_time = 0.6
+one_shot = true
+
+[node name="StompParticles" type="CPUParticles2D" parent="Stomp_Manager"]
+emitting = false
+amount = 1
+texture = ExtResource("11_4olj2")
+lifetime = 0.3
+one_shot = true
+scale_amount_curve = SubResource("Curve_aur7k")

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://5k35riea7uit"
-path="res://.godot/imported/labDoor.png-d0a84c44807ddb5b78e1a8ad5717d437.ctex"
+path="res://.godot/imported/labDoor.png-a9f6386dd5fb26c13352cc2d0bb36a3e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/labDoor.png"
-dest_files=["res://.godot/imported/labDoor.png-d0a84c44807ddb5b78e1a8ad5717d437.ctex"]
+source_file="res://Assets/Sprites/labDoor.png"
+dest_files=["res://.godot/imported/labDoor.png-a9f6386dd5fb26c13352cc2d0bb36a3e.ctex"]
 
 [params]
 
