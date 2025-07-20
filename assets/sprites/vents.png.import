@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://b1ei1dgjs0r7h"
-path="res://.godot/imported/vents.png-0a670a6cf51db3c9534e816f30dabb9e.ctex"
+path="res://.godot/imported/vents.png-fffc18c040adbb309d4e70540230aed6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/vents.png"
-dest_files=["res://.godot/imported/vents.png-0a670a6cf51db3c9534e816f30dabb9e.ctex"]
+source_file="res://Assets/Sprites/vents.png"
+dest_files=["res://.godot/imported/vents.png-fffc18c040adbb309d4e70540230aed6.ctex"]
 
 [params]
 
