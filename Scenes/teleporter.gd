@@ -12,11 +12,11 @@ func teleport_player(player):
 		player.global_position = target_position
 		return
 
-	await fade.finished
-
+	await get_tree().create_timer(2.5).timeout
+	
 	player.global_position = target_position
 
-	await get_tree().create_timer(0.1).timeout
+	await get_tree().create_timer(1).timeout
 
 	var fade_back = Transition.fade_from_black()
 	if fade_back != null:
