@@ -1,15 +1,44 @@
-[gd_scene load_steps=7 format=3 uid="uid://qllcb8v2mmpi"]
+[gd_scene load_steps=11 format=3 uid="uid://qllcb8v2mmpi"]
 
 [ext_resource type="Script" uid="uid://22fap6cfjikc" path="res://Hazards/string_bean.gd" id="1_ugcg5"]
-[ext_resource type="Texture2D" uid="uid://c2e287bm52knm" path="res://Assets/Sprites/Fatty normal.png" id="2_pui2k"]
-[ext_resource type="Texture2D" uid="uid://yfcj4udepxwd" path="res://Assets/Sprites/Fatty smiling.png" id="3_ndje8"]
+[ext_resource type="Texture2D" uid="uid://45xf1l7bi05o" path="res://Assets/Sprites/stringbean2.png" id="2_ndje8"]
+[ext_resource type="Texture2D" uid="uid://eeloxuyl2ie2" path="res://Assets/Sprites/stringbean2_smile.png" id="3_gtfat"]
 [ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="3_pui2k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rolw2"]
+atlas = ExtResource("2_ndje8")
+region = Rect2(0, 0, 8, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0xb7o"]
+atlas = ExtResource("2_ndje8")
+region = Rect2(8, 0, 8, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vls6l"]
+atlas = ExtResource("2_ndje8")
+region = Rect2(16, 0, 8, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6ocl"]
+atlas = ExtResource("2_ndje8")
+region = Rect2(24, 0, 8, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cpjcr"]
+atlas = ExtResource("3_gtfat")
+region = Rect2(0, 0, 8, 24)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_287tu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_pui2k")
+"texture": SubResource("AtlasTexture_rolw2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0xb7o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vls6l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6ocl")
 }],
 "loop": true,
 "name": &"Base",
@@ -17,31 +46,26 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_ndje8")
+"texture": SubResource("AtlasTexture_cpjcr")
 }],
 "loop": true,
 "name": &"Kill",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ugcg5"]
-size = Vector2(8, 24)
-
 [node name="String_Bean" type="Node2D" groups=["Enemies"]]
 script = ExtResource("1_ugcg5")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(3.5, -23.5)
-scale = Vector2(0.53125, 1.46875)
+position = Vector2(4, -12)
 sprite_frames = SubResource("SpriteFrames_287tu")
 animation = &"Kill"
 autoplay = "Base"
 
 [node name="Kill_zone" parent="." instance=ExtResource("3_pui2k")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_zone"]
-position = Vector2(4, -12)
-shape = SubResource("RectangleShape2D_ugcg5")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kill_zone"]
+polygon = PackedVector2Array(2, 0, 1, -3, 2, -5, 0, -7, 0, -17, 2, -20, 1, -22, 3, -24, 5, -24, 7, -23, 7, -20, 6, -19, 7, -18, 8, -18, 8, -6, 7, -6, 7, -4, 8, -4, 8, -3, 7, 0)
 
 [node name="RayCast_Right" type="RayCast2D" parent="."]
 position = Vector2(4, -8)

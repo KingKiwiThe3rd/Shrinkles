@@ -1,15 +1,40 @@
-[gd_scene load_steps=7 format=3 uid="uid://oigntvfu4ih8"]
+[gd_scene load_steps=10 format=3 uid="uid://oigntvfu4ih8"]
 
 [ext_resource type="Script" uid="uid://e76tpl250hp3" path="res://Hazards/shorty.gd" id="1_a85sk"]
-[ext_resource type="Texture2D" uid="uid://c2e287bm52knm" path="res://Assets/Sprites/Fatty normal.png" id="2_erp61"]
+[ext_resource type="Texture2D" uid="uid://dll0u0og425ti" path="res://Assets/Sprites/shorty2.png" id="2_c5gpx"]
 [ext_resource type="Texture2D" uid="uid://yfcj4udepxwd" path="res://Assets/Sprites/Fatty smiling.png" id="3_c5gpx"]
 [ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="3_erp61"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_erp61"]
+atlas = ExtResource("2_c5gpx")
+region = Rect2(0, 0, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gywld"]
+atlas = ExtResource("2_c5gpx")
+region = Rect2(8, 0, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ylhf3"]
+atlas = ExtResource("2_c5gpx")
+region = Rect2(16, 0, 8, 9)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rqepg"]
+atlas = ExtResource("2_c5gpx")
+region = Rect2(24, 0, 8, 9)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_287tu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_erp61")
+"texture": SubResource("AtlasTexture_erp61")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gywld")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ylhf3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rqepg")
 }],
 "loop": true,
 "name": &"Base",
@@ -24,25 +49,21 @@ animations = [{
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_a85sk"]
-size = Vector2(16, 16)
-
 [node name="Shorty" type="Node2D"]
 scale = Vector2(0.5, 0.5)
 script = ExtResource("1_a85sk")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(7, -16)
-scale = Vector2(0.9375, 1)
+position = Vector2(8, -8)
+scale = Vector2(2, 1.77778)
 sprite_frames = SubResource("SpriteFrames_287tu")
 animation = &"Base"
 autoplay = "Base"
 
 [node name="Kill_zone" parent="." instance=ExtResource("3_erp61")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_zone"]
-position = Vector2(8, -8)
-shape = SubResource("RectangleShape2D_a85sk")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kill_zone"]
+polygon = PackedVector2Array(4, 0, 0, -4, 0, -12, 6, -16, 10, -16, 16, -12, 16, -4, 12, 0)
 
 [node name="RayCast_Right" type="RayCast2D" parent="."]
 position = Vector2(8, -8)

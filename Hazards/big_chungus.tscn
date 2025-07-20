@@ -1,15 +1,40 @@
-[gd_scene load_steps=7 format=3 uid="uid://d21mpe4r0ilv4"]
+[gd_scene load_steps=10 format=3 uid="uid://d21mpe4r0ilv4"]
 
 [ext_resource type="Script" uid="uid://b4k52lc462652" path="res://Hazards/big_chungus.gd" id="1_mc4ut"]
-[ext_resource type="Texture2D" uid="uid://c2e287bm52knm" path="res://Assets/Sprites/Fatty normal.png" id="2_8k0ww"]
-[ext_resource type="Texture2D" uid="uid://yfcj4udepxwd" path="res://Assets/Sprites/Fatty smiling.png" id="3_h7til"]
+[ext_resource type="Texture2D" uid="uid://c4qfnrdyo221p" path="res://Assets/Sprites/fatty2.png" id="2_mc4ut"]
+[ext_resource type="Texture2D" uid="uid://diuqo6h1ox4eh" path="res://Assets/Sprites/fatty2_smile.png" id="3_8k0ww"]
 [ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="4_qqm70"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h7til"]
+atlas = ExtResource("2_mc4ut")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qqm70"]
+atlas = ExtResource("2_mc4ut")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lmjlv"]
+atlas = ExtResource("2_mc4ut")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11uye"]
+atlas = ExtResource("2_mc4ut")
+region = Rect2(96, 0, 32, 32)
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_287tu"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_8k0ww")
+"texture": SubResource("AtlasTexture_h7til")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qqm70")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lmjlv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11uye")
 }],
 "loop": true,
 "name": &"Base",
@@ -17,32 +42,28 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("3_h7til")
+"texture": ExtResource("3_8k0ww")
 }],
 "loop": true,
 "name": &"Kill",
 "speed": 5.0
 }]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_k8uwv"]
-size = Vector2(16, 16)
-
 [node name="Big_Chungus" type="Node2D"]
 scale = Vector2(2, 2)
 script = ExtResource("1_mc4ut")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
-position = Vector2(7.125, -16)
-scale = Vector2(0.992188, 1)
+position = Vector2(8, -8)
+scale = Vector2(0.5, 0.5)
 sprite_frames = SubResource("SpriteFrames_287tu")
 animation = &"Kill"
 autoplay = "Base"
 
 [node name="Kill_zone" parent="." instance=ExtResource("4_qqm70")]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Kill_zone"]
-position = Vector2(8, -8)
-shape = SubResource("RectangleShape2D_k8uwv")
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Kill_zone"]
+polygon = PackedVector2Array(3.5, -5.5, 0.5, -5, 0.5, -0.5, 15.5, -0.5, 16, -4, 14, -5, 15.5, -6.5, 15.5, -10.5, 13.5, -12, 13, -15.5, 7.5, -15.5, 6, -12.5, 6.5, -12, 3.5, -8.5)
 
 [node name="RayCast_Right" type="RayCast2D" parent="."]
 position = Vector2(8, -8)
