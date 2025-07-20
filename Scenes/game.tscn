@@ -447,7 +447,7 @@ shader_parameter/mute_amount = 1.0
 [node name="game" type="Node2D"]
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(4930, 8268)
+position = Vector2(3689, 8280)
 
 [node name="Camera2D" type="Camera2D" parent="Shrinky"]
 position = Vector2(0, 1)
