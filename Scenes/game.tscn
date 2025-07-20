@@ -1,4 +1,4 @@
-[gd_scene load_steps=35 format=3 uid="uid://bwjyxjswceqrv"]
+[gd_scene load_steps=38 format=3 uid="uid://bwjyxjswceqrv"]
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://boya3ftm3d4la" path="res://Scenes/screen_shake.gd" id="2_22asu"]
@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://btxksfw0gix8n" path="res://Hazards/spikes_celing.tscn" id="23_vm72l"]
 [ext_resource type="PackedScene" uid="uid://ut16m01l1jug" path="res://Hazards/spikes_left_wall.tscn" id="24_vm72l"]
 [ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="25_22asu"]
+[ext_resource type="Shader" uid="uid://e614fpnx1vd" path="res://Scenes/sfumato.gdshader" id="26_81klo"]
+[ext_resource type="Texture2D" uid="uid://k4s048raoj73" path="res://assets/sprites/background2.png" id="27_tgy6u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
@@ -440,6 +442,12 @@ sources/5 = SubResource("TileSetAtlasSource_rku1e")
 sources/6 = SubResource("TileSetAtlasSource_rfjv2")
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_fkdbe"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mucmn"]
+shader = ExtResource("26_81klo")
+shader_parameter/blur_strength = 0.4
+shader_parameter/fade_strength = 1.7
+shader_parameter/mute_amount = 1.0
 
 [sub_resource type="FontFile" id="FontFile_22asu"]
 cache/0/16/0/ascent = 0.0
@@ -2233,7 +2241,7 @@ position = Vector2(1374, 8090)
 position = Vector2(1239, 8208)
 
 [node name="Shorty3" parent="KillZones" instance=ExtResource("14_1phco")]
-position = Vector2(1318, 8208)
+position = Vector2(1326, 8209)
 
 [node name="Fatty2" parent="KillZones" instance=ExtResource("13_1phco")]
 position = Vector2(1368, 8209)
@@ -2528,6 +2536,17 @@ position = Vector2(0.0926675, -81.6009)
 texture = ExtResource("20_7nbq1")
 
 [node name="ParallaxBackground" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="ParallaxBackground"]
+motion_mirroring = Vector2(4096, 4096)
+
+[node name="Sprite2D" type="Sprite2D" parent="ParallaxBackground/ParallaxLayer"]
+texture_filter = 1
+texture_repeat = 2
+material = SubResource("ShaderMaterial_mucmn")
+texture = ExtResource("27_tgy6u")
+region_enabled = true
+region_rect = Rect2(0, 0, 4096, 4096)
 
 [node name="Labels" type="Node" parent="."]
 
