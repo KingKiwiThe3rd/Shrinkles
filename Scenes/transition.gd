@@ -2,7 +2,7 @@ extends CanvasLayer
 
 @onready var fade_rect = $Fade
 
-func fade_to_black(duration = 0.5):
+func fade_to_black(duration = 2):
 	if not fade_rect:
 		push_error("Fade node not found!")
 		return null
@@ -10,7 +10,7 @@ func fade_to_black(duration = 0.5):
 	fade_rect.modulate.a = 0
 	return fade_rect.create_tween().tween_property(fade_rect, "modulate:a", 1.0, duration)
 
-func fade_from_black(duration = 0.5):
+func fade_from_black(duration = 2):
 	if not fade_rect:
 		push_error("Fade node not found!")
 		return null
