@@ -4,7 +4,6 @@ extends Area2D
 var respawn_position: Vector2
 
 func _ready():
-	print("checkpoint is here")
 	if not is_connected("body_entered", Callable(self, "_on_body_entered")):
 		connect("body_entered", Callable(self, "_on_body_entered"))
 

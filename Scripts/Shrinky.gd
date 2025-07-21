@@ -3,10 +3,9 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $AnimatedSprite2D
 @onready var dash_manager = $Dash_Manager
 @onready var stomp_manager = $Stomp_Manager
-
+@onready var camera: Camera2D = $ScreenShake/Camera2D
 @export var sprite_frames: SpriteFrames
 @export var tilemap: TileMap  # Reference to the TileMap with vent tiles
-@export var camera: Camera2D  # Reference to the Camera2D node
 @export var normal_zoom: Vector2 = Vector2(3.6, 3.6)  # Default zoom level
 @export var vent_zoom: Vector2 = Vector2(7,7)  # Zoom level when in vent
 @export var zoom_speed: float = 2.0  # Speed of zoom transition (units per second)
@@ -73,7 +72,7 @@ func _ready() -> void:
 	global_position = spawn_point
 
 	print("Shrinky spawned at: ", global_position)	
-	camera=get_node("Camera2D")
+	camera=get_node("ScreenShake/Camera2D")
 	#tilemap=get_node("res://scenes/game/TileMap")
 
 
@@ -127,7 +126,7 @@ func _ready() -> void:
 	large_form.animation_prefix = "large_"
 	large_form.air_control = 600
 	large_form.form_type = Form.LARGE
-	large_form.ladder_detector = Vector2(15,30)
+	large_form.ladder_detector = Vector2(15, 30)
 	large_form.can_stomp = true
 
 

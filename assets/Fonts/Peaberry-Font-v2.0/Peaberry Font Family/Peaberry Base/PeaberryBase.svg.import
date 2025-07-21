@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://xdehn010d3xv"
-path="res://.godot/imported/PeaberryBase.svg-bd6d802e1cd980e3259a3cdbbef1187a.ctex"
+path="res://.godot/imported/PeaberryBase.svg-3cf1d8463750ffea7b47e65131534273.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/Fonts/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.svg"
-dest_files=["res://.godot/imported/PeaberryBase.svg-bd6d802e1cd980e3259a3cdbbef1187a.ctex"]
+source_file="res://Assets/Fonts/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.svg"
+dest_files=["res://.godot/imported/PeaberryBase.svg-3cf1d8463750ffea7b47e65131534273.ctex"]
 
 [params]
 

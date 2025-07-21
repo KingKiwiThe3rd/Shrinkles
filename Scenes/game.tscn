@@ -1,18 +1,16 @@
-
 [gd_scene load_steps=38 format=3 uid="uid://26r5x70cfrob"]
-
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
 [ext_resource type="Script" path="res://Scenes/timer_ui.gd" id="1_tgy6u"]
 [ext_resource type="Script" path="res://Scenes/screen_shake.gd" id="2_22asu"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
-[ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://assets/sprites/tilemaptemplate.png" id="3_3dryh"]
-[ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://assets/sprites/labtilemap.png" id="3_wowpa"]
-[ext_resource type="Texture2D" uid="uid://b1ei1dgjs0r7h" path="res://assets/sprites/vents.png" id="4_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://Assets/Sprites/tilemaptemplate.png" id="3_3dryh"]
+[ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://Assets/Sprites/labtilemap.png" id="3_wowpa"]
+[ext_resource type="Texture2D" uid="uid://b1ei1dgjs0r7h" path="res://Assets/Sprites/vents.png" id="4_o5yvi"]
 [ext_resource type="Script" uid="uid://d3j2dd13ko6lv" path="res://Scenes/tile_map.gd" id="4_wowpa"]
-[ext_resource type="Texture2D" uid="uid://cjen73cghif3h" path="res://assets/sprites/cave_tilemap.png" id="5_o5yvi"]
+[ext_resource type="Texture2D" uid="uid://cjen73cghif3h" path="res://Assets/Sprites/cave_tilemap.png" id="5_o5yvi"]
 [ext_resource type="PackedScene" uid="uid://cdiyv24pvm6ai" path="res://Scenes/breakable_box.tscn" id="6_i6g32"]
-[ext_resource type="Texture2D" uid="uid://ckkmj682w7exj" path="res://assets/sprites/foreground_lab.png" id="6_rku1e"]
+[ext_resource type="Texture2D" uid="uid://ckkmj682w7exj" path="res://Assets/Sprites/foreground_lab.png" id="6_rku1e"]
 [ext_resource type="PackedScene" uid="uid://c6s0rocml1gw1" path="res://Scenes/ladder.tscn" id="7_1l0tm"]
 [ext_resource type="PackedScene" uid="uid://bv2wr08fdoj8a" path="res://Scenes/locked_door.tscn" id="8_h4fw4"]
 [ext_resource type="PackedScene" uid="uid://6jef5csgiayi" path="res://Scenes/key_card.tscn" id="9_ldgsr"]
@@ -503,9 +501,7 @@ grow_horizontal = 0
 text = "00:00"
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-
-position = Vector2(1736, 4745)
-
+position = Vector2(402, 2164)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
@@ -2987,7 +2983,6 @@ target_position = Vector2(203, 4720)
 position = Vector2(550, 4657)
 target_position = Vector2(211, 3525)
 
-
 [node name="Teleporter15" parent="." instance=ExtResource("27_tgy6u")]
 position = Vector2(807, 3453)
 target_position = Vector2(880, 4747)
@@ -3364,3 +3359,53 @@ position = Vector2(2276, 4501)
 [node name="Spikes_right_wall14" parent="." instance=ExtResource("27_81klo")]
 position = Vector2(2276, 4509)
 
+[node name="CheckPoints" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(-1922, 1110)
+
+[node name="CheckPoints2" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(923, 1099)
+
+[node name="CheckPoints3" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(2001, 740)
+
+[node name="CheckPoints4" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(2695, 1259)
+
+[node name="CheckPoints5" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(3892, 823)
+
+[node name="CheckPoints6" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(4516, 1317)
+
+[node name="CheckPoints7" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(2328, 2085)
+
+[node name="CheckPoints8" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(1031, 2365)
+
+[node name="CheckPoints9" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(117, 2373)
+
+[node name="CheckPoints10" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(102, 2373)
+
+[node name="CheckPoints11" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(201, 3536)
+
+[node name="CheckPoints12" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(1521, 3550)
+
+[node name="CheckPoints13" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(2700, 3588)
+
+[node name="CheckPoints14" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(3795, 3590)
+
+[node name="CheckPoints15" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(5017, 3564)
+
+[node name="CheckPoints16" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(199, 4735)
+
+[node name="CheckPoints17" parent="." instance=ExtResource("13_rfjv2")]
+position = Vector2(872, 4763)

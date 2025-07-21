@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmcnqf8a34n86"
-path="res://.godot/imported/light_cone.png-a948897a27daae1b6cadab60b3b7cc4f.ctex"
+path="res://.godot/imported/light_cone.png-9ffaf83a9fbf2b001c226678244e7d8a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/light_cone.png"
-dest_files=["res://.godot/imported/light_cone.png-a948897a27daae1b6cadab60b3b7cc4f.ctex"]
+source_file="res://Assets/Sprites/light_cone.png"
+dest_files=["res://.godot/imported/light_cone.png-9ffaf83a9fbf2b001c226678244e7d8a.ctex"]
 
 [params]
 
