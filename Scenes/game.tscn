@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://b4wkdp0dpnnsl" path="res://Scenes/end_credits_trigger.tscn" id="1_cwurv"]
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://2hdhx5aiwyat" path="res://Scenes/timer_ui.gd" id="1_tgy6u"]
-[ext_resource type="Script" uid="uid://boya3ftm3d4la" path="res://Scenes/screen_shake.gd" id="2_22asu"]
+[ext_resource type="Script" path="res://Scenes/screen_shake.gd" id="2_22asu"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://assets/sprites/tilemaptemplate.png" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://assets/sprites/labtilemap.png" id="3_wowpa"]
@@ -481,13 +481,14 @@ cache/0/12/0/underline_thickness = 0.0
 cache/0/12/0/scale = 1.0
 
 [node name="game" type="Node2D"]
+position = Vector2(0, -6)
 
 [node name="EndCreditsTrigger" parent="." instance=ExtResource("1_cwurv")]
 position = Vector2(2309, 4567)
 collision_mask = 2
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(-1915, 1100)
+position = Vector2(2144, 4448)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 position = Vector2(12, -15)
