@@ -1,6 +1,6 @@
 extends Area2D
 
-@onready var timer_ui = get_node("res://scenes/game/TimerLayer/TimerUI") #$TimerLayer/TimerUId
+@onready var timer_ui = get_node("../TimerLayer/TimerUI") #$TimerLayer/TimerUId
 var global_game_data = { "final_time": 0.0 }
 
 
@@ -13,11 +13,11 @@ func _ready():
 
 
 func _on_body_entered(body: Node2D) -> void:
-	pass # Replace with function body.
-	if timer_ui == null:
-		print("Error: timer_ui is null during trigger_cutscene")
-		global_game_data.final_time = 0.0  # Fallback to avoid crash
+	var final_time = 0.0
+	if timer_ui != null and timer_ui.get("elapsed_time") != null:
+		final_time = timer_ui.elapsed_time
+		print("Passing elapsed_time: ", final_time)
 	else:
-		get_node("/root").set("global_game_data", { "final_time": timer_ui.elapsed_time})
-	# Transition to FinalCutscene
+		print("Error: Cannot access elapsed_time. Using fallback time 0.0")
+	GlobalGameData.global_game_data.final_time = final_time
 	get_tree().change_scene_to_file("res://scenes/final_cutscene.tscn")

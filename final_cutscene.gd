@@ -14,11 +14,11 @@ func _ready():
 	timer_label.modulate.a = 0.0
 	
 	# Get final time from global_game_data
-	var final_time = get_node("/root").get("global_game_data").final_time if get_node("/root").get("global_game_data") != null else 0.0
+	var final_time = GlobalGameData.global_game_data.final_time if GlobalGameData != null else 0.0
 	var minutes = int(final_time / 60)
 	var seconds = int(final_time) % 60
-	timer_label.text = "Time: %02d:%02d" % [minutes, seconds]
-	credits_label.text = "Game by Your Name\nThanks for Playing!"
+	if credits_label != null:
+		timer_label.text = "Time: %02d:%02d" % [minutes, seconds]
 	
 	# Start the cutscene sequence
 	start_cutscene()
@@ -34,7 +34,7 @@ func start_cutscene():
 	
 	# Wait after labels are fully visible
 	await tween.finished
-	await get_tree().create_timer(5.0).timeout
+	await get_tree().create_timer(10.0).timeout
 	
 	# Transition to main menu
 	get_tree().change_scene_to_file("res://scenes/menu.tscn")
