@@ -15,7 +15,7 @@ func _ready():
 func _on_body_entered(body: Node2D) -> void:
 	var final_time = 0.0
 	if timer_ui != null and timer_ui.get("elapsed_time") != null:
-		final_time = timer_ui.elapsed_time
+		final_time = TimerManager.get_formatted_time()
 		print("Passing elapsed_time: ", final_time)
 	else:
 		print("Error: Cannot access elapsed_time. Using fallback time 0.0")
