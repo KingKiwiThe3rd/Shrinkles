@@ -486,7 +486,7 @@ cache/0/12/0/scale = 1.0
 position = Vector2(253, 4686)
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(-1913, 1112)
+position = Vector2(1531, 3534)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
@@ -958,7 +958,7 @@ position = Vector2(2996, 3472)
 position = Vector2(5590, 3304)
 
 [node name="LockedDoor42" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
-position = Vector2(5542, 3384)
+position = Vector2(5539, 3384)
 rotation = 3.14159
 
 [node name="LockedDoor43" parent="Locked_Doors" instance=ExtResource("8_h4fw4")]
@@ -2963,7 +2963,7 @@ position = Vector2(351, 2103)
 target_position = Vector2(5025, 3555)
 
 [node name="Teleporter8" parent="." instance=ExtResource("27_tgy6u")]
-position = Vector2(5609, 3306)
+position = Vector2(5601, 3304)
 target_position = Vector2(2332, 2070)
 
 [node name="Teleporter9" parent="." instance=ExtResource("27_tgy6u")]
@@ -2971,23 +2971,23 @@ position = Vector2(3073, 2373)
 target_position = Vector2(2711, 3555)
 
 [node name="Teleporter10" parent="." instance=ExtResource("27_tgy6u")]
-position = Vector2(3013, 3479)
+position = Vector2(3007, 3472)
 target_position = Vector2(3809, 3575)
 
 [node name="Teleporter11" parent="." instance=ExtResource("27_tgy6u")]
-position = Vector2(4270, 3531)
+position = Vector2(4263, 3531)
 target_position = Vector2(1040, 2355)
 
 [node name="Teleporter12" parent="." instance=ExtResource("27_tgy6u")]
-position = Vector2(1604, 2320)
+position = Vector2(1599, 2320)
 target_position = Vector2(1543, 3533)
 
 [node name="Teleporter13" parent="." instance=ExtResource("27_tgy6u")]
-position = Vector2(1969, 3307)
+position = Vector2(1959, 3304)
 target_position = Vector2(203, 4720)
 
 [node name="Teleporter14" parent="." instance=ExtResource("27_tgy6u")]
-position = Vector2(550, 4657)
+position = Vector2(543, 4657)
 target_position = Vector2(211, 3525)
 
 [node name="Teleporter15" parent="." instance=ExtResource("27_tgy6u")]
