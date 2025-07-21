@@ -21,6 +21,7 @@ GameManager="*res://Scripts/Game_Manager.gd"
 Transition="*res://Scenes/Transition.tscn"
 TimeManager="*res://Scripts/time_manager.gd"
 GlobalGameData="*res://GlobalGameData.gd"
+TimerManager="*res://TimerManager.gd"
 
 [editor_plugins]
 

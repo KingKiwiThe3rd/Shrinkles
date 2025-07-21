@@ -9,9 +9,4 @@ func _ready():
 	timer_label.text = "00:00"
 
 func _process(delta):
-	# Update elapsed time
-	elapsed_time += delta
-	# Format as MM:SS
-	var minutes = int(elapsed_time / 60)
-	var seconds = int(elapsed_time) % 60
-	timer_label.text = "%02d:%02d" % [minutes, seconds]
+	timer_label.text = TimerManager.get_formatted_time()
