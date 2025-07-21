@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://ni44gg478ifo"
-path="res://.godot/imported/101.png-8aba7ef34fd796bf26bd05fa9a0cb8aa.ctex"
+path="res://.godot/imported/101.png-f84461255467e8a322fe151caa47b759.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/2. WhitePeaberry Outline/White Peaberry Outline Sprite Kit/WhitePeaberryOutline.atlas/101.png"
-dest_files=["res://.godot/imported/101.png-8aba7ef34fd796bf26bd05fa9a0cb8aa.ctex"]
+source_file="res://assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/2. WhitePeaberry Outline/White Peaberry Outline Sprite Kit/WhitePeaberryOutline.atlas/101.png"
+dest_files=["res://.godot/imported/101.png-f84461255467e8a322fe151caa47b759.ctex"]
 
 [params]
 

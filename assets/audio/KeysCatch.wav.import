@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://flpvcxgcro5j"
-path="res://.godot/imported/KeysCatch.wav-7fa7fe9922fa5ac3c61646aaf04670dc.sample"
+path="res://.godot/imported/KeysCatch.wav-2ea2b405c31003f578d481cc989da1e5.sample"
 
 [deps]
 
-source_file="res://Assets/audio/KeysCatch.wav"
-dest_files=["res://.godot/imported/KeysCatch.wav-7fa7fe9922fa5ac3c61646aaf04670dc.sample"]
+source_file="res://assets/audio/KeysCatch.wav"
+dest_files=["res://.godot/imported/KeysCatch.wav-2ea2b405c31003f578d481cc989da1e5.sample"]
 
 [params]
 

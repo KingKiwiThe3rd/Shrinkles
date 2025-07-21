@@ -350,7 +350,6 @@ func _physics_process(delta: float) -> void:
 		if camera.zoom != target_zoom:
 			var new_zoom = camera.zoom.lerp(target_zoom, delta * zoom_speed)
 			camera.zoom = new_zoom
-			print("Camera zoom updated to: ", camera.zoom, " (target: ", target_zoom, ")")
 	
 	if dash_manager.is_dashing:
 		animated_sprite_2d.play("smaller_dash")
