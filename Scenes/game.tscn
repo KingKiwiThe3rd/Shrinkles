@@ -1,9 +1,9 @@
-[gd_scene load_steps=39 format=3 uid="uid://26r5x70cfrob"]
+[gd_scene load_steps=42 format=3 uid="uid://26r5x70cfrob"]
 
 [ext_resource type="PackedScene" uid="uid://b4wkdp0dpnnsl" path="res://Scenes/end_credits_trigger.tscn" id="1_cwurv"]
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
 [ext_resource type="Script" uid="uid://2hdhx5aiwyat" path="res://Scenes/timer_ui.gd" id="1_tgy6u"]
-[ext_resource type="Script" uid="uid://boya3ftm3d4la" path="res://Scenes/screen_shake.gd" id="2_22asu"]
+[ext_resource type="Script" path="res://Scenes/screen_shake.gd" id="2_22asu"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://assets/sprites/tilemaptemplate.png" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://assets/sprites/labtilemap.png" id="3_wowpa"]
@@ -28,6 +28,9 @@
 [ext_resource type="Shader" uid="uid://e614fpnx1vd" path="res://Scenes/sfumato.gdshader" id="26_81klo"]
 [ext_resource type="PackedScene" uid="uid://gwbs3o7fgqba" path="res://Hazards/spikes_right_wall.tscn" id="27_81klo"]
 [ext_resource type="PackedScene" uid="uid://c6pgo65otp0w2" path="res://Scenes/Teleporter.tscn" id="27_tgy6u"]
+[ext_resource type="PackedScene" uid="uid://cbkbjytv6vuhh" path="res://Scenes/Song.tscn" id="29_mucmn"]
+[ext_resource type="AudioStream" uid="uid://b4lain4haqdsv" path="res://assets/audio/song for game number 1 4.wav" id="30_8m3t6"]
+[ext_resource type="AudioStream" uid="uid://j4rexo0ukix" path="res://assets/audio/My Song 5.wav" id="31_8m3t6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
@@ -483,7 +486,7 @@ cache/0/12/0/scale = 1.0
 position = Vector2(253, 4686)
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(208, 4726)
+position = Vector2(-1913, 1112)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
@@ -3413,3 +3416,11 @@ position = Vector2(199, 4735)
 
 [node name="CheckPoints17" parent="." instance=ExtResource("13_rfjv2")]
 position = Vector2(872, 4763)
+
+[node name="Song" parent="." instance=ExtResource("29_mucmn")]
+position = Vector2(962, 1059)
+song_stream = ExtResource("30_8m3t6")
+
+[node name="Song2" parent="." instance=ExtResource("29_mucmn")]
+position = Vector2(129, 2333)
+song_stream = ExtResource("31_8m3t6")

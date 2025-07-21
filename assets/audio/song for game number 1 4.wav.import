@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://b4lain4haqdsv"
+path="res://.godot/imported/song for game number 1 4.wav-24f349767f6de04b331cae05931db294.sample"
+
+[deps]
+
+source_file="res://assets/audio/song for game number 1 4.wav"
+dest_files=["res://.godot/imported/song for game number 1 4.wav-24f349767f6de04b331cae05931db294.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=2
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2
