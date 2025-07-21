@@ -420,12 +420,6 @@ func die_and_respawn():
 	velocity = Vector2.ZERO
 	show()
 	
-	# Reset keycard state
-	if keycard:
-		keycard.queue_free()
-		keycard = null
-	has_keycard = false
-	
 	# Re-enable player's collision if it was disabled
 	var collider = get_node_or_null("CollisionShape2D")
 	if collider:
