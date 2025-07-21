@@ -1,9 +1,8 @@
-[gd_scene load_steps=39 format=3 uid="uid://26r5x70cfrob"]
+[gd_scene load_steps=38 format=3 uid="uid://26r5x70cfrob"]
 
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
-[ext_resource type="Script" uid="uid://2hdhx5aiwyat" path="res://Scenes/timer_ui.gd" id="1_tgy6u"]
-[ext_resource type="Script" uid="uid://boya3ftm3d4la" path="res://Scenes/screen_shake.gd" id="2_22asu"]
-
+[ext_resource type="Script" path="res://Scenes/timer_ui.gd" id="1_tgy6u"]
+[ext_resource type="Script" path="res://Scenes/screen_shake.gd" id="2_22asu"]
 [ext_resource type="Texture2D" uid="uid://1d86c7ux1ygd" path="res://icon.svg" id="2_qxrlw"]
 [ext_resource type="Texture2D" uid="uid://g6b5hvprhk32" path="res://Assets/Sprites/tilemaptemplate.png" id="3_3dryh"]
 [ext_resource type="Texture2D" uid="uid://c6hukldulw33b" path="res://Assets/Sprites/labtilemap.png" id="3_wowpa"]
@@ -24,8 +23,10 @@
 [ext_resource type="PackedScene" uid="uid://btxksfw0gix8n" path="res://Hazards/spikes_celing.tscn" id="23_vm72l"]
 [ext_resource type="PackedScene" uid="uid://ut16m01l1jug" path="res://Hazards/spikes_left_wall.tscn" id="24_vm72l"]
 [ext_resource type="PackedScene" uid="uid://dytwcxut67ivy" path="res://Scenes/kill_zone.tscn" id="25_22asu"]
+[ext_resource type="Texture2D" uid="uid://k4s048raoj73" path="res://Assets/Sprites/background2.png" id="25_fkdbe"]
 [ext_resource type="Shader" uid="uid://e614fpnx1vd" path="res://Scenes/sfumato.gdshader" id="26_81klo"]
 [ext_resource type="PackedScene" uid="uid://gwbs3o7fgqba" path="res://Hazards/spikes_right_wall.tscn" id="27_81klo"]
+[ext_resource type="PackedScene" uid="uid://c6pgo65otp0w2" path="res://Scenes/Teleporter.tscn" id="27_tgy6u"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
@@ -500,7 +501,7 @@ grow_horizontal = 0
 text = "00:00"
 
 [node name="Shrinky" parent="." instance=ExtResource("1_ebmjs")]
-position = Vector2(203, 4728)
+position = Vector2(222, 1066)
 
 [node name="ScreenShake" type="Node2D" parent="Shrinky"]
 script = ExtResource("2_22asu")
@@ -2277,6 +2278,192 @@ position = Vector2(347.999, 4591)
 [node name="Spikes_left_wall17" parent="Spikes" instance=ExtResource("24_vm72l")]
 position = Vector2(347.999, 4599)
 
+[node name="Spikes_celing51" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(-59.012, -1.7168)
+rotation = 0.00260526
+
+[node name="Spikes_celing52" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(-51.012, -1.70654)
+rotation = 0.00260526
+
+[node name="Spikes_celing53" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(-43.012, -1.69531)
+rotation = 0.00260526
+
+[node name="Spikes_right_wall" parent="Spikes" instance=ExtResource("27_81klo")]
+position = Vector2(1732, 4605)
+
+[node name="Spikes_right_wall2" parent="Spikes" instance=ExtResource("27_81klo")]
+position = Vector2(1732, 4613)
+
+[node name="Spikes_right_wall3" parent="Spikes" instance=ExtResource("27_81klo")]
+position = Vector2(1732, 4621)
+
+[node name="Spikes_right_wall4" parent="Spikes" instance=ExtResource("27_81klo")]
+position = Vector2(1732, 4629)
+
+[node name="Spikes329" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1725, 4628)
+
+[node name="Spikes330" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1717, 4628)
+
+[node name="Spikes331" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1709, 4628)
+
+[node name="Spikes_celing54" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1613, 4612)
+
+[node name="Spikes_celing55" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1605, 4612)
+
+[node name="Spikes_celing56" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1597, 4612)
+
+[node name="Spikes_celing57" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1589, 4612)
+
+[node name="Spikes332" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1628, 4628)
+
+[node name="Spikes333" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1636, 4628)
+
+[node name="Spikes334" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1644, 4628)
+
+[node name="Spikes335" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1652, 4628)
+
+[node name="Spikes336" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1589, 4636)
+
+[node name="Spikes337" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1581, 4636)
+
+[node name="Spikes338" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1573, 4636)
+
+[node name="Spikes339" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1565, 4636)
+
+[node name="Spikes_celing58" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1556, 4604)
+
+[node name="Spikes_celing59" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1548, 4604)
+
+[node name="Spikes_celing60" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1540, 4604)
+
+[node name="Spikes_celing61" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1532, 4604)
+
+[node name="Spikes340" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1522, 4636)
+
+[node name="Spikes_celing62" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1492, 4604)
+
+[node name="Spikes_celing63" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1484, 4604)
+
+[node name="Spikes_celing64" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1476, 4604)
+
+[node name="Spikes341" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1491, 4636)
+
+[node name="Spikes342" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1459, 4636)
+
+[node name="Spikes343" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1420, 4636)
+
+[node name="Spikes_celing65" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1440, 4604)
+
+[node name="Spikes_celing66" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1432, 4604)
+
+[node name="Spikes_celing67" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1424, 4604)
+
+[node name="Spikes344" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1412, 4636)
+
+[node name="Spikes_celing68" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1392, 4604)
+
+[node name="Spikes_celing69" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1384, 4604)
+
+[node name="Spikes_celing70" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1376, 4604)
+
+[node name="Spikes345" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1374, 4644)
+
+[node name="Spikes346" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1366, 4644)
+
+[node name="Spikes347" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1358, 4644)
+
+[node name="Spikes_celing71" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1321, 4596)
+
+[node name="Spikes_celing72" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1313, 4596)
+
+[node name="Spikes_celing73" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1305, 4596)
+
+[node name="Spikes_celing74" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1272, 4596)
+
+[node name="Spikes_celing75" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1264, 4596)
+
+[node name="Spikes_celing76" parent="Spikes" instance=ExtResource("23_vm72l")]
+position = Vector2(1256, 4596)
+
+[node name="Spikes348" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1294, 4644)
+
+[node name="Spikes349" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1286, 4644)
+
+[node name="Spikes350" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1278, 4644)
+
+[node name="Spikes351" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1230, 4644)
+
+[node name="Spikes352" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1222, 4644)
+
+[node name="Spikes353" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1214, 4644)
+
+[node name="Spikes354" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1164, 4652)
+
+[node name="Spikes355" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1156, 4652)
+
+[node name="Spikes356" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1148, 4652)
+
+[node name="Spikes357" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1108, 4652)
+
+[node name="Spikes358" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1100, 4652)
+
+[node name="Spikes359" parent="Spikes" instance=ExtResource("21_exi56")]
+position = Vector2(1092, 4652)
+
 [node name="KillZones" type="Node" parent="."]
 
 [node name="Shorty" parent="KillZones" instance=ExtResource("14_1phco")]
@@ -2474,6 +2661,63 @@ position = Vector2(5521, 3392)
 [node name="Fatty7" parent="KillZones" instance=ExtResource("13_1phco")]
 position = Vector2(5315, 3360)
 
+[node name="Big_Chungus3" parent="KillZones" instance=ExtResource("22_mg4q0")]
+position = Vector2(1172, 4386)
+
+[node name="Big_Chungus5" parent="KillZones" instance=ExtResource("22_mg4q0")]
+position = Vector2(1405, 4393)
+
+[node name="Fatty8" parent="KillZones" instance=ExtResource("13_1phco")]
+position = Vector2(1599, 4401)
+
+[node name="Big_Chungus6" parent="KillZones" instance=ExtResource("22_mg4q0")]
+position = Vector2(1612, 4473)
+
+[node name="String_Bean23" parent="KillZones" instance=ExtResource("14_nb51f")]
+position = Vector2(1515, 4480)
+
+[node name="String_Bean24" parent="KillZones" instance=ExtResource("14_nb51f")]
+position = Vector2(1403, 4480)
+
+[node name="String_Bean25" parent="KillZones" instance=ExtResource("14_nb51f")]
+position = Vector2(1287, 4480)
+
+[node name="Shorty32" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1337, 4480)
+
+[node name="Fatty9" parent="KillZones" instance=ExtResource("13_1phco")]
+position = Vector2(1180, 4487)
+
+[node name="Shorty33" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1103, 4488)
+
+[node name="Shorty34" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1063, 4560)
+
+[node name="Shorty35" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1151, 4568)
+
+[node name="Shorty36" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1201, 4568)
+
+[node name="Shorty37" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1305, 4568)
+
+[node name="Shorty38" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1370, 4576)
+
+[node name="Shorty39" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1383, 4576)
+
+[node name="Shorty40" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1496, 4576)
+
+[node name="Shorty41" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1518, 4576)
+
+[node name="Shorty42" parent="KillZones" instance=ExtResource("14_1phco")]
+position = Vector2(1589, 4584)
+
 [node name="Red_lights" type="Node" parent="."]
 
 [node name="PointLight2D2" type="PointLight2D" parent="Red_lights"]
@@ -2573,6 +2817,7 @@ motion_mirroring = Vector2(4096, 4096)
 texture_filter = 1
 texture_repeat = 2
 material = SubResource("ShaderMaterial_mucmn")
+texture = ExtResource("25_fkdbe")
 region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
 
@@ -2682,245 +2927,62 @@ text = "Good Luck!
 
 and Don't Get Hit"
 
-[node name="Spikes_celing24" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(-59.012, -1.7168)
-rotation = 0.00260526
-
-[node name="Spikes_celing25" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(-51.012, -1.70654)
-rotation = 0.00260526
-
-[node name="Spikes_celing26" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(-43.012, -1.69531)
-rotation = 0.00260526
-
-[node name="Big_Chungus" parent="." instance=ExtResource("22_mg4q0")]
-position = Vector2(1172, 4386)
-
-[node name="Big_Chungus2" parent="." instance=ExtResource("22_mg4q0")]
-position = Vector2(1405, 4393)
-
-[node name="Fatty" parent="." instance=ExtResource("13_1phco")]
-position = Vector2(1599, 4401)
-
-[node name="Big_Chungus3" parent="." instance=ExtResource("22_mg4q0")]
-position = Vector2(1612, 4473)
-
-[node name="String_Bean" parent="." instance=ExtResource("14_nb51f")]
-position = Vector2(1515, 4480)
-
-[node name="String_Bean2" parent="." instance=ExtResource("14_nb51f")]
-position = Vector2(1403, 4480)
-
-[node name="String_Bean3" parent="." instance=ExtResource("14_nb51f")]
-position = Vector2(1287, 4480)
-
-[node name="Shorty" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1337, 4480)
-
-[node name="Fatty2" parent="." instance=ExtResource("13_1phco")]
-position = Vector2(1180, 4487)
-
-[node name="Shorty2" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1103, 4488)
-
-[node name="Shorty3" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1063, 4560)
-
-[node name="Shorty4" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1151, 4568)
-
-[node name="Shorty5" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1201, 4568)
-
-[node name="Shorty6" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1305, 4568)
-
-[node name="Shorty7" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1370, 4576)
-
-[node name="Shorty8" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1383, 4576)
-
-[node name="Shorty9" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1496, 4576)
-
-[node name="Shorty10" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1518, 4576)
-
-[node name="Shorty11" parent="." instance=ExtResource("14_1phco")]
-position = Vector2(1589, 4584)
-
-[node name="Spikes_right_wall" parent="." instance=ExtResource("27_81klo")]
-position = Vector2(1732, 4605)
-
-[node name="Spikes_right_wall2" parent="." instance=ExtResource("27_81klo")]
-position = Vector2(1732, 4613)
-
-[node name="Spikes_right_wall3" parent="." instance=ExtResource("27_81klo")]
-position = Vector2(1732, 4621)
-
-[node name="Spikes_right_wall4" parent="." instance=ExtResource("27_81klo")]
-position = Vector2(1732, 4629)
-
-[node name="Spikes2" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1725, 4628)
-
-[node name="Spikes3" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1717, 4628)
-
-[node name="Spikes4" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1709, 4628)
-
-[node name="Spikes_celing" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1613, 4612)
-
-[node name="Spikes_celing2" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1605, 4612)
-
-[node name="Spikes_celing3" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1597, 4612)
-
-[node name="Spikes_celing4" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1589, 4612)
-
-[node name="Spikes5" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1628, 4628)
-
-[node name="Spikes6" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1636, 4628)
-
-[node name="Spikes7" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1644, 4628)
-
-[node name="Spikes8" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1652, 4628)
-
-[node name="Spikes9" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1589, 4636)
-
-[node name="Spikes10" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1581, 4636)
-
-[node name="Spikes11" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1573, 4636)
-
-[node name="Spikes12" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1565, 4636)
-
-[node name="Spikes_celing5" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1556, 4604)
-
-[node name="Spikes_celing6" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1548, 4604)
-
-[node name="Spikes_celing7" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1540, 4604)
-
-[node name="Spikes_celing8" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1532, 4604)
-
-[node name="Spikes13" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1522, 4636)
-
-[node name="Spikes_celing9" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1492, 4604)
-
-[node name="Spikes_celing10" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1484, 4604)
-
-[node name="Spikes_celing11" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1476, 4604)
-
-[node name="Spikes14" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1491, 4636)
-
-[node name="Spikes15" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1459, 4636)
-
-[node name="Spikes16" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1420, 4636)
-
-[node name="Spikes_celing12" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1440, 4604)
-
-[node name="Spikes_celing13" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1432, 4604)
-
-[node name="Spikes_celing14" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1424, 4604)
-
-[node name="Spikes17" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1412, 4636)
-
-[node name="Spikes_celing15" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1392, 4604)
-
-[node name="Spikes_celing16" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1384, 4604)
-
-[node name="Spikes_celing17" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1376, 4604)
-
-[node name="Spikes18" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1374, 4644)
-
-[node name="Spikes19" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1366, 4644)
-
-[node name="Spikes20" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1358, 4644)
-
-[node name="Spikes_celing18" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1321, 4596)
-
-[node name="Spikes_celing19" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1313, 4596)
-
-[node name="Spikes_celing20" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1305, 4596)
-
-[node name="Spikes_celing21" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1272, 4596)
-
-[node name="Spikes_celing22" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1264, 4596)
-
-[node name="Spikes_celing23" parent="." instance=ExtResource("23_vm72l")]
-position = Vector2(1256, 4596)
-
-[node name="Spikes21" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1294, 4644)
-
-[node name="Spikes22" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1286, 4644)
-
-[node name="Spikes23" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1278, 4644)
-
-[node name="Spikes24" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1230, 4644)
-
-[node name="Spikes25" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1222, 4644)
-
-[node name="Spikes26" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1214, 4644)
-
-[node name="Spikes27" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1164, 4652)
-
-[node name="Spikes28" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1156, 4652)
-
-[node name="Spikes29" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1148, 4652)
-
-[node name="Spikes30" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1108, 4652)
-
-[node name="Spikes31" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1100, 4652)
-
-[node name="Spikes32" parent="." instance=ExtResource("21_exi56")]
-position = Vector2(1092, 4652)
+[node name="Teleporter" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(476, 1105)
+target_position = Vector2(942, 1052)
+
+[node name="Teleporter2" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(931, 824)
+target_position = Vector2(2004, 731)
+
+[node name="Teleporter3" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(4291, 623)
+target_position = Vector2(2704, 1247)
+
+[node name="Teleporter4" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(2456, 639)
+target_position = Vector2(3903, 799)
+
+[node name="Teleporter5" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(3279, 1274)
+target_position = Vector2(4527, 1303)
+
+[node name="Teleporter6" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(4890, 1306)
+target_position = Vector2(122, 2347)
+
+[node name="Teleporter7" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(351, 2103)
+target_position = Vector2(5025, 3555)
+
+[node name="Teleporter8" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(5609, 3306)
+target_position = Vector2(2332, 2070)
+
+[node name="Teleporter9" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(3073, 2373)
+target_position = Vector2(2711, 3555)
+
+[node name="Teleporter10" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(3013, 3479)
+target_position = Vector2(3809, 3575)
+
+[node name="Teleporter11" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(4270, 3531)
+target_position = Vector2(1040, 2355)
+
+[node name="Teleporter12" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(1604, 2320)
+target_position = Vector2(1543, 3533)
+
+[node name="Teleporter13" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(1969, 3307)
+target_position = Vector2(203, 4720)
+
+[node name="Teleporter14" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(550, 4657)
+target_position = Vector2(211, 3525)
+
+[node name="Teleporter15" parent="." instance=ExtResource("27_tgy6u")]
+position = Vector2(807, 3453)
+target_position = Vector2(880, 4747)
