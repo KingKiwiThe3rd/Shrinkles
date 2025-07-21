@@ -1,7 +1,7 @@
 [gd_scene load_steps=7 format=3 uid="uid://cdiyv24pvm6ai"]
 
 [ext_resource type="Script" uid="uid://ba0co6o1cx1ta" path="res://Scripts/breakable_box.gd" id="1_tr8hw"]
-[ext_resource type="Texture2D" uid="uid://b5rm4tej63aa0" path="res://assets/sprites/breakable.png" id="2_vyrgs"]
+[ext_resource type="Texture2D" uid="uid://b5rm4tej63aa0" path="res://Assets/Sprites/breakable.png" id="2_vyrgs"]
 [ext_resource type="Script" uid="uid://b6pjt2nauojfe" path="res://Scripts/sensor.gd" id="3_vyrgs"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_tr8hw"]

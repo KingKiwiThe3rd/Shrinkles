@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://d88anfx2fybu"
-path="res://.godot/imported/16bitmcfall.png-9ba0f6c0890151e6db59086e8cc1d0d1.ctex"
+path="res://.godot/imported/16bitmcfall.png-ecad7a5570be2ed796cf0aa142e791fe.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/sprites/16bitmcfall.png"
-dest_files=["res://.godot/imported/16bitmcfall.png-9ba0f6c0890151e6db59086e8cc1d0d1.ctex"]
+source_file="res://Assets/Sprites/16bitmcfall.png"
+dest_files=["res://.godot/imported/16bitmcfall.png-ecad7a5570be2ed796cf0aa142e791fe.ctex"]
 
 [params]
 

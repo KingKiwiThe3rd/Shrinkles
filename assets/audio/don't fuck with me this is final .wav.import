@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://brw8rxctnjcix"
-path="res://.godot/imported/don't fuck with me this is final .wav-49207017842d72236db793a9cec2bb86.sample"
+path="res://.godot/imported/don't fuck with me this is final .wav-eeeecaef27f27a23fcc9bc46a3400dd9.sample"
 
 [deps]
 
-source_file="res://assets/audio/don't fuck with me this is final .wav"
-dest_files=["res://.godot/imported/don't fuck with me this is final .wav-49207017842d72236db793a9cec2bb86.sample"]
+source_file="res://Assets/audio/don't fuck with me this is final .wav"
+dest_files=["res://.godot/imported/don't fuck with me this is final .wav-eeeecaef27f27a23fcc9bc46a3400dd9.sample"]
 
 [params]
 
