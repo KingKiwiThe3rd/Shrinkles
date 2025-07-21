@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bxrv6kbtipvqy"
-path="res://.godot/imported/breakableLab.png-d807bf49680134f0c4b245db73fec530.ctex"
+path="res://.godot/imported/breakableLab.png-f80bc6f9b7c0a386853ce3191be50b5e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/breakableLab.png"
-dest_files=["res://.godot/imported/breakableLab.png-d807bf49680134f0c4b245db73fec530.ctex"]
+source_file="res://assets/sprites/breakableLab.png"
+dest_files=["res://.godot/imported/breakableLab.png-f80bc6f9b7c0a386853ce3191be50b5e.ctex"]
 
 [params]
 

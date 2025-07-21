@@ -3,12 +3,12 @@
 importer="font_data_bmfont"
 type="FontFile"
 uid="uid://c6ixai3sfactb"
-path="res://.godot/imported/RedPeaberry.fnt-1c399432dfeb944caf15e1838e3c7c86.fontdata"
+path="res://.godot/imported/RedPeaberry.fnt-5fa1ccb7a7379c3d6a33f531a7e3407e.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/4. RedPeaberry/RedPeaberry.fnt (XML)/RedPeaberry.fnt"
-dest_files=["res://.godot/imported/RedPeaberry.fnt-1c399432dfeb944caf15e1838e3c7c86.fontdata"]
+source_file="res://assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/4. RedPeaberry/RedPeaberry.fnt (XML)/RedPeaberry.fnt"
+dest_files=["res://.godot/imported/RedPeaberry.fnt-5fa1ccb7a7379c3d6a33f531a7e3407e.fontdata"]
 
 [params]
 

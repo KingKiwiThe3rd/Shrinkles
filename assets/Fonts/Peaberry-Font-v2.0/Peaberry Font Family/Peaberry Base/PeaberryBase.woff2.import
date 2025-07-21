@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://b8xbpvsdr3ern"
-path="res://.godot/imported/PeaberryBase.woff2-2b0e122c4161aba90fef3589637a4220.fontdata"
+path="res://.godot/imported/PeaberryBase.woff2-2db3e261f099abca66a2994e0133d690.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.woff2"
-dest_files=["res://.godot/imported/PeaberryBase.woff2-2b0e122c4161aba90fef3589637a4220.fontdata"]
+source_file="res://assets/Fonts/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Base/PeaberryBase.woff2"
+dest_files=["res://.godot/imported/PeaberryBase.woff2-2db3e261f099abca66a2994e0133d690.fontdata"]
 
 [params]
 
