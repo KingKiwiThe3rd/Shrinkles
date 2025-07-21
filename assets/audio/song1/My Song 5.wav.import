@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://j4rexo0ukix"
+path="res://.godot/imported/My Song 5.wav-d1ae6432d8704de9a9a5eb783801cbc9.sample"
+
+[deps]
+
+source_file="res://Assets/audio/song1/My Song 5.wav"
+dest_files=["res://.godot/imported/My Song 5.wav-d1ae6432d8704de9a9a5eb783801cbc9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

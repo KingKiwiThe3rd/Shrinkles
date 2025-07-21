@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cbkbjytv6vuhh"]
+
+[ext_resource type="Script" uid="uid://b5jqcxc10s7gw" path="res://Scenes/song.gd" id="1_yxlgn"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_yxlgn"]
+size = Vector2(83, 87)
+
+[node name="Song" type="Area2D"]
+collision_layer = 3
+collision_mask = 3
+script = ExtResource("1_yxlgn")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_yxlgn")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

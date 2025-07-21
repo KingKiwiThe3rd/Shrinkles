@@ -15,10 +15,8 @@ func _ready():
 	
 	# Get final time from global_game_data
 	var final_time = GlobalGameData.global_game_data.final_time if GlobalGameData != null else 0.0
-	var minutes = int(final_time / 60)
-	var seconds = int(final_time) % 60
 	if credits_label != null:
-		timer_label.text = "Time: %02d:%02d" % [minutes, seconds]
+		timer_label.text = "Time: " + final_time
 	
 	# Start the cutscene sequence
 	start_cutscene()
