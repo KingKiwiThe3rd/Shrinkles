@@ -331,7 +331,7 @@ func _physics_process(delta: float) -> void:
 	
 	if Input.is_action_just_pressed("reset"):
 		die_and_respawn()
-		get_tree().reload_current_scene()
+
 		
 
 		# Check if player is on a vent tile
@@ -393,16 +393,55 @@ func set_spawn_point(new_spawn_point: Vector2):
 	spawn_point = new_spawn_point
 
 
+#func die_and_respawn():
+	#print(">> die_and_respawn called")
+	#global_position = spawn_point
+	#velocity = Vector2.ZERO
+	#show()  # If you ever hide Shrinky
+	#var collider = get_node_or_null("CollisionShape2D")
+	#if collider:
+		#collider.disabled = false
+	#print("Player respawned at: ", global_position)
+#
+	## Reset objects
+	#for node in get_tree().get_nodes_in_group("Resettable"):
+		#if node.has_method("reset"):
+			#node.reset()
+	#
+	#var areas = get_tree().get_nodes_in_group("room")
+	#for area in areas:
+		#if area is Area2D and area.has_method("check_player_inside"):
+			#area.check_player_inside()
+
 func die_and_respawn():
 	print(">> die_and_respawn called")
+	
+	# Reset player position and state
 	global_position = spawn_point
 	velocity = Vector2.ZERO
-	show()  # If you ever hide Shrinky
+	show()
+	
+	# Reset keycard state
+	if keycard:
+		keycard.queue_free()
+		keycard = null
+	has_keycard = false
+	
+	# Re-enable player's collision if it was disabled
 	var collider = get_node_or_null("CollisionShape2D")
 	if collider:
 		collider.disabled = false
+	
 	print("Player respawned at: ", global_position)
-
+	
+	# Reset all objects in the "Resettable" group
+	print("Resetting resettable objects...")
+	for node in get_tree().get_nodes_in_group("Resettable"):
+		if node.has_method("reset"):
+			print("Resetting: ", node.name)
+			node.reset()
+	
+	# Check room areas (if you need this functionality)
 	var areas = get_tree().get_nodes_in_group("room")
 	for area in areas:
 		if area is Area2D and area.has_method("check_player_inside"):

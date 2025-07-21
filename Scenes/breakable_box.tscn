@@ -21,7 +21,7 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_vyrgs"]
 size = Vector2(16, 4.8125)
 
-[node name="breakable_box" type="StaticBody2D" groups=["Breakable"]]
+[node name="breakable_box" type="StaticBody2D" groups=["Breakable", "Resettable"]]
 script = ExtResource("1_tr8hw")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
