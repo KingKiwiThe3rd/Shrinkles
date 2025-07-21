@@ -29,8 +29,8 @@
 [ext_resource type="PackedScene" uid="uid://gwbs3o7fgqba" path="res://Hazards/spikes_right_wall.tscn" id="27_81klo"]
 [ext_resource type="PackedScene" uid="uid://c6pgo65otp0w2" path="res://Scenes/Teleporter.tscn" id="27_tgy6u"]
 [ext_resource type="PackedScene" uid="uid://cbkbjytv6vuhh" path="res://Scenes/Song.tscn" id="29_mucmn"]
-[ext_resource type="AudioStream" uid="uid://b4lain4haqdsv" path="res://assets/audio/song for game number 1 4.wav" id="30_8m3t6"]
-[ext_resource type="AudioStream" uid="uid://j4rexo0ukix" path="res://assets/audio/My Song 5.wav" id="31_8m3t6"]
+[ext_resource type="AudioStream" uid="uid://b4lain4haqdsv" path="res://assets/audio/song2/song for game number 1 4.wav" id="30_8m3t6"]
+[ext_resource type="AudioStream" uid="uid://j4rexo0ukix" path="res://assets/audio/song1/My Song 5.wav" id="31_8m3t6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
 texture = ExtResource("2_qxrlw")
