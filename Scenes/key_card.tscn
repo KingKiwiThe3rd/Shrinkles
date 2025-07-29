@@ -1,8 +1,8 @@
 [gd_scene load_steps=18 format=3 uid="uid://6jef5csgiayi"]
 
 [ext_resource type="Script" uid="uid://bqn6hqdseay1i" path="res://Scripts/key_card.gd" id="1_mhvp7"]
-[ext_resource type="Texture2D" uid="uid://ctrotdooeruv4" path="res://assets/sprites/keycard.png" id="2_ws7y3"]
-[ext_resource type="AudioStream" uid="uid://flpvcxgcro5j" path="res://assets/audio/KeysCatch.wav" id="3_f8xtt"]
+[ext_resource type="Texture2D" uid="uid://ctrotdooeruv4" path="res://Assets/Sprites/keycard.png" id="2_ws7y3"]
+[ext_resource type="AudioStream" uid="uid://flpvcxgcro5j" path="res://Assets/audio/KeysCatch.wav" id="3_f8xtt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_n5nl0"]
 size = Vector2(8, 8)

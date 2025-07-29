@@ -113,4 +113,4 @@ func _on_tween_finished(new_index: int):
 func _on_start_pressed():
 	print("Starting game...")
 	#get_tree().change_scene_to_file("res://scenes/final_cutscene.tscn")
-	get_tree().change_scene_to_file("res://scenes/game.tscn")
+	get_tree().change_scene_to_file("res://Scenes/game.tscn")

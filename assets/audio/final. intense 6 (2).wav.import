@@ -3,12 +3,12 @@
 importer="wav"
 type="AudioStreamWAV"
 uid="uid://pjek4ju84733"
-path="res://.godot/imported/final. intense 6 (2).wav-6c8bcb5255331fe722380f68ab507231.sample"
+path="res://.godot/imported/final. intense 6 (2).wav-6156f8ced24e53346bb3051d66ce8674.sample"
 
 [deps]
 
-source_file="res://assets/audio/final. intense 6 (2).wav"
-dest_files=["res://.godot/imported/final. intense 6 (2).wav-6c8bcb5255331fe722380f68ab507231.sample"]
+source_file="res://Assets/audio/final. intense 6 (2).wav"
+dest_files=["res://.godot/imported/final. intense 6 (2).wav-6156f8ced24e53346bb3051d66ce8674.sample"]
 
 [params]
 

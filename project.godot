@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Shrinkles"
-run/main_scene="uid://26r5x70cfrob"
+run/main_scene="uid://bd06pgd1jl8ou"
 config/features=PackedStringArray("4.4", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -109,4 +109,6 @@ reset={
 [rendering]
 
 textures/canvas_textures/default_texture_filter=0
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
 environment/defaults/default_clear_color=Color(0.147777, 0.0936402, 0.145067, 1)
