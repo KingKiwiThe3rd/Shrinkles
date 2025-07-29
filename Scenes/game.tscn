@@ -1,4 +1,4 @@
-[gd_scene load_steps=42 format=3 uid="uid://26r5x70cfrob"]
+[gd_scene load_steps=41 format=3 uid="uid://26r5x70cfrob"]
 
 [ext_resource type="PackedScene" uid="uid://ckh5pnsbsxbq" path="res://Scenes/end_credits_trigger.tscn" id="1_cwurv"]
 [ext_resource type="PackedScene" uid="uid://dedwio2103ro2" path="res://Scenes/shrinky.tscn" id="1_ebmjs"]
@@ -29,7 +29,6 @@
 [ext_resource type="PackedScene" uid="uid://gwbs3o7fgqba" path="res://Hazards/spikes_right_wall.tscn" id="27_81klo"]
 [ext_resource type="PackedScene" uid="uid://c6pgo65otp0w2" path="res://Scenes/Teleporter.tscn" id="27_tgy6u"]
 [ext_resource type="PackedScene" path="res://Scenes/Song.tscn" id="29_mucmn"]
-[ext_resource type="AudioStream" uid="uid://b4lain4haqdsv" path="res://Assets/audio/song2/song for game number 1 4.wav" id="30_8m3t6"]
 [ext_resource type="AudioStream" uid="uid://j4rexo0ukix" path="res://Assets/audio/song1/My Song 5.wav" id="31_8m3t6"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_wrm1d"]
@@ -1040,6 +1039,9 @@ position = Vector2(963, 4608)
 
 [node name="CheckPoints20" parent="Checkpoints" instance=ExtResource("13_rfjv2")]
 position = Vector2(238, 4678)
+
+[node name="CheckPoints2" parent="Checkpoints" instance=ExtResource("13_rfjv2")]
+position = Vector2(1721, 4714)
 
 [node name="KeyCards" type="Node" parent="."]
 
@@ -3328,9 +3330,11 @@ region_enabled = true
 region_rect = Rect2(0, 0, 4096, 4096)
 
 [node name="Song" parent="." instance=ExtResource("29_mucmn")]
-position = Vector2(963, 1055)
-song_stream = ExtResource("30_8m3t6")
+position = Vector2(961, 1063)
+audio_bus_name = &"Music"
+song_stream = ExtResource("31_8m3t6")
 
 [node name="Song2" parent="." instance=ExtResource("29_mucmn")]
 position = Vector2(127, 2327)
+audio_bus_name = &"Music"
 song_stream = ExtResource("31_8m3t6")

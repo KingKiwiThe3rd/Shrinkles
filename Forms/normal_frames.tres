@@ -108,5 +108,5 @@ animations = [{
 }],
 "loop": true,
 "name": &"normal_run",
-"speed": 13.0
+"speed": 11.0
 }]
