@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://bvptrq0oovtx6"]
 
-[ext_resource type="Script" path="res://final_cutscene.gd" id="1_t5xjq"]
+[ext_resource type="Script" uid="uid://cpfis1u4pp1v8" path="res://final_cutscene.gd" id="1_t5xjq"]
 [ext_resource type="Texture2D" uid="uid://2s6nqiiq2763" path="res://Assets/Sprites/final_cutscene.png" id="2_yiaxy"]
 
 [node name="FinalCutscene" type="Control"]

@@ -11,7 +11,17 @@ func _ready():
 	else:
 		print("timer_ui found: ", timer_ui.name)
 
-
+#
+#func _on_body_entered(body: Node2D) -> void:
+	#var final_time = 0.0
+	#if timer_ui != null and timer_ui.get("elapsed_time") != null:
+		#final_time = TimerManager.get_formatted_time()
+		#print("Passing elapsed_time: ", final_time)
+	#else:
+		#print("Error: Cannot access elapsed_time. Using fallback time 0.0")
+	#GlobalGameData.global_game_data.final_time = final_time
+	#get_tree().change_scene_to_file("res://Scenes/final_cutscene.tscn")
+	
 func _on_body_entered(body: Node2D) -> void:
 	var final_time = 0.0
 	if timer_ui != null and timer_ui.get("elapsed_time") != null:
@@ -19,5 +29,9 @@ func _on_body_entered(body: Node2D) -> void:
 		print("Passing elapsed_time: ", final_time)
 	else:
 		print("Error: Cannot access elapsed_time. Using fallback time 0.0")
-	GlobalGameData.global_game_data.final_time = final_time
-	get_tree().change_scene_to_file("res://scenes/final_cutscene.tscn")
+
+	GlobalGamedata.global_game_data.final_time = final_time
+	call_deferred("_go_to_final_cutscene")  # <--- FIXED
+
+func _go_to_final_cutscene():
+	get_tree().change_scene_to_file("res://Scenes/final_cutscene.tscn")

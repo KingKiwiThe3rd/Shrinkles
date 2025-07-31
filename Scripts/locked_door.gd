@@ -20,6 +20,10 @@ func open_door():
 			player.keycard.queue_free()
 			player.keycard = null
 			player.has_keycard = false
+		if player.keycard:
+			player.keycard.queue_free()
+			player.keycard = null
+			player.has_keycard = false
 	call_deferred("queue_free")  # optional: if you want to remove the door itself too
 
 

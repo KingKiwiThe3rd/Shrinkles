@@ -16,7 +16,7 @@ func _on_body_entered(body):
 	if body is CharacterBody2D and not picked_up:
 		picked_up = true
 		player_ref = body
-		$AudioStreamPlayer2D.play()
+		#$AudioStreamPlayer2D.play()
 		player_ref.give_keycard(self)  # ← THIS is what was missing
 		self.collision_layer = 0
 		self.collision_mask = 0

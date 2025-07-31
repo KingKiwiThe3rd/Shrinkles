@@ -14,7 +14,7 @@ func _ready():
 	timer_label.modulate.a = 0.0
 	
 	# Get final time from global_game_data
-	var final_time = GlobalGameData.global_game_data.final_time if GlobalGameData != null else 0.0
+	var final_time = GlobalGamedata.global_game_data.final_time if GlobalGamedata != null else 0.0
 	if credits_label != null:
 		timer_label.text = "Time: " + final_time
 	
