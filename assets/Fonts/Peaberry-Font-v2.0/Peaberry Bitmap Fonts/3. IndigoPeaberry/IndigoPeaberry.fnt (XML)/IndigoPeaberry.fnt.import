@@ -3,12 +3,12 @@
 importer="font_data_bmfont"
 type="FontFile"
 uid="uid://clao8vgmr3h7"
-path="res://.godot/imported/IndigoPeaberry.fnt-f396d7580c9767b1700f48763033a659.fontdata"
+path="res://.godot/imported/IndigoPeaberry.fnt-d2afc6f2e2e8f218cb214d59582f7741.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/3. IndigoPeaberry/IndigoPeaberry.fnt (XML)/IndigoPeaberry.fnt"
-dest_files=["res://.godot/imported/IndigoPeaberry.fnt-f396d7580c9767b1700f48763033a659.fontdata"]
+source_file="res://assets/Fonts/Peaberry-Font-v2.0/Peaberry Bitmap Fonts/3. IndigoPeaberry/IndigoPeaberry.fnt (XML)/IndigoPeaberry.fnt"
+dest_files=["res://.godot/imported/IndigoPeaberry.fnt-d2afc6f2e2e8f218cb214d59582f7741.fontdata"]
 
 [params]
 

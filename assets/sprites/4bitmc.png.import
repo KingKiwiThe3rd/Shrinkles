@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dpv0byl5pcvw4"
-path="res://.godot/imported/4bitmc.png-2bd5ea856702c288042edbffc46df7c9.ctex"
+path="res://.godot/imported/4bitmc.png-362ef5a4dc9147559a3966585b5c323d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/Sprites/4bitmc.png"
-dest_files=["res://.godot/imported/4bitmc.png-2bd5ea856702c288042edbffc46df7c9.ctex"]
+source_file="res://assets/sprites/4bitmc.png"
+dest_files=["res://.godot/imported/4bitmc.png-362ef5a4dc9147559a3966585b5c323d.ctex"]
 
 [params]
 

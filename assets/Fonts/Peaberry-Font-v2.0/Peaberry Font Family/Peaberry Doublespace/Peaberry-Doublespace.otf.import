@@ -3,12 +3,12 @@
 importer="font_data_dynamic"
 type="FontFile"
 uid="uid://bbub2erhx0rk1"
-path="res://.godot/imported/Peaberry-Doublespace.otf-edacf4dbfb966b750823a87c3ca49fec.fontdata"
+path="res://.godot/imported/Peaberry-Doublespace.otf-f00fe950c2aeeef8b415d4a15292c285.fontdata"
 
 [deps]
 
-source_file="res://Assets/Fonts/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Doublespace/Peaberry-Doublespace.otf"
-dest_files=["res://.godot/imported/Peaberry-Doublespace.otf-edacf4dbfb966b750823a87c3ca49fec.fontdata"]
+source_file="res://assets/Fonts/Peaberry-Font-v2.0/Peaberry Font Family/Peaberry Doublespace/Peaberry-Doublespace.otf"
+dest_files=["res://.godot/imported/Peaberry-Doublespace.otf-f00fe950c2aeeef8b415d4a15292c285.fontdata"]
 
 [params]
 
